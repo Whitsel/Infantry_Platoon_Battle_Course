@@ -3,7 +3,7 @@
 
 params ["_target", "_floorSetHash", "_floorNum"];
 
-_spawnChance = _target getVariable ["spawnChance", 0.2];
+_spawnChance = _target getVariable ["spawnChanceAI", 0.2];
 
 {
 	if (_spawnChance > random 1) then

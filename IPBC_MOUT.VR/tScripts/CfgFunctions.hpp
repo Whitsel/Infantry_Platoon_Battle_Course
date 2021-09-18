@@ -32,6 +32,7 @@ class tScripts {
 		class roomController {};
 		class roomClear {};
 		class roomSpawnFloor {};
+		class roomSpawnFurniture {};
 		class roomSpawnAI {};
 	};
 
