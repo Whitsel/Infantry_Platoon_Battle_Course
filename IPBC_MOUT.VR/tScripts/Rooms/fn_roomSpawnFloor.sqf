@@ -3,7 +3,9 @@
 
 params ["_target", "_frontDoor", "_floorSetHash"];
 
-_frontDoor animate ["door_1_rot", 0];
+_frontDoor animate ["door_1_rot", 0, 3];
+
+sleep 0.5;
 
 _floorNum= floor random count roomSimpleHash + 1;
 
