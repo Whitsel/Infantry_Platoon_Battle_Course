@@ -10,8 +10,13 @@ roomBoxSmall = [
 ];
 
 roomBoxSmallOpfor = [
-	box_small_opfor_0,
-	box_small_opfor_1
+	box_small_opfor_0
+];
+
+roomBoxSmallFurniture = [
+	box_small_furniture_0,
+	box_small_furniture_1,
+	box_small_furniture_2
 ];
 
 roomBoxLarge = [
@@ -28,6 +33,15 @@ roomBoxLargeOpfor = [
 	box_large_opfor_3,
 	box_large_opfor_4,
 	box_large_opfor_5
+];
+
+roomBoxLargeFurniture = [
+	box_large_furniture_0,
+	box_large_furniture_1,
+	box_large_furniture_2,
+	box_large_furniture_3,
+	box_large_furniture_4,
+	box_large_furniture_5
 ];
 
 roomTubeLong = [
@@ -47,6 +61,21 @@ roomTubeLongOpfor = [
 	tube_long_opfor_4
 ];
 
+roomTubeLongFurniture = [
+	tube_long_furniture_0,
+	tube_long_furniture_1,
+	tube_long_furniture_2,
+	tube_long_furniture_3,
+	tube_long_furniture_4,
+	tube_long_furniture_5,
+	tube_long_furniture_6,
+	tube_long_furniture_7,
+	tube_long_furniture_8,
+	tube_long_furniture_9,
+	tube_long_furniture_10,
+	tube_long_furniture_11
+];
+
 roomTubeWide = [
 	tube_wide_1,
 	tube_wide_2,
@@ -59,6 +88,18 @@ roomTubeWideOpfor = [
 	tube_wide_opfor_2,
 	tube_wide_opfor_3,
 	tube_wide_opfor_4
+];
+
+roomTubeWideFurniture = [
+	tube_wide_furniture_0,
+	tube_wide_furniture_1,
+	tube_wide_furniture_2,
+	tube_wide_furniture_3,
+	tube_wide_furniture_4,
+	tube_wide_furniture_5,
+	tube_wide_furniture_6,
+	tube_wide_furniture_7,
+	tube_wide_furniture_8
 ];
 
 roomLShapedSmallLeft = [
@@ -79,6 +120,14 @@ roomLShapedSmallLeftOpfor = [
 	LShaped_Small_Left_opfor_2
 ];
 
+roomLShapedSmallLeftFurniture = [
+	LShaped_Small_Left_furniture_0,
+	LShaped_Small_Left_furniture_1,
+	LShaped_Small_Left_furniture_2,
+	LShaped_Small_Left_furniture_3,
+	LShaped_Small_Left_furniture_4
+];
+
 roomLShapedSmallRight = [
 	LShaped_Small_Right_0,
 	LShaped_Small_Right_1,
@@ -95,6 +144,14 @@ roomLShapedSmallRightOpfor = [
 	LShaped_Small_Right_opfor_0,
 	LShaped_Small_Right_opfor_1,
 	LShaped_Small_Right_opfor_2
+];
+
+roomLShapedSmallRightFurniture = [
+	LShaped_Small_Right_furniture_0,
+	LShaped_Small_Right_furniture_1,
+	LShaped_Small_Right_furniture_2,
+	LShaped_Small_Right_furniture_3,
+	LShaped_Small_Right_furniture_4
 ];
 
 roomLShapedLargeL = [
@@ -119,6 +176,20 @@ roomLShapedLargeLOpfor = [
 	LShaped_Large_Left_opfor_7
 ];
 
+roomLShapedLargeLFurniture = [
+	LShaped_Large_Left_furniture_0,
+	LShaped_Large_Left_furniture_1,
+	LShaped_Large_Left_furniture_2,
+	LShaped_Large_Left_furniture_3,
+	LShaped_Large_Left_furniture_4,
+	LShaped_Large_Left_furniture_5,
+	LShaped_Large_Left_furniture_6,
+	LShaped_Large_Left_furniture_7,
+	LShaped_Large_Left_furniture_8,
+	LShaped_Large_Left_furniture_9,
+	LShaped_Large_Left_furniture_10
+];
+
 roomLShapedLargeR = [
 	LShaped_Large_Right_0,
 	LShaped_Large_Right_1,
@@ -139,6 +210,20 @@ roomLShapedLargeROpfor = [
 	LShaped_Large_Right_opfor_5,
 	LShaped_Large_Right_opfor_6,
 	LShaped_Large_Right_opfor_7
+];
+
+roomLShapedLargeRFurniture = [
+	LShaped_Large_Right_furniture_0,
+	LShaped_Large_Right_furniture_1,
+	LShaped_Large_Right_furniture_2,
+	LShaped_Large_Right_furniture_3,
+	LShaped_Large_Right_furniture_4,
+	LShaped_Large_Right_furniture_5,
+	LShaped_Large_Right_furniture_6,
+	LShaped_Large_Right_furniture_7,
+	LShaped_Large_Right_furniture_8,
+	LShaped_Large_Right_furniture_9,
+	LShaped_Large_Right_furniture_10
 ];
 
 roomTShapedSmall = [
@@ -162,6 +247,15 @@ roomTShapedSmallOpfor = [
 	TShaped_Small_opfor_3
 ];
 
+roomTShapedSmallFurniture = [
+	TShaped_Small_furniture_0,
+	TShaped_Small_furniture_1,
+	TShaped_Small_furniture_2,
+	TShaped_Small_furniture_3,
+	TShaped_Small_furniture_4,
+	TShaped_Small_furniture_5
+];
+
 roomTShapedLarge =[
 	TShaped_Large_0,
 	TShaped_Large_1,
@@ -182,6 +276,21 @@ roomTShapedLargeOpfor =[
 	TShaped_Large_opfor_4,
 	TShaped_Large_opfor_5,
 	TShaped_Large_opfor_6
+];
+
+roomTShapedLargeFurniture =[
+	TShaped_Large_furniture_0,
+	TShaped_Large_furniture_1,
+	TShaped_Large_furniture_2,
+	TShaped_Large_furniture_3,
+	TShaped_Large_furniture_4,
+	TShaped_Large_furniture_5,
+	TShaped_Large_furniture_6,
+	TShaped_Large_furniture_7,
+	TShaped_Large_furniture_8,
+	TShaped_Large_furniture_9,
+	TShaped_Large_furniture_10,
+	TShaped_Large_furniture_11
 ];
 
 roomIntersection = [
@@ -223,18 +332,29 @@ roomIntersectionOpfor = [
 	intersection_opfor_5
 ];
 
-roomSimpleHash = createHashMapFromArray [
-	[1, [roomBoxSmall, roomBoxSmallOpfor]],
-	[2, [roomBoxLarge, roomBoxLargeOpfor]],
-	[3, [roomTubeLong, roomTubeLongOpfor]],
-	[4, [roomTubeWide, roomTubeWideOpfor]],
-	[5, [roomLShapedSmallLeft, roomLShapedSmallLeftOpfor]],
-	[6, [roomLShapedSmallRight, roomLShapedSmallRightOpfor]],
-	[7, [roomLShapedLargeL, roomLShapedLargeLOpfor]],
-	[8, [roomLShapedLargeR, roomLShapedLargeROpfor]],
-	[9, [roomTShapedSmall, roomTShapedSmallOpfor]],
-	[10, [roomTShapedLarge, roomTShapedLargeOpfor]],
-	[11, [roomIntersection, roomIntersectionOpfor]]
+roomIntersectionFurniture = [
+	intersection_furniture_0,
+	intersection_furniture_1,
+	intersection_furniture_2,
+	intersection_furniture_3,
+	intersection_furniture_4,
+	intersection_furniture_5,
+	intersection_furniture_6,
+	intersection_furniture_7
 ];
 
-for "_i" from 1 to (count roomSimpleHash) do {{hideObject _x} forEach (roomSimpleHash get _i)#0 + (roomSimpleHash get _i)#1};
+roomSimpleHash = createHashMapFromArray [
+	[1, [roomBoxSmall, roomBoxSmallOpfor, roomBoxSmallFurniture]],
+	[2, [roomBoxLarge, roomBoxLargeOpfor, roomBoxLargeFurniture]],
+	[3, [roomTubeLong, roomTubeLongOpfor, roomTubeLongFurniture]],
+	[4, [roomTubeWide, roomTubeWideOpfor, roomTubeWideFurniture]],
+	[5, [roomLShapedSmallLeft, roomLShapedSmallLeftOpfor, roomLShapedSmallLeftFurniture]],
+	[6, [roomLShapedSmallRight, roomLShapedSmallRightOpfor, roomLShapedSmallRightFurniture]],
+	[7, [roomLShapedLargeL, roomLShapedLargeLOpfor, roomLShapedLargeLFurniture]],
+	[8, [roomLShapedLargeR, roomLShapedLargeROpfor, roomLShapedLargeRFurniture]],
+	[9, [roomTShapedSmall, roomTShapedSmallOpfor, roomTShapedSmallFurniture]],
+	[10, [roomTShapedLarge, roomTShapedLargeOpfor, roomTShapedLargeFurniture]],
+	[11, [roomIntersection, roomIntersectionOpfor, roomIntersectionFurniture]]
+];
+
+for "_i" from 1 to (count roomSimpleHash) do {{hideObject _x} forEach (roomSimpleHash get _i)#0 + (roomSimpleHash get _i)#1 + (roomSimpleHash get _i)#2};
