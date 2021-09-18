@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4662.8672,24.671236,4181.4028};
-		dir[]={-0.035351936,-0.52666086,0.8493824};
-		up[]={-0.021901762,0.85006762,0.52622062};
-		aside[]={0.99916625,-6.9128873e-008,0.041584566};
+		pos[]={4667.4653,16.383936,4206.8867};
+		dir[]={-0.082241021,-0.5640493,0.82163543};
+		up[]={-0.0561774,0.82574117,0.56124479};
+		aside[]={0.9950279,-3.7252903e-009,0.09959662};
 	};
 };
 binarizationWanted=0;
@@ -241,7 +241,7 @@ class Mission
 							flags=5;
 							class Attributes
 							{
-								init="this allowDamage false;" \n "this animate [""door_1_rot"", 0];" \n "this setVariable[""bis_disabled_Door_1"", 1, true];";
+								init="this allowDamage false;" \n "this animate [""door_1_rot"", 0, true];" \n "";
 								name="frontDoor";
 							};
 							id=81;
