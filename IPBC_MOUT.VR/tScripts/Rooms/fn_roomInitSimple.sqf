@@ -223,7 +223,7 @@ roomIntersectionOpfor = [
 	intersection_opfor_5
 ];
 
-roomSimple = createHashMapFromArray [
+roomSimpleHash = createHashMapFromArray [
 	[1, [roomBoxSmall, roomBoxSmallOpfor]],
 	[2, [roomBoxLarge, roomBoxLargeOpfor]],
 	[3, [roomTubeLong, roomTubeLongOpfor]],
@@ -237,33 +237,4 @@ roomSimple = createHashMapFromArray [
 	[11, [roomIntersection, roomIntersectionOpfor]]
 ];
 
-opforAll = [
-	roomBoxSmallOpfor +
-	roomBoxLargeOpfor +
-	roomTubeLongOpfor +
-	roomTubeWideOpfor +
-	roomLShapedSmallLeftOpfor +
-	roomLShapedSmallRightOpfor +
-	roomLShapedLargeLOpfor +
-	roomLShapedLargeROpfor +
-	roomTShapedSmallOpfor +
-	roomTShapedLargeOpfor +
-	roomIntersectionOpfor
-];
-
-roomAll = [
-	roomBoxSmall +
-	roomBoxLarge +
-	roomTubeLong +
-	roomTubeWide +
-	roomLShapedSmallLeft +
-	roomLShapedSmallRight +
-	roomLShapedLargeL +
-	roomLShapedLargeR +
-	roomTShapedSmall +
-	roomTShapedLarge +
-	roomIntersection
-];
-
-{{ hideObject _x } foreach _x} foreach opforAll;
-{{ hideObject _x } foreach _x} foreach roomAll;
+for "_i" from 1 to (count roomSimpleHash) do {{hideObject _x} forEach (roomSimpleHash get _i)#0 + (roomSimpleHash get _i)#1};
