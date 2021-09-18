@@ -28,8 +28,11 @@ class tScripts {
 
 	class rooms {
 		file = "tScripts\Rooms";
-		class roomInit {};
-		class roomSimple {};
+		class roomInitSimple {};
+		class roomController {};
+		class roomClear {};
+		class roomSpawnFloor {};
+		class roomSpawnAI {};
 	};
 
 	class kits {
