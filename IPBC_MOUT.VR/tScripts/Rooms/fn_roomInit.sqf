@@ -39,10 +39,26 @@ roomTubeLong = [
 	tube_long_6
 ];
 
+roomTubeLongOpfor = [
+	tube_long_opfor_0,
+	tube_long_opfor_1,
+	tube_long_opfor_2,
+	tube_long_opfor_3,
+	tube_long_opfor_4
+];
+
 roomTubeWide = [
 	tube_wide_1,
 	tube_wide_2,
 	tube_wide_3
+];
+
+roomTubeWideOpfor = [
+	tube_wide_opfor_0,
+	tube_wide_opfor_1,
+	tube_wide_opfor_2,
+	tube_wide_opfor_3,
+	tube_wide_opfor_4
 ];
 
 roomLShapedSmallLeft = [
@@ -57,6 +73,12 @@ roomLShapedSmallLeft = [
 	LShaped_Small_Left_8
 ];
 
+roomLShapedSmallLeftOpfor = [
+	LShaped_Small_Left_opfor_0,
+	LShaped_Small_Left_opfor_1,
+	LShaped_Small_Left_opfor_2
+];
+
 roomLShapedSmallRight = [
 	LShaped_Small_Right_0,
 	LShaped_Small_Right_1,
@@ -67,6 +89,12 @@ roomLShapedSmallRight = [
 	LShaped_Small_Right_6,
 	LShaped_Small_Right_7,
 	LShaped_Small_Right_8
+];
+
+roomLShapedSmallRightOpfor = [
+	LShaped_Small_Right_opfor_0,
+	LShaped_Small_Right_opfor_1,
+	LShaped_Small_Right_opfor_2
 ];
 
 roomLShapedLargeL = [
@@ -127,6 +155,13 @@ roomTShapedSmall = [
 	TShaped_Small_10
 ];
 
+roomTShapedSmallOpfor = [
+	TShaped_Small_opfor_0,
+	TShaped_Small_opfor_1,
+	TShaped_Small_opfor_2,
+	TShaped_Small_opfor_3
+];
+
 roomTShapedLarge =[
 	TShaped_Large_0,
 	TShaped_Large_1,
@@ -137,6 +172,16 @@ roomTShapedLarge =[
 	TShaped_Large_6,
 	TShaped_Large_7,
 	TShaped_Large_8
+];
+
+roomTShapedLargeOpfor =[
+	TShaped_Large_opfor_0,
+	TShaped_Large_opfor_1,
+	TShaped_Large_opfor_2,
+	TShaped_Large_opfor_3,
+	TShaped_Large_opfor_4,
+	TShaped_Large_opfor_5,
+	TShaped_Large_opfor_6
 ];
 
 roomIntersection = [
@@ -181,22 +226,28 @@ roomIntersectionOpfor = [
 roomSimple = createHashMapFromArray [
 	[1, [roomBoxSmall, roomBoxSmallOpfor]],
 	[2, [roomBoxLarge, roomBoxLargeOpfor]],
-	[3, [roomTubeLong, roomBoxSmallOpfor]],
-	[4, [roomTubeWide, roomBoxSmallOpfor]],
-	[5, [roomLShapedSmallLeft, roomBoxSmallOpfor]],
-	[6, [roomLShapedSmallRight, roomBoxSmallOpfor]],
+	[3, [roomTubeLong, roomTubeLongOpfor]],
+	[4, [roomTubeWide, roomTubeWideOpfor]],
+	[5, [roomLShapedSmallLeft, roomLShapedSmallLeftOpfor]],
+	[6, [roomLShapedSmallRight, roomLShapedSmallRightOpfor]],
 	[7, [roomLShapedLargeL, roomLShapedLargeLOpfor]],
 	[8, [roomLShapedLargeR, roomLShapedLargeROpfor]],
-	[9, [roomTShapedSmall, roomBoxSmallOpfor]],
-	[10, [roomTShapedLarge, roomBoxSmallOpfor]],
+	[9, [roomTShapedSmall, roomTShapedSmallOpfor]],
+	[10, [roomTShapedLarge, roomTShapedLargeOpfor]],
 	[11, [roomIntersection, roomIntersectionOpfor]]
 ];
 
 opforAll = [
 	roomBoxSmallOpfor +
 	roomBoxLargeOpfor +
+	roomTubeLongOpfor +
+	roomTubeWideOpfor +
+	roomLShapedSmallLeftOpfor +
+	roomLShapedSmallRightOpfor +
 	roomLShapedLargeLOpfor +
 	roomLShapedLargeROpfor +
+	roomTShapedSmallOpfor +
+	roomTShapedLargeOpfor +
 	roomIntersectionOpfor
 ];
 
