@@ -3,7 +3,7 @@
 
 params ["_controller", "_frontDoor", "_floorSetHash", "_roomTrigger"];
 
-_controller addAction [format ["<img image='Data\7Cav_Logo.paa' /> 7th Cavalry Room Controller"], {}, [], 1.5, true, true, "", "true", 5];
+_controller addAction [format ["<img image='Data\7Cav_Logo.paa' /> 7th Cavalry Room Controller"], {}, [], 1.5, true, false, "", "true", 5];
 
 _controller addAction [
 	"  Randomize Room",
@@ -24,7 +24,7 @@ _controller addAction [
 	5
 ];
 
-_controller addAction ["---", {}, nil, 1.5, true, true, "", "true", 5];
+_controller addAction ["---", {}, nil, 1.5, true, false, "", "true", 5];
 
 _controller addAction [
 	"  Toggle Opfor spawning",
@@ -32,13 +32,13 @@ _controller addAction [
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
 		if (
-			_target getVariable ["spawningAI", true]
+			_target getVariable ["spawningAI", false] == false
 		) then {
-			[_target, ["spawningAI", false]] remoteExec ["setvariable", 0, true];
-			hint "AI spawning toggled off";
-		} else {
 			[_target, ["spawningAI", true]] remoteExec ["setvariable", 0, true];
 			hint "AI spawning toggled on";
+		} else {
+			[_target, ["spawningAI", false]] remoteExec ["setvariable", 0, true];
+			hint "AI spawning toggled off";
 		}
 	},
 	nil,
@@ -106,7 +106,7 @@ _controller addAction [
 	5
 ];
 
-_controller addAction ["---", {}, nil, 1.5, true, true, "", "true", 5];
+_controller addAction ["---", {}, nil, 1.5, true, false, "", "true", 5];
 
 _controller addAction [
 	"  Toggle Furniture Spawning",

@@ -18,7 +18,7 @@ if (
 };
 
 if (
-	_target getVariable ["spawningAI", true]
+	_target getVariable ["spawningAI", false]
 ) then {
 	[_target, _floorSetHash, _floorNum] call tScripts_fnc_roomSpawnAI;
 };

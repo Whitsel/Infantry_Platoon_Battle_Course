@@ -10,7 +10,7 @@ _controller setObjectTextureGlobal [3, format["#(argb,512,512,1)r2t(%1,1)", _rtt
 
 [_screen, ["display", 0]] remoteExec ["setvariable", 0, true];
 
-_screen addAction [format ["<img image='Data\7Cav_Logo.paa' /> 7th Cavalry Camera Controller"], {}, [], 1.5, true, true, "", "true", 5];
+_screen addAction [format ["<img image='Data\7Cav_Logo.paa' /> 7th Cavalry Camera Controller"], {}, [], 1.5, true, false, "", "true", 5];
 
 _screen addAction [
 	"  Display Overhead Camera",
@@ -98,7 +98,7 @@ _screen addAction [
 	nil,
 	1.5,
 	true,
-	true,
+	false,
 	"",
 	"true",
 	5
@@ -163,7 +163,7 @@ _screen addAction [
 	nil,
 	1.5,
 	true,
-	true,
+	false,
 	"",
 	"true",
 	5
@@ -204,6 +204,5 @@ _screen addAction [
 ];
 
 [_screen, ["helmetCam", false]] remoteExec ["setvariable", 0, true];
-
 
 diag_log format ["tScripts Logging: Camera screen controls initialized for %1", _screen]
