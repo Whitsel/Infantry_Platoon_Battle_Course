@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=587;
+		nextID=638;
 	};
 	class Camera
 	{
-		pos[]={4664.3994,13.208358,4210.5234};
-		dir[]={-0.07007768,-0.36005151,0.93043715};
-		up[]={-0.027044771,0.93290806,0.35907131};
-		aside[]={0.99724239,-6.8452209e-008,0.075105719};
+		pos[]={4664.2515,15.314051,4197.3867};
+		dir[]={-0.022074366,-0.38991037,0.92073286};
+		up[]={-0.0093464674,0.92083418,0.38983104};
+		aside[]={0.99977154,3.2359094e-007,0.023964699};
 	};
 };
 binarizationWanted=0;
@@ -262,7 +262,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=47;
+		items=46;
 		class Item0
 		{
 			dataType="Layer";
@@ -9079,16 +9079,6 @@ class Mission
 			};
 			id=617;
 			type="B_supplyCrate_F";
-		};
-		class Item46
-		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={4658.6372,5,4215.6338};
-			};
-			title="Add civilian spawn control";
-			id=746;
 		};
 	};
 };
