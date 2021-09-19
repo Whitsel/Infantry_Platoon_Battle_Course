@@ -11,7 +11,7 @@ if(!isMultiplayer) then {
 } foreach allMissionObjects "VR_Billboard_01_F";
 
 {
-	for "_i" from 0 to 6 do {
+	for "_i" from 0 to 5 do {
 		_x setObjectMaterialGlobal [_i, "A3\Structures_F\Data\Windows\glass.rvmat"];
 		_x setObjectTextureGlobal [_i, "#(rgb,8,8,3)color(0,0,0,1)"]
 	}
