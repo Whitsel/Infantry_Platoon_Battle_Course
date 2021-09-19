@@ -55,7 +55,7 @@ _controller addAction [
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
-		_spawnChanceAI = (_target getVariable ["spawnChanceAI", 0.20]);
+		_spawnChanceAI = (_target getVariable ["spawnChanceAI", 0.3]);
 
 		if (
 			_spawnChanceAI >= 1
@@ -83,7 +83,7 @@ _controller addAction [
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
-		_spawnChanceAI = (_target getVariable ["spawnChanceAI", 0.2]);
+		_spawnChanceAI = (_target getVariable ["spawnChanceAI", 0.3]);
 
 		if (
 			_spawnChanceAI <= 0
@@ -137,7 +137,7 @@ _controller addAction [
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
-		_spawnChanceCiv = (_target getVariable ["spawnChanceCiv", 0.20]);
+		_spawnChanceCiv = (_target getVariable ["spawnChanceCiv", 0.2]);
 
 		if (
 			_spawnChanceCiv >= 1
@@ -219,7 +219,7 @@ _controller addAction [
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
-		_spawnChanceFurniture = (_target getVariable ["spawnChanceFurniture", 0.20]);
+		_spawnChanceFurniture = (_target getVariable ["spawnChanceFurniture", 0.3]);
 
 		if (
 			_spawnChanceFurniture >= 1
@@ -247,7 +247,7 @@ _controller addAction [
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
-		_spawnChanceFurniture = (_target getVariable ["spawnChanceFurniture", 0.20]);
+		_spawnChanceFurniture = (_target getVariable ["spawnChanceFurniture", 0.3]);
 
 		if (
 			_spawnChanceFurniture <= 0
