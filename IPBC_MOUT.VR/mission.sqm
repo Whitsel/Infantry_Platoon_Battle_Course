@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=824;
+		nextID=827;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=536;
+		nextID=587;
 	};
 	class Camera
 	{
-		pos[]={4665.2954,9.1942406,4218.3608};
-		dir[]={-0.15559433,-0.46584007,0.87122947};
-		up[]={-0.081903368,0.88487518,0.45860037};
-		aside[]={0.98450708,-1.2887176e-007,0.1758211};
+		pos[]={4664.3994,13.208358,4210.5234};
+		dir[]={-0.07007768,-0.36005151,0.93043715};
+		up[]={-0.027044771,0.93290806,0.35907131};
+		aside[]={0.99724239,-6.8452209e-008,0.075105719};
 	};
 };
 binarizationWanted=0;
@@ -6166,6 +6166,7 @@ class Mission
 									flags=5;
 									class Attributes
 									{
+										init="this setObjectTextureGlobal [0, ""#(argb,8,8,3)color(0,0,0,0.75,ca)""]";
 									};
 									id=804;
 									type="Land_VR_Shape_01_cube_1m_F";
@@ -6541,7 +6542,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={4663.875,6.7625761,4225};
-										angles[]={0,1.5707966,0};
+										angles[]={0,1.5707964,0};
 									};
 									side="Empty";
 									flags=5;
@@ -6573,7 +6574,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={4663.875,6.7625761,4223};
-										angles[]={0,1.5707966,0};
+										angles[]={0,1.5707964,0};
 									};
 									side="Empty";
 									flags=5;
@@ -6588,11 +6589,11 @@ class Mission
 						};
 					};
 					id=817;
-					atlOffset=-2.2853951;
+					atlOffset=0.42420959;
 				};
 			};
 			id=91;
-			atlOffset=-1.1421218;
+			atlOffset=0.2151804;
 		};
 		class Item1
 		{
@@ -9046,11 +9047,10 @@ class Mission
 			dataType="Comment";
 			class PositionInfo
 			{
-				position[]={4664.7271,5.0500002,4226.3979};
+				position[]={4664.625,5,4230.125};
 			};
 			title="Add check for BluFor in area";
 			id=571;
-			atlOffset=0.050000191;
 		};
 		class Item44
 		{
