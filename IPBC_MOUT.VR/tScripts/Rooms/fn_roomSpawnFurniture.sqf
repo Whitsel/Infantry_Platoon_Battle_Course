@@ -3,7 +3,7 @@
 
 params ["_target", "_floorSetHash", "_floorNum"];
 
-_spawnChance = _target getVariable ["spawnChanceFurniture", 0.2];
+_spawnChance = _target getVariable ["spawnChanceFurniture", 0.3];
 
 if (_target getVariable ["spawningFurniture", false]) then {
 	{
@@ -11,7 +11,7 @@ if (_target getVariable ["spawningFurniture", false]) then {
 		{
 			_x hideObject false;
 		}
-	} foreach (roomSimpleHash get _floorNum)#2;
+	} foreach (_floorSetHash get _floorNum)#2;
 };
 
 diag_log format["tScripts Logging: Floor spawned %1", _floorNum];

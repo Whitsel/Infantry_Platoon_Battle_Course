@@ -162,6 +162,7 @@ if (_target getVariable ["spawningAI", false]) then {
 					private _civRand = _civArray select _rand;
 					private _unitCiv = (createGroup east) createUnit [_civRand, getposATL _x, [], 0.5, "NONE"];
 					_unitCiv setDir random 360;
+					_unitCiv disableAI "PATH";
 				} else {
 					private _unitOpfor = (createGroup east) createUnit ["O_soldierU_F", getposATL _x, [], 0.5, "NONE"];
 					_unitOpfor setDir random 360;
@@ -187,7 +188,7 @@ if (_target getVariable ["spawningAI", false]) then {
 				}
 			}
 		}
-	} forEach (roomSimpleHash get _floorNum)#1
+	} forEach (_floorSetHash get _floorNum)#1
 };
 
 diag_log format["tScripts Logging: AI spawned %1", _floorNum];
