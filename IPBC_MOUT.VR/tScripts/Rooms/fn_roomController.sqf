@@ -27,7 +27,7 @@ _controller addAction [
 _controller addAction ["---", {}, nil, 1.5, true, false, "", "true", 5];
 
 _controller addAction [
-	"  Toggle Opfor spawning",
+	"  Toggle AI spawning",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
@@ -51,7 +51,7 @@ _controller addAction [
 ];
 
 _controller addAction [
-	"  Increase Opfor Spawn Chance",
+	"  Increase AI Spawn Chance",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
@@ -79,7 +79,7 @@ _controller addAction [
 ];
 
 _controller addAction [
-	"  Decrease Opfor Spawn Chance", //Strange behavior first time it hits 0%
+	"  Decrease AI Spawn Chance", //Strange behavior first time it hits 0%
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
@@ -95,6 +95,88 @@ _controller addAction [
 			[_target, ["spawnChanceAI", _spawnChanceAI]] remoteExec ["setvariable", 0, true];
 
 			hint format["AI spawn chance set to %1 %",_spawnChanceAI * 100];
+		};
+	},
+	nil,
+	1.5,
+	true,
+	false,
+	"",
+	"true",
+	5
+];
+
+_controller addAction ["---", {}, nil, 1.5, true, false, "", "true", 5];
+
+_controller addAction [
+	"  Toggle Civilian spawning",
+	{
+		params ["_target", "_caller", "_actionId", "_arguments"];
+
+		if (
+			_target getVariable ["spawningCiv", false] == false
+		) then {
+			[_target, ["spawningCiv", true]] remoteExec ["setvariable", 0, true];
+			hint "Civlian spawning toggled on";
+		} else {
+			[_target, ["spawningCiv", false]] remoteExec ["setvariable", 0, true];
+			hint "Civilian spawning toggled off";
+		}
+	},
+	nil,
+	1.5,
+	true,
+	false,
+	"",
+	"true",
+	5
+];
+
+_controller addAction [
+	"  Increase Civilian Spawn Chance",
+	{
+		params ["_target", "_caller", "_actionId", "_arguments"];
+
+		_spawnChanceCiv = (_target getVariable ["spawnChanceCiv", 0.20]);
+
+		if (
+			_spawnChanceCiv >= 1
+		) then {
+			hint "Spawn Chance already set to 100%";
+		} else {
+			_spawnChanceCiv = _spawnChanceCiv + .05;
+
+			[_target, ["spawnChanceCiv", _spawnChanceCiv]] remoteExec ["setvariable", 0, true];
+
+			hint format["Civilian spawn chance set to %1 %",_spawnChanceCiv * 100];
+		};
+	},
+	nil,
+	1.5,
+	true,
+	false,
+	"",
+	"true",
+	5
+];
+
+_controller addAction [
+	"  Decrease Civilian Spawn Chance", //Strange behavior first time it hits 0%
+	{
+		params ["_target", "_caller", "_actionId", "_arguments"];
+
+		_spawnChanceCiv = (_target getVariable ["spawnChanceCiv", 0.2]);
+
+		if (
+			_spawnChanceCiv <= 0
+		) then {
+			hint "Spawn Chance already set to 0%";
+		} else {
+			_spawnChanceCiv = _spawnChanceCiv - .05;
+
+			[_target, ["spawnChanceCiv", _spawnChanceCiv]] remoteExec ["setvariable", 0, true];
+
+			hint format["Civilian spawn chance set to %1 %",_spawnChanceCiv * 100];
 		};
 	},
 	nil,
