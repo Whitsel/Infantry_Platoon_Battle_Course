@@ -11,10 +11,14 @@ if (_state == "init") then {
 
 	player call FUNC(bAssistantMachineGunner);
 
+	player addEventHandler ["Respawn","_this call tScripts_fnc_bAssistantMachineGunner"];
+
 };
 
 if (_state == "respawn") then {
 
 	player call FUNC(assistantMachineGunner);
+
+	player addEventHandler ["Respawn","_this call tScripts_fnc_bAssistantMachineGunner"];
 
 };

@@ -13,6 +13,8 @@ if (_state == "init") then {
 
 	player call FUNC(cRangeMaster);
 
+	player addEventHandler ["Respawn","_this call tScripts_fnc_cRangeMaster"];
+
 	[] call FUNC(tools);
 	[] call FUNC(pauseEx);
 	[] call FUNC(wallHacks);
@@ -32,5 +34,7 @@ if (_state == "respawn") then {
 	[] call FUNC(wallHacks);
 
 	player call FUNC(rangeMaster);
+
+	player addEventHandler ["Respawn","_this call tScripts_fnc_cRangeMaster"];
 
 };

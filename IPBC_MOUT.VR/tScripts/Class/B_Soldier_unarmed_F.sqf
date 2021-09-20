@@ -11,10 +11,14 @@ if (_state == "init") then {
 
 	player call FUNC(bTeamLeader);
 
+	player addEventHandler ["Respawn","_this call tScripts_fnc_bTeamLeader"];
+
 };
 
 if (_state == "respawn") then {
 
 	player call FUNC(teamLeader);
+
+	player addEventHandler ["Respawn","_this call tScripts_fnc_bTeamLeader"];
 
 };
