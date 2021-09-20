@@ -167,7 +167,7 @@ if (_target getVariable ["spawningAI", false]) then {
 					private _unitOpfor = (createGroup east) createUnit ["O_soldierU_F", getposATL _x, [], 0.5, "NONE"];
 					_unitOpfor setDir random 360;
 
-					private _randkit = floor random 4 + 1;
+					private _randkit = ceil random 4;
 					switch (_randKit) do {
 						case 1: {_unitOpfor call tScripts_fnc_oRifleman};
 						case 2: {_unitOpfor call tScripts_fnc_oGrenadier};
@@ -179,7 +179,7 @@ if (_target getVariable ["spawningAI", false]) then {
 				private _unitOpfor = (createGroup east) createUnit ["O_soldierU_F", getposATL _x, [], 0.5, "NONE"];
 				_unitOpfor setDir random 360;
 
-				private _randkit = floor random 4 + 1;
+				private _randkit = ceil random 4;
 				switch (_randKit) do {
 					case 1: {_unitOpfor call tScripts_fnc_oRifleman};
 					case 2: {_unitOpfor call tScripts_fnc_oGrenadier};
