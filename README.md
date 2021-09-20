@@ -1,10 +1,10 @@
-Infantry Platoon Battle Course
+# Infantry Platoon Battle Course
 Arma 3 Repository for assembling Infantry Platoon Battle Course mission files. All mission are inteded to be open for use by any units or individuals so interested as well as modified to meet their needs.
 
-# Steam Workshop Collection
+## Steam Workshop Collection
 https://steamcommunity.com/workshop/filedetails/?id=2604918148
 
-## Missions
+### Missions
 - [MOUT (Military Operations in Urban Terrain)](https://steamcommunity.com/sharedfiles/filedetails/?id=2605376543)
   - Automated random room generation going from bare simple rooms to complex systems and mechanized infantry
 - Land Navigaiton (WIP)
