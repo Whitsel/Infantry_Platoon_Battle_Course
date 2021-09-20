@@ -14,7 +14,7 @@ _kits = [
 		"crangeMaster",
 		iconManCommander2,
 		"(player getVariable ['instructor', false])",
-		"<t color='#FFD700'>"
+		colorHexGold
 	],
 	[
 		"Platoon Leader",
@@ -50,7 +50,7 @@ _box addAction [format ["<img image='Data\7Cav_Logo.paa' /> 7th Cavalry Equipmen
 		"_fileName",
 		["_icon", iconMan],
 		["_cond", "(!(_target getVariable ['locked', false]) && (_this getVariable ['role','']) == 'inf') || ((_this getVariable ['role','']) == 'rangeMaster')"],
-		["_color", "<t color='#155492'>"]
+		["_color", colorHexWest]
 	];
 
 	_box addAction ["  " + _color + _icon + "</t>" + _role, {

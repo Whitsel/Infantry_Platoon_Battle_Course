@@ -1,4 +1,6 @@
 
+#include "script_macros.hpp"
+
 #define PREFIX tScripts
 
 #define iconManCommander3 "<img size='1' image='\a3\ui_f\data\Map\VehicleIcons\iconManCommander3_ca'/>"
@@ -39,4 +41,18 @@
 #define iconHeal "<img size='1' image='\a3\ui_f\data\Map\VehicleIcons\iconHeal_ca'/>"
 #define iconExplosive "<img size='1' image='\a3\ui_f\data\Map\VehicleIcons\iconExplosive_ca'/>"
 
-#include "script_macros.hpp"
+#define iconEdenMan "<img size='1' image='\a3\3den\data\Displays\Display3DEN\PanelRight\modeObjects_ca'/>"
+#define iconEdenGroup "<img size='1' image='\a3\3den\data\Displays\Display3DEN\PanelRight\modeGroups_ca'/>"
+#define iconEdenObjects "<img size='1' image='\a3\3den\data\Displays\Display3DEN\ToolBar\widget_local_ca'/>"
+#define iconEdenRefresh "<img size='1' image='\a3\3den\data\Displays\Display3DEN\ToolBar\widget_rotation_off_ca'/>"
+#define iconEdenUp "<img size='1' image='\a3\3den\data\Displays\Display3DENSave\sort_up_ca'/>"
+#define iconEdenDown "<img size='1' image='\a3\3den\data\Displays\Display3DENSave\sort_down_ca'/>"
+#define iconEdenTreeExpand "<img size='1' image='\a3\3den\data\Displays\Display3DEN\tree_expand_ca'/>"
+#define iconEdenTreeCollapse "<img size='1' image='\a3\3den\data\Displays\Display3DEN\tree_collapse_ca'/>"
+
+#define colorHexWest "<t color='#004D9A'>"
+#define colorHexEast "<t color='#800000'>"
+#define colorHexGuer "<t color='#008000'>"
+#define colorHexCiv "<t color='#660080'>"
+#define colorHexUnknown "<t color='#B39A00'>"
+#define colorHexGold "<t color='#FFD700'>"

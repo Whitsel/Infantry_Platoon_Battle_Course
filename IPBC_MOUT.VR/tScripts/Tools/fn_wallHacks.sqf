@@ -27,7 +27,7 @@ player addAction ["  <t color='#ffffff'><img size='1' image='\a3\ui_f\data\IGUI\
 	"(player getVariable ['showWallhacks', false]) && (player getVariable ['showTools', false])" 	// condition
 ];
 
-player addAction ["    <t color='#00ff00'><img size='1' image='\a3\ui_f\data\IGUI\Cfg\Radar\viewdir_ca'/></t> AI: Turn Wallhacks On", {
+player addAction ["    " + colorHexGuer + "<img size='1' image='\a3\ui_f\data\IGUI\Cfg\Radar\viewdir_ca'/></t> AI: Turn Wallhacks On", {
 		params ["_target", "_caller", "_actionId", "_arguments"];
 		player setVariable ["showWallhacksAI", true];
 		player setVariable ["showWallhacksPlayers", false];
@@ -51,7 +51,7 @@ player addAction ["    <t color='#00ff00'><img size='1' image='\a3\ui_f\data\IGU
 	"(player getVariable ['showWallhacks', false]) && !(player getVariable ['showWallhacksAI', false]) && (player getVariable ['showTools', false])" 	// condition
 ];
 
-player addAction ["    <t color='#ff0000'><img size='1' image='\a3\ui_f\data\IGUI\Cfg\Radar\viewdir_ca'/></t> AI: Turn Wallhacks Off", {
+player addAction ["    " + colorHexEast + "<img size='1' image='\a3\ui_f\data\IGUI\Cfg\Radar\viewdir_ca'/></t> AI: Turn Wallhacks Off", {
 		params ["_target", "_caller", "_actionId", "_arguments"];
 		player setVariable ["showWallhacksAI", false];
 		onEachFrame {
@@ -74,7 +74,7 @@ player addAction ["    <t color='#ff0000'><img size='1' image='\a3\ui_f\data\IGU
 	"(player getVariable ['showWallhacks', false]) && (player getVariable ['showWallhacksAI', false]) && (player getVariable ['showTools', false])" 	// condition
 ];
 
-player addAction ["    <t color='#00ff00'><img size='1' image='\a3\ui_f\data\IGUI\Cfg\Radar\viewdir_ca'/></t> Players: Turn Wallhacks On", {
+player addAction ["    " + colorHexGuer + "<img size='1' image='\a3\ui_f\data\IGUI\Cfg\Radar\viewdir_ca'/></t> Players: Turn Wallhacks On", {
 		params ["_target", "_caller", "_actionId", "_arguments"];
 		player setVariable ["showWallhacksPlayers", true];
 		player setVariable ["showWallhacksAI", false];
@@ -98,7 +98,7 @@ player addAction ["    <t color='#00ff00'><img size='1' image='\a3\ui_f\data\IGU
 	"(player getVariable ['showWallhacks', false]) && !(player getVariable ['showWallhacksPlayers', false]) && (player getVariable ['showTools', false])" 	// condition
 ];
 
-player addAction ["    <t color='#ff0000'><img size='1' image='\a3\ui_f\data\IGUI\Cfg\Radar\viewdir_ca'/></t> Players: Turn Wallhacks Off", {
+player addAction ["    " + colorHexEast + "<img size='1' image='\a3\ui_f\data\IGUI\Cfg\Radar\viewdir_ca'/></t> Players: Turn Wallhacks Off", {
 		params ["_target", "_caller", "_actionId", "_arguments"];
 		player setVariable ["showWallhacksPlayers", false];
 		onEachFrame {

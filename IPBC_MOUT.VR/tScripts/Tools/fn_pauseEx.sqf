@@ -3,7 +3,7 @@
 
 params [""];
 
-player addAction ["  <t color='#ff0000'><img size='1' image='\a3\ui_f\data\GUI\Cfg\Ranks\captain_gs'/></t> Pause Exercise", {
+player addAction ["  " + colorHexEast + "<img size='1' image='\a3\ui_f\data\GUI\Cfg\Ranks\captain_gs'/></t> Pause Exercise", {
 		params ["_target", "_caller", "_actionId", "_arguments"];
 		[missionNameSpace, ["aiFreeze", true]] remoteExec ["setvariable", 0, true];
 		_AI = (
@@ -41,7 +41,7 @@ player addAction ["  <t color='#ff0000'><img size='1' image='\a3\ui_f\data\GUI\C
 	true		// unconscious
 ];
 
-player addAction ["  <t color='#00ff00'><img size='1' image='\a3\ui_f\data\GUI\RscCommon\RscHTML\arrow_right_ca'/></t> Play Exercise", {
+player addAction ["  " + colorHexGuer + "<img size='1' image='\a3\ui_f\data\GUI\RscCommon\RscHTML\arrow_right_ca'/></t> Play Exercise", {
 		params ["_target", "_caller", "_actionId", "_arguments"];
 		[missionNameSpace, ["aiFreeze", false]] remoteExec ["setvariable", 0, true];
 		_AI = (

@@ -3,7 +3,7 @@
 
 params [""];
 
-player addAction ["[Open Range Master Tools]", {
+player addAction [iconEdenTreeExpand + " Open Range Master Tools", {
 		params ["_target", "_caller", "_actionId", "_arguments"];
 		player setVariable ["showTools", true];
 		},
@@ -19,7 +19,7 @@ player addAction ["[Open Range Master Tools]", {
 		""			// memoryPoint
 ];
 
-player addAction ["[Close Range Master Tools]", {
+player addAction [iconEdenTreeCollapse + "Close Range Master Tools", {
 		params ["_target", "_caller", "_actionId", "_arguments"];
 		player setVariable ["showTools", false];
 		},

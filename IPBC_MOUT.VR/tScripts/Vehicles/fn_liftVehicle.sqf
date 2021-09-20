@@ -3,7 +3,7 @@
 
 params ["_vehicle"];
 
-_vehicle addAction ["<t color='#00ff00'><img size='1' image='\a3\ui_f\data\IGUI\Cfg\Actions\unloadVehicle_ca'/> Raise", {
+_vehicle addAction [colorHexGuer + "<img size='1' image='\a3\ui_f\data\IGUI\Cfg\Actions\unloadVehicle_ca'/> Raise", {
 		params ["_target", "_caller", "_actionId", "_arguments"]; // script
 		_pos = getPos _target;
 		_target setPos [_pos#0, _pos#1, 0.1];
