@@ -11,14 +11,10 @@ if (_state == "init") then {
 
 	player call FUNC(oRifleman);
 
-	player addEventHandler ["Respawn","_this call tScripts_fnc_oRifleman"];
-
 };
 
 if (_state == "respawn") then {
 
 	player call FUNC(oRifleman);
-
-	player addEventHandler ["Respawn","_this call tScripts_fnc_oRifleman"];
 
 };

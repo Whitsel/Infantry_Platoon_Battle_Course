@@ -11,14 +11,10 @@ if (_state == "init") then {
 
 	player call FUNC(bAntiTankGunner);
 
-	player addEventHandler ["Respawn","_this call tScripts_fnc_bAntiTankGunner"];
-
 };
 
 if (_state == "respawn") then {
 
 	player call FUNC(antiTankGunner);
-
-	player addEventHandler ["Respawn","_this call tScripts_fnc_bAntiTankGunner"];
 
 };

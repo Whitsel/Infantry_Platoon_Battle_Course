@@ -63,4 +63,14 @@ _unit setUnitLoadout [
 	]
 ];
 
+_unit removeAllEventHandlers "Respawn";
+
+_unit addEventHandler [
+	"Respawn",
+	{
+		params ["_unit", "_corpse"];
+		_unit call tScripts_fnc_bCrewman;
+	}
+];
+
 diag_log format ["tScripts Logging: %1 had the Crewman kit applied",name _unit]
