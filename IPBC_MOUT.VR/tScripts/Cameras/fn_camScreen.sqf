@@ -173,11 +173,15 @@ _screen addAction [
 	"  Attach Helmet Cam",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
-		camera_3 attachTo [_caller, [0.18, 0, 0.2], "Head"];
-		cam_3 hideObjectGlobal true;
+		_arguments params ["_screen", "_rtt_3"];
+		private _camHash = missionNameSpace getVariable ["tScripts_camerasHelmet", []];
+		private _cam = (_camHash get _rtt_3)#0;
+		private _camHolder = (_camHash get _rtt_3)#1;
+		_cam attachTo [_caller, [0.18, 0, 0.2], "Head"];
+		_cam hideObjectGlobal true;
 		[_target, ["helmetCam", true]] remoteExec ["setvariable", 0, true];
 	},
-	_screen,
+	[_screen, _rtt_3],
 	1.5,
 	true,
 	true,
@@ -190,11 +194,15 @@ _screen addAction [
 	"  Return Helmet Cam",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
-		camera_3 attachTo [cam_3 ,[0, 0, 0]];
-		cam_3 hideObjectGlobal false;
+		_arguments params ["_screen", "_rtt_3"];
+		private _camHash = missionNameSpace getVariable ["tScripts_camerasHelmet", []];
+		private _cam = (_camHash get _rtt_3)#0;
+		private _camHolder = (_camHash get _rtt_3)#1;
+		_cam attachTo [_camHolder ,[0, 0, 0]];
+		_cam hideObjectGlobal false;
 		[_target, ["helmetCam", false]] remoteExec ["setvariable", 0, true];
 	},
-	_screen,
+	[_screen, _rtt_3],
 	1.5,
 	true,
 	true,

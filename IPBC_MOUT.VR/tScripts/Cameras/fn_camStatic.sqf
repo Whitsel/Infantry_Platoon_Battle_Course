@@ -7,7 +7,7 @@ _camPos hideObjectGlobal true;
 _camTarget hideObjectGlobal true;
 
 _cam = "camera" camCreate getPos _camPos;
-_cam attachTo [_camPos];
+_cam attachTo [_camPos, [0, 0, 0]];
 _cam cameraEffect ["Internal", "Back", _rtt];
 _cam camSetFov _fov;
 _rtt setPiPEffect [_effect];

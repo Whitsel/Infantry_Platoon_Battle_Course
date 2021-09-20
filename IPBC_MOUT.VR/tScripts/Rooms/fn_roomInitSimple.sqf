@@ -343,7 +343,7 @@ roomIntersectionFurniture = [
 	intersection_furniture_7
 ];
 
-roomSimpleHash = createHashMapFromArray [
+roomHashSimple = createHashMapFromArray [
 	[1, [roomBoxSmall, roomBoxSmallOpfor, roomBoxSmallFurniture]],
 	[2, [roomBoxLarge, roomBoxLargeOpfor, roomBoxLargeFurniture]],
 	[3, [roomTubeLong, roomTubeLongOpfor, roomTubeLongFurniture]],
@@ -357,4 +357,4 @@ roomSimpleHash = createHashMapFromArray [
 	[11, [roomIntersection, roomIntersectionOpfor, roomIntersectionFurniture]]
 ];
 
-for "_i" from 1 to (count roomSimpleHash) do {{hideObject _x} forEach (roomSimpleHash get _i)#0 + (roomSimpleHash get _i)#1 + (roomSimpleHash get _i)#2};
+for "_i" from 1 to (count roomHashSimple) do {{hideObject _x} forEach (roomHashSimple get _i)#0 + (roomHashSimple get _i)#1 + (roomHashSimple get _i)#2};
