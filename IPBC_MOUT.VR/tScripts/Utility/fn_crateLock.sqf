@@ -13,7 +13,7 @@ _box addEventHandler ["ContainerOpened", {
         };
 }];
 
-_box addAction ["  " + colorHexEast + "<img size='1' image='\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\getout_ca'/>Lock Crate</t>", {
+_box addAction ["  " + colorHexEast + iconKey + "</t> Lock Crate", {
         params ["_target", "_caller", "_actionId", "_arguments"];
         [_target, ["locked", true]] remoteExec ["setvariable", 0, true];
     },
@@ -29,7 +29,7 @@ _box addAction ["  " + colorHexEast + "<img size='1' image='\a3\ui_f\data\IGUI\C
     ""
 ];
 
-_box addAction ["  " + colorHexGuer + "<img size='1' image='\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\getin_ca'/>Unlock Crate</t>", {
+_box addAction ["  " + colorHexGuer + iconKey + "</t> Unlock Crate", {
         params ["_target", "_caller", "_actionId", "_arguments"];
         [_target, ["locked", false]] remoteExec ["setvariable", 0, true];
     },

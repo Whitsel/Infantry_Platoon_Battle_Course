@@ -40,6 +40,7 @@
 #define iconVirtual "<img size='1' image='\a3\ui_f\data\Map\VehicleIcons\iconVirtual_ca'/>"
 #define iconHeal "<img size='1' image='\a3\ui_f\data\Map\VehicleIcons\iconHeal_ca'/>"
 #define iconExplosive "<img size='1' image='\a3\ui_f\data\Map\VehicleIcons\iconExplosive_ca'/>"
+#define iconKey "<img size='1' image='\a3\ui_f\data\GUI\Cfg\KeyframeAnimation\IconKey_CA'/>"
 
 #define iconEdenMan "<img size='1' image='\a3\3den\data\Displays\Display3DEN\PanelRight\modeObjects_ca'/>"
 #define iconEdenGroup "<img size='1' image='\a3\3den\data\Displays\Display3DEN\PanelRight\modeGroups_ca'/>"
