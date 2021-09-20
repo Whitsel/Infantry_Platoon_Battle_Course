@@ -6,12 +6,12 @@ params ["_controller", "_frontDoor", "_floorSetHash", "_roomTrigger"];
 _controller addAction [format ["<img image='Data\7Cav_Logo.paa' /> 7th Cavalry Room Controller"], {}, [], 1.5, true, false, "", "true", 5];
 
 _controller addAction [
-	"  Randomize Room",
+	"  " + iconEdenRefresh + " Randomize Room",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 		_arguments params ["_frontDoor", "_floorSetHash", "_roomTrigger"]; //_floorSetHash is not being passed properly
 
-		[_floorSetHash, _roomTrigger] call tScripts_fnc_roomClear;
+		[_floorSetHash, _roomTrigger, _frontDoor] call tScripts_fnc_roomClear;
 
 		[_target, _frontDoor, _floorSetHash] call tScripts_fnc_roomSpawnFloor;
 	},
@@ -24,10 +24,10 @@ _controller addAction [
 	5
 ];
 
-_controller addAction ["---", {}, nil, 1.5, true, false, "", "true", 5];
+_controller addAction [" ", {}, nil, 1.5, true, false, "", "true", 5];
 
 _controller addAction [
-	"  Toggle AI spawning",
+	"  " + colorHexEast + iconEdenMan + "</t> Toggle AI spawning",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
@@ -51,7 +51,7 @@ _controller addAction [
 ];
 
 _controller addAction [
-	"  Increase AI Spawn Chance",
+	"    " + colorHexEast + iconEdenUp + "</t> Increase AI Spawn Chance",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
@@ -74,12 +74,12 @@ _controller addAction [
 	true,
 	false,
 	"",
-	"true",
+	"_target getVariable ['spawningAI', false]",
 	5
 ];
 
 _controller addAction [
-	"  Decrease AI Spawn Chance", //Strange behavior first time it hits 0%
+	"    " + colorHexEast + iconEdenDown + "</t>  Decrease AI Spawn Chance", //Strange behavior first time it hits 0%
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
@@ -102,14 +102,14 @@ _controller addAction [
 	true,
 	false,
 	"",
-	"true",
+	"_target getVariable ['spawningAI', false]",
 	5
 ];
 
-_controller addAction ["---", {}, nil, 1.5, true, false, "", "true", 5];
+_controller addAction [" ", {}, nil, 1.5, true, false, "", "_target getVariable ['spawningAI', false]", 5];
 
 _controller addAction [
-	"  Toggle Civilian spawning",
+	"  " + colorHexCiv + iconEdenMan + "</t> Toggle Civilian spawning",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
@@ -128,12 +128,12 @@ _controller addAction [
 	true,
 	false,
 	"",
-	"true",
+	"_target getVariable ['spawningAI', false]",
 	5
 ];
 
 _controller addAction [
-	"  Increase Civilian Spawn Chance",
+	"    " + colorHexCiv + iconEdenUp + "</t> Increase Civilian Spawn Chance",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
@@ -156,12 +156,12 @@ _controller addAction [
 	true,
 	false,
 	"",
-	"true",
+	"(_target getVariable ['spawningAI', false]) && (_target getVariable ['spawningCiv', false])",
 	5
 ];
 
 _controller addAction [
-	"  Decrease Civilian Spawn Chance", //Strange behavior first time it hits 0%
+	"    " + colorHexCiv + iconEdenDown + "</t> Decrease Civilian Spawn Chance", //Strange behavior first time it hits 0%
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
@@ -184,14 +184,14 @@ _controller addAction [
 	true,
 	false,
 	"",
-	"true",
+	"(_target getVariable ['spawningAI', false]) && (_target getVariable ['spawningCiv', false])",
 	5
 ];
 
-_controller addAction ["---", {}, nil, 1.5, true, false, "", "true", 5];
+_controller addAction [" ", {}, nil, 1.5, true, false, "", "true", 5];
 
 _controller addAction [
-	"  Toggle Furniture Spawning",
+	"  " + colorHexUnknown + iconEdenObjects + "</t> Toggle Furniture Spawning",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
@@ -215,7 +215,7 @@ _controller addAction [
 ];
 
 _controller addAction [
-	"  Increase Furniture Spawn Chance",
+	"    " + colorHexUnknown + iconEdenUp + "</t> Increase Furniture Spawn Chance",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
@@ -238,12 +238,12 @@ _controller addAction [
 	true,
 	false,
 	"",
-	"true",
+	"(_target getVariable ['spawningFurniture', false])",
 	5
 ];
 
 _controller addAction [
-	"  Decrease Furniture Spawn Chance",
+	"    " + colorHexUnknown + iconEdenDown + "</t> Decrease Furniture Spawn Chance",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
@@ -266,6 +266,6 @@ _controller addAction [
 	true,
 	false,
 	"",
-	"true",
+	"(_target getVariable ['spawningFurniture', false])",
 	5
 ];

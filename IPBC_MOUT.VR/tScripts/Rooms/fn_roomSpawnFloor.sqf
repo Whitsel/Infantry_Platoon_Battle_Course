@@ -3,11 +3,13 @@
 
 params ["_target", "_frontDoor", "_floorSetHash"];
 
-_frontDoor animate ["door_1_rot", 0, 3];
+{_x animate ["door_1_rot", 0, 3]} forEach _frontDoor;
 
 sleep 0.5;
 
-_floorNum= floor random count _floorSetHash + 1;
+_frontDoor#(floor random count _frontDoor) hideObjectGlobal true;
+
+_floorNum= ceil random count _floorSetHash;
 
 {_x hideObject false} foreach (_floorSetHash get _floorNum)#0;
 
