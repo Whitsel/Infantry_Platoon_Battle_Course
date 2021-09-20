@@ -14,8 +14,4 @@ _rtt setPiPEffect [_effect];
 _cam camSetTarget _camTarget;
 _cam camCommit 1;
 
-private _cameras = missionNamespace getVariable [QGVAR(cameras), []];
-_cameras pushBack _cam;
-missionNamespace setVariable [QGVAR(cameras), _cameras, true];
-
 diag_log format ["tScripts Logging: %1 static camera created at %2", _cam, _camPos]
