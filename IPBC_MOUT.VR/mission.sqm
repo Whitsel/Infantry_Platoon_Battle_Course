@@ -264,7 +264,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=48;
+		items=49;
 		class Item0
 		{
 			dataType="Layer";
@@ -6917,7 +6917,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4671,5.0014391,4208.0498};
+						position[]={4673,5.0014391,4208.0498};
 						angles[]={0,3.1415927,0};
 					};
 					side="West";
@@ -6937,7 +6937,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4669,5.0014391,4208.0498};
+						position[]={4675,5.0014391,4208.0498};
 						angles[]={0,3.1415927,0};
 					};
 					side="West";
@@ -6971,7 +6971,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4673,5.0014391,4208.0498};
+						position[]={4671,5.0014391,4208.0498};
 						angles[]={0,3.1415927,0};
 					};
 					side="West";
@@ -6991,7 +6991,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4675,5.0014391,4208.0498};
+						position[]={4669,5.0014391,4208.0498};
 						angles[]={0,3.1415927,0};
 					};
 					side="West";
@@ -8614,18 +8614,16 @@ class Mission
 			name="HUD_A6_Infantry_Weapon_5_15";
 			type="Empty";
 			colorName="ColorYellow";
-			angle=270;
 			id=477;
 			atlOffset=0.050000191;
 		};
 		class Item32
 		{
 			dataType="Marker";
-			position[]={4669.0005,5.0500002,4204.0005};
+			position[]={4669,5.0500002,4204};
 			name="HUD_A1_Infantry_Weapon_5_15";
 			type="Empty";
 			colorName="ColorYellow";
-			angle=270;
 			id=478;
 			atlOffset=0.050000191;
 		};
@@ -8636,7 +8634,6 @@ class Mission
 			name="HUD_A3_Infantry_Weapon_5_15";
 			type="Empty";
 			colorName="ColorYellow";
-			angle=270;
 			id=479;
 			atlOffset=0.050000191;
 		};
@@ -8647,7 +8644,6 @@ class Mission
 			name="HUD_A2_Infantry_Weapon_5_15";
 			type="Empty";
 			colorName="ColorYellow";
-			angle=270;
 			id=480;
 			atlOffset=0.050000191;
 		};
@@ -10639,6 +10635,16 @@ class Mission
 			colorName="ColorWEST";
 			id=967;
 			atlOffset=0.045000076;
+		};
+		class Item48
+		{
+			dataType="Marker";
+			position[]={4658,5.0500002,4220};
+			name="HUD_A7_Infantry_Weapon_5_15";
+			type="Empty";
+			colorName="ColorEAST";
+			id=1;
+			atlOffset=0.050000191;
 		};
 	};
 };
