@@ -79,7 +79,7 @@ _controller addAction [
 ];
 
 _controller addAction [
-	"    " + colorHexEast + iconEdenDown + "</t>  Decrease AI Spawn Chance", //Strange behavior first time it hits 0%
+	"    " + colorHexEast + iconEdenDown + "</t> Decrease AI Spawn Chance", //Strange behavior first time it hits 0%
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
@@ -137,7 +137,7 @@ _controller addAction [
 ];
 
 _controller addAction [
-	"    " + colorHexEast + iconEdenDown + "</t>  Decrease AI Skill", //Strange behavior first time it hits 0%
+	"    " + colorHexEast + iconEdenDown + "</t> Decrease AI Skill", //Strange behavior first time it hits 0%
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
