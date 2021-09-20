@@ -16,5 +16,3 @@ if(!isMultiplayer) then {
 		_x setObjectTextureGlobal [_i, "#(rgb,8,8,3)color(0,0,0,1)"]
 	}
 } foreach allMissionObjects "Land_VR_Shape_01_cube_1m_F";
-
-[] call tScripts_fnc_roomInitSimple;
