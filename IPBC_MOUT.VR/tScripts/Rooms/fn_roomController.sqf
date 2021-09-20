@@ -11,9 +11,9 @@ _controller addAction [
 		params ["_target", "_caller", "_actionId", "_arguments"];
 		_arguments params ["_frontDoor", "_floorSetHash", "_roomTrigger"]; //_floorSetHash is not being passed properly
 
-		[roomSimpleHash, _roomTrigger] call tScripts_fnc_roomClear;
+		[_floorSetHash, _roomTrigger] call tScripts_fnc_roomClear;
 
-		[_target, _frontDoor, roomSimpleHash] call tScripts_fnc_roomSpawnFloor;
+		[_target, _frontDoor, _floorSetHash] call tScripts_fnc_roomSpawnFloor;
 	},
 	[_frontDoor, _floorSetHash, _roomTrigger],
 	1.5,
