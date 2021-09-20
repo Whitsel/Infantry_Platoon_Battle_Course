@@ -5,6 +5,8 @@ params ["_controller", "_frontDoor", "_floorSetHash", "_roomTrigger"];
 
 _controller addAction [format ["<img image='Data\7Cav_Logo.paa' /> 7th Cavalry Room Controller"], {}, [], 1.5, true, false, "", "true", 5];
 
+_controller addAction [" ", {}, nil, 1.5, true, false, "", "true", 5];
+
 _controller addAction [
 	"  " + iconEdenRefresh + " Randomize Room",
 	{
