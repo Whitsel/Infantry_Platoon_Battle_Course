@@ -109,6 +109,64 @@ _controller addAction [
 _controller addAction [" ", {}, nil, 1.5, true, false, "", "_target getVariable ['spawningAI', false]", 5];
 
 _controller addAction [
+	"    " + colorHexEast + iconEdenUp + "</t> Increase AI Skill",
+	{
+		params ["_target", "_caller", "_actionId", "_arguments"];
+
+		_spawnAISkill = (_target getVariable ["spawnAISkill", 0.1]);
+
+		if (
+			_spawnAISkill >= 1
+		) then {
+			hint "AI skill already set to 100%";
+		} else {
+			_spawnAISkill = _spawnAISkill + .05;
+
+			[_target, ["spawnAISkill", _spawnAISkill]] remoteExec ["setvariable", 0, true];
+
+			hint format["AI skill set to %1 %",_spawnAISkill * 100];
+		};
+	},
+	nil,
+	1.5,
+	true,
+	false,
+	"",
+	"_target getVariable ['spawningAI', false]",
+	5
+];
+
+_controller addAction [
+	"    " + colorHexEast + iconEdenDown + "</t>  Decrease AI Skill", //Strange behavior first time it hits 0%
+	{
+		params ["_target", "_caller", "_actionId", "_arguments"];
+
+		_spawnAISkill = (_target getVariable ["spawnAISkill", 0.1]);
+
+		if (
+			_spawnAISkill <= 0
+		) then {
+			hint "AI skill already set to 0%";
+		} else {
+			_spawnAISkill = _spawnAISkill - .05;
+
+			[_target, ["spawnAISkill", _spawnAISkill]] remoteExec ["setvariable", 0, true];
+
+			hint format["AI skill set to %1 %",_spawnAISkill * 100];
+		};
+	},
+	nil,
+	1.5,
+	true,
+	false,
+	"",
+	"_target getVariable ['spawningAI', false]",
+	5
+];
+
+_controller addAction [" ", {}, nil, 1.5, true, false, "", "_target getVariable ['spawningAI', false]", 5];
+
+_controller addAction [
 	"  " + colorHexCiv + iconEdenMan + "</t> Toggle Civilian spawning",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];

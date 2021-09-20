@@ -5,6 +5,7 @@ params ["_target", "_floorSetHash", "_floorNum"];
 
 _spawnChanceAI = _target getVariable ["spawnChanceAI", 0.2];
 _spawnChanceCiv = _target getVariable ["spawnChanceCiv", 0.2];
+_spawnAISkill = (_target getVariable ["spawnAISkill", 0.1]);
 
 _civArray = [
 	"C_man_p_beggar_F",
@@ -166,6 +167,7 @@ if (_target getVariable ["spawningAI", false]) then {
 				} else {
 					private _unitOpfor = (createGroup east) createUnit ["O_soldierU_F", getposATL _x, [], 0.5, "NONE"];
 					_unitOpfor setDir random 360;
+					_unitOpfor setSKill _spawnAISkill;
 
 					private _randkit = ceil random 4;
 					switch (_randKit) do {
@@ -178,6 +180,7 @@ if (_target getVariable ["spawningAI", false]) then {
 			} else {
 				private _unitOpfor = (createGroup east) createUnit ["O_soldierU_F", getposATL _x, [], 0.5, "NONE"];
 				_unitOpfor setDir random 360;
+				_unitOpfor setSKill _spawnAISkill;
 
 				private _randkit = ceil random 4;
 				switch (_randKit) do {
