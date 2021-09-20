@@ -6,7 +6,7 @@
 	dev				= "Whitsel";
 	author			= "Whitsel";
 
-	onLoadName		= "MOUT Generator";
+	onLoadName		= "IPBC - MOUT";
 	onLoadMission	= "A product of 7th Cavalry Gaming Regiment";
 	onLoadIntro		= "This room generation tool is designed to provide a training tool to practice entering rooms without previous understanding of the layout and using dynamic decision making to solve the room.";
 
