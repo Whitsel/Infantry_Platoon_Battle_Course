@@ -49,8 +49,9 @@
 #define iconEdenVisionNormal "<img size='1' image='\a3\3den\data\Displays\Display3DEN\ToolBar\vision_normal_ca'/>"
 #define iconEdenVisionNight "<img size='1' image='\a3\3den\data\Displays\Display3DEN\ToolBar\vision_nvg_ca'/>"
 #define iconEdenVisionThermal "<img size='1' image='\a3\3den\data\Displays\Display3DEN\ToolBar\vision_ti_ca'/>"
-#define iconEdenUp "<img size='1' image='\a3\3den\data\Displays\Display3DENSave\sort_up_ca'/>"
-#define iconEdenDown "<img size='1' image='\a3\3den\data\Displays\Display3DENSave\sort_down_ca'/>"
+#define iconEdenSortUp "<img size='1' image='\a3\3den\data\Displays\Display3DENSave\sort_up_ca'/>"
+#define iconEdenSortNone "<img size='1' image='\a3\3den\data\Displays\Display3DENSave\sort_none_ca'/>"
+#define iconEdenSortDown "<img size='1' image='\a3\3den\data\Displays\Display3DENSave\sort_down_ca'/>"
 #define iconEdenTreeExpand "<img size='1' image='\a3\3den\data\Displays\Display3DEN\tree_expand_ca'/>"
 #define iconEdenTreeCollapse "<img size='1' image='\a3\3den\data\Displays\Display3DEN\tree_collapse_ca'/>"
 

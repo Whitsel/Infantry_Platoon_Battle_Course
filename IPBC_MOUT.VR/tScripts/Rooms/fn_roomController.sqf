@@ -53,7 +53,7 @@ _controller addAction [
 ];
 
 _controller addAction [
-	"    " + colorHexEast + iconEdenUp + "</t> Increase AI Spawn Chance",
+	"    " + colorHexEast + iconEdenSortUp + "</t> Increase AI Spawn Chance",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
@@ -81,7 +81,7 @@ _controller addAction [
 ];
 
 _controller addAction [
-	"    " + colorHexEast + iconEdenDown + "</t> Decrease AI Spawn Chance", //Strange behavior first time it hits 0%
+	"    " + colorHexEast + iconEdenSortDown + "</t> Decrease AI Spawn Chance", //Strange behavior first time it hits 0%
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
@@ -111,7 +111,7 @@ _controller addAction [
 _controller addAction [" ", {}, nil, 1.5, true, false, "", "_target getVariable ['spawningAI', false]", 5];
 
 _controller addAction [
-	"    " + colorHexEast + iconEdenUp + "</t> Increase AI Skill",
+	"    " + colorHexEast + iconEdenSortUp + "</t> Increase AI Skill",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
@@ -139,7 +139,7 @@ _controller addAction [
 ];
 
 _controller addAction [
-	"    " + colorHexEast + iconEdenDown + "</t> Decrease AI Skill", //Strange behavior first time it hits 0%
+	"    " + colorHexEast + iconEdenSortDown + "</t> Decrease AI Skill", //Strange behavior first time it hits 0%
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
@@ -193,7 +193,7 @@ _controller addAction [
 ];
 
 _controller addAction [
-	"    " + colorHexCiv + iconEdenUp + "</t> Increase Civilian Spawn Chance",
+	"    " + colorHexCiv + iconEdenSortUp + "</t> Increase Civilian Spawn Chance",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
@@ -221,7 +221,7 @@ _controller addAction [
 ];
 
 _controller addAction [
-	"    " + colorHexCiv + iconEdenDown + "</t> Decrease Civilian Spawn Chance", //Strange behavior first time it hits 0%
+	"    " + colorHexCiv + iconEdenSortDown + "</t> Decrease Civilian Spawn Chance", //Strange behavior first time it hits 0%
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
@@ -275,7 +275,7 @@ _controller addAction [
 ];
 
 _controller addAction [
-	"    " + colorHexUnknown + iconEdenUp + "</t> Increase Furniture Spawn Chance",
+	"    " + colorHexUnknown + iconEdenSortUp + "</t> Increase Furniture Spawn Chance",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
@@ -303,7 +303,7 @@ _controller addAction [
 ];
 
 _controller addAction [
-	"    " + colorHexUnknown + iconEdenDown + "</t> Decrease Furniture Spawn Chance",
+	"    " + colorHexUnknown + iconEdenSortDown + "</t> Decrease Furniture Spawn Chance",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
