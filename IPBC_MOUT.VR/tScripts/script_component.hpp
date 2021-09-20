@@ -41,6 +41,9 @@
 #define iconHeal "<img size='1' image='\a3\ui_f\data\Map\VehicleIcons\iconHeal_ca'/>"
 #define iconExplosive "<img size='1' image='\a3\ui_f\data\Map\VehicleIcons\iconExplosive_ca'/>"
 #define iconKey "<img size='1' image='\a3\ui_f\data\GUI\Cfg\KeyframeAnimation\IconKey_CA'/>"
+#define iconCamera "<img size='1' image='\a3\ui_f\data\GUI\Rsc\RscDisplayEGSpectator\Follow'/>"
+#define iconCameraOld "<img size='1' image='\a3\ui_f\data\GUI\Cfg\KeyframeAnimation\iconCamera_CA'/>"
+#define iconCameraOverhead "<img size='1' image='\a3\ui_f\data\GUI\Rsc\RscDisplayMissionEditor\iconCamera_ca'/>"
 
 #define iconEdenMan "<img size='1' image='\a3\3den\data\Displays\Display3DEN\PanelRight\modeObjects_ca'/>"
 #define iconEdenGroup "<img size='1' image='\a3\3den\data\Displays\Display3DEN\PanelRight\modeGroups_ca'/>"
@@ -61,3 +64,4 @@
 #define colorHexCiv "<t color='#660080'>"
 #define colorHexUnknown "<t color='#B39A00'>"
 #define colorHexGold "<t color='#FFD700'>"
+#define colorHexGreyDark "<t color='#222222'>"

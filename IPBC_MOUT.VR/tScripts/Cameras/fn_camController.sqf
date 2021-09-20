@@ -3,11 +3,6 @@
 
 params ["_screen", "_controller", "_rtt_0", "_rtt_1", "_rtt_2", "_rtt_3"];
 
-_screen setObjectTextureGlobal [0, format["#(argb,512,512,1)r2t(%1,1)", _rtt_0]];
-_controller setObjectTextureGlobal [1, format["#(argb,512,512,1)r2t(%1,1)", _rtt_1]];
-_controller setObjectTextureGlobal [2, format["#(argb,512,512,1)r2t(%1,1)", _rtt_2]];
-_controller setObjectTextureGlobal [3, format["#(argb,512,512,1)r2t(%1,1)", _rtt_3]];
-
 [_screen, ["display", 0]] remoteExec ["setvariable", 0, true];
 
 _screen addAction [format ["<img image='Data\7Cav_Logo.paa' /> 7th Cavalry Camera Controller"], {}, [], 1.5, true, false, "", "true", 5];
@@ -15,7 +10,50 @@ _screen addAction [format ["<img image='Data\7Cav_Logo.paa' /> 7th Cavalry Camer
 _screen addAction [" ", {}, nil, 1.5, true, false, "", "true", 5];
 
 _screen addAction [
-	"  Display Overhead Camera",
+	"  " + colorHexGuer + iconCameraOld + "</t> Turn on camera displays",
+	{
+		params ["_target", "_caller", "_actionId", "_arguments"];
+		_arguments params ["_screen", "_controller", "_rtt_0", "_rtt_1", "_rtt_2", "_rtt_3"];
+		_screen setObjectTextureGlobal [0, format["#(argb,512,512,1)r2t(%1,1)", _rtt_0]];
+		_controller setObjectTextureGlobal [1, format["#(argb,512,512,1)r2t(%1,1)", _rtt_1]];
+		_controller setObjectTextureGlobal [2, format["#(argb,512,512,1)r2t(%1,1)", _rtt_2]];
+		_controller setObjectTextureGlobal [3, format["#(argb,512,512,1)r2t(%1,1)", _rtt_3]];
+		[_target, ["display", 0]] remoteExec ["setvariable", 0, true];
+		[_target, ["turnedOn", true]] remoteExec ["setvariable", 0, true];
+	},
+	[_screen, _controller, _rtt_0, _rtt_1, _rtt_2, _rtt_3],
+	1.5,
+	true,
+	false,
+	"",
+	"!(_target getVariable ['turnedOn', false])",
+	5
+];
+
+_screen addAction [
+	"  " + colorHexEast + iconCameraOld + "</t> Turn off camera displays",
+	{
+		params ["_target", "_caller", "_actionId", "_arguments"];
+		_arguments params ["_screen", "_controller", "_rtt_0", "_rtt_1", "_rtt_2", "_rtt_3"];
+		_screen setObjectTextureGlobal [0, format["#(argb,8,8,3)color(0,0,0,0.0,co)", _rtt_0]];
+		_controller setObjectTextureGlobal [1, format["#(argb,8,8,3)color(0,0,0,0.0,co)", _rtt_1]];
+		_controller setObjectTextureGlobal [2, format["#(argb,8,8,3)color(0,0,0,0.0,co)", _rtt_2]];
+		_controller setObjectTextureGlobal [3, format["#(argb,8,8,3)color(0,0,0,0.0,co)", _rtt_3]];
+		[_target, ["turnedOn", false]] remoteExec ["setvariable", 0, true];
+	},
+	[_screen, _controller, _rtt_0, _rtt_1, _rtt_2, _rtt_3],
+	1.5,
+	true,
+	false,
+	"",
+	"(_target getVariable ['turnedOn', false])",
+	5
+];
+
+_screen addAction [" ", {}, nil, 1.5, true, false, "", "(_target getVariable ['turnedOn', false])", 5];
+
+_screen addAction [
+	"  " + iconCamera + " Display Overhead Camera",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 		_arguments params ["_screen", "_controller", "_rtt_0", "_rtt_1", "_rtt_2", "_rtt_3"];
@@ -27,15 +65,15 @@ _screen addAction [
 	},
 	[_screen, _controller, _rtt_0, _rtt_1, _rtt_2, _rtt_3],
 	1.5,
-	true,
-	true,
+ 	true,
+	false,
 	"",
-	"!((_target getVariable ['display', 0]) == 0)",
+	"!((_target getVariable ['display', 0]) == 0) && (_target getVariable ['turnedOn', false])",
 	5
 ];
 
 _screen addAction [
-	"  Display Front Door Camera",
+	"  " + iconCamera + " Display Front Door Camera",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 		_arguments params ["_screen", "_controller", "_rtt_0", "_rtt_1", "_rtt_2", "_rtt_3"];
@@ -47,15 +85,15 @@ _screen addAction [
 	},
 	[_screen, _controller, _rtt_0, _rtt_1, _rtt_2, _rtt_3],
 	1.5,
-	true,
-	true,
+ 	true,
+	false,
 	"",
-	"!((_target getVariable ['display', 0]) == 1)",
+	"!((_target getVariable ['display', 0]) == 1) && (_target getVariable ['turnedOn', false])",
 	5
 ];
 
 _screen addAction [
-	"  Display Over Door Camera",
+	"  " + iconCamera + " Display Over Door Camera",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 		_arguments params ["_screen", "_controller", "_rtt_0", "_rtt_1", "_rtt_2", "_rtt_3"];
@@ -67,15 +105,15 @@ _screen addAction [
 	},
 	[_screen, _controller, _rtt_0, _rtt_1, _rtt_2, _rtt_3],
 	1.5,
-	true,
-	true,
+ 	true,
+	false,
 	"",
-	"!((_target getVariable ['display', 0]) == 2)",
+	"!((_target getVariable ['display', 0]) == 2) && (_target getVariable ['turnedOn', false])",
 	5
 ];
 
 _screen addAction [
-	"  Display Helmet Camera",
+	"  " + iconCamera + " Display Helmet Camera",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 		_arguments params ["_screen", "_controller", "_rtt_0", "_rtt_1", "_rtt_2", "_rtt_3"];
@@ -87,14 +125,14 @@ _screen addAction [
 	},
 	[_screen, _controller, _rtt_0, _rtt_1, _rtt_2, _rtt_3],
 	1.5,
-	true,
-	true,
+ 	true,
+	false,
 	"",
-	"!((_target getVariable ['display', 0]) == 3)",
+	"!((_target getVariable ['display', 0]) == 3) && (_target getVariable ['turnedOn', false])",
 	5
 ];
 
-_screen addAction [" ", {}, nil, 1.5, true, false, "", "true", 5];
+_screen addAction [" ", {}, nil, 1.5, true, false, "", "(_target getVariable ['turnedOn', false])", 5];
 
 _screen addAction [
 	"  " + iconEdenVisionNormal + " Daylight Vision",
@@ -106,17 +144,17 @@ _screen addAction [
 	},
 	[_rtt_0, _rtt_1, _rtt_2, _rtt_3],
 	1.5,
-	true,
-	true,
+ 	true,
+	false,
 	"",
-	"!((_target getVariable ['vision', 0]) == 0)",
+	"!((_target getVariable ['vision', 0]) == 0) && (_target getVariable ['turnedOn', false])",
 	5
 ];
 
 [_screen, ["vision", 0]] remoteExec ["setvariable", 0, true];
 
 _screen addAction [
-	"  " + iconEdenVisionNight + " Night Vision",
+	"  " + colorHexGuer + iconEdenVisionNight + "</t> Night Vision",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 		_arguments params ["_rtt_0", "_rtt_1", "_rtt_2", "_rtt_3"];
@@ -125,15 +163,15 @@ _screen addAction [
 	},
 	[_rtt_0, _rtt_1, _rtt_2, _rtt_3],
 	1.5,
-	true,
-	true,
+ 	true,
+	false,
 	"",
-	"!((_target getVariable ['vision', 0]) == 1)",
+	"!((_target getVariable ['vision', 0]) == 1) && (_target getVariable ['turnedOn', false])",
 	5
 ];
 
 _screen addAction [
-	"  " + iconEdenVisionThermal + " Thermal Vision",
+	"  "+ colorHexGreyDark + iconEdenVisionThermal + "</t> Thermal Vision",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 		_arguments params ["_rtt_0", "_rtt_1", "_rtt_2", "_rtt_3"];
@@ -142,17 +180,17 @@ _screen addAction [
 	},
 	[_rtt_0, _rtt_1, _rtt_2, _rtt_3],
 	1.5,
-	true,
-	true,
+ 	true,
+	false,
 	"",
-	"!((_target getVariable ['vision', 0]) == 2)",
+	"!((_target getVariable ['vision', 0]) == 2) && (_target getVariable ['turnedOn', false])",
 	5
 ];
 
-_screen addAction [" ", {}, nil, 1.5, true, false, "", "true", 5];
+_screen addAction [" ", {}, nil, 1.5, true, false, "", " (_target getVariable ['turnedOn', false])", 5];
 
 _screen addAction [
-	"  Attach Helmet Cam",
+	"  " + colorHexGuer + iconCameraOverhead + "</t> Attach Helmet Cam",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 		_arguments params ["_screen", "_rtt_3"];
@@ -165,15 +203,15 @@ _screen addAction [
 	},
 	[_screen, _rtt_3],
 	1.5,
-	true,
-	true,
+ 	true,
+	false,
 	"",
-	"!(_target getVariable ['helmetCam', false])",
+	"!(_target getVariable ['helmetCam', false]) && (_target getVariable ['turnedOn', false])",
 	5
 ];
 
 _screen addAction [
-	"  Return Helmet Cam",
+	"  " + colorHexEast + iconCameraOverhead + "</t> Return Helmet Cam",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 		_arguments params ["_screen", "_rtt_3"];
@@ -186,13 +224,11 @@ _screen addAction [
 	},
 	[_screen, _rtt_3],
 	1.5,
-	true,
-	true,
+ 	true,
+	false,
 	"",
-	"(_target getVariable ['helmetCam', false])",
+	"(_target getVariable ['helmetCam', false]) && (_target getVariable ['turnedOn', false])",
 	5
 ];
-
-[_screen, ["helmetCam", false]] remoteExec ["setvariable", 0, true];
 
 diag_log format ["tScripts Logging: Camera screen controls initialized for %1", _screen]
