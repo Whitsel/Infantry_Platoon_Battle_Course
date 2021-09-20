@@ -93,7 +93,7 @@ _screen addAction [
 ];
 
 _screen addAction [
-	"---",
+	" ",
 	{},
 	nil,
 	1.5,
@@ -105,7 +105,7 @@ _screen addAction [
 ];
 
 _screen addAction [
-	"  Daylight Vision",
+	"  " + iconEdenVisionNormal + " Daylight Vision",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 		_arguments params ["_rtt_0", "_rtt_1", "_rtt_2", "_rtt_3"];
@@ -124,7 +124,7 @@ _screen addAction [
 [_screen, ["vision", 0]] remoteExec ["setvariable", 0, true];
 
 _screen addAction [
-	"  Night Vision",
+	"  " + iconEdenVisionNight + " Night Vision",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 		_arguments params ["_rtt_0", "_rtt_1", "_rtt_2", "_rtt_3"];
@@ -141,7 +141,7 @@ _screen addAction [
 ];
 
 _screen addAction [
-	"  Thermal Vision",
+	"  " + iconEdenVisionThermal + " Thermal Vision",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 		_arguments params ["_rtt_0", "_rtt_1", "_rtt_2", "_rtt_3"];
@@ -158,7 +158,7 @@ _screen addAction [
 ];
 
 _screen addAction [
-	"---",
+	" ",
 	{},
 	nil,
 	1.5,
