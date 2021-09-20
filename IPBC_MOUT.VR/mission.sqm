@@ -264,7 +264,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=50;
+		items=48;
 		class Item0
 		{
 			dataType="Layer";
@@ -8591,25 +8591,13 @@ class Mission
 			dataType="Comment";
 			class PositionInfo
 			{
-				position[]={4665.7319,5.0500002,4205.9351};
-				angles[]={0,4.7123895,0};
-			};
-			title="Add all kits";
-			id=451;
-			atlOffset=0.050000191;
-		};
-		class Item30
-		{
-			dataType="Comment";
-			class PositionInfo
-			{
 				position[]={4688.8428,5.0500002,4190.082};
 			};
 			title="Add diary subjects";
 			id=453;
 			atlOffset=0.050000191;
 		};
-		class Item31
+		class Item30
 		{
 			dataType="Marker";
 			position[]={4672,5.0500002,4220.25};
@@ -8619,7 +8607,7 @@ class Mission
 			id=476;
 			atlOffset=0.045000076;
 		};
-		class Item32
+		class Item31
 		{
 			dataType="Marker";
 			position[]={4663,5.0500002,4204};
@@ -8630,7 +8618,7 @@ class Mission
 			id=477;
 			atlOffset=0.050000191;
 		};
-		class Item33
+		class Item32
 		{
 			dataType="Marker";
 			position[]={4669.0005,5.0500002,4204.0005};
@@ -8641,7 +8629,7 @@ class Mission
 			id=478;
 			atlOffset=0.050000191;
 		};
-		class Item34
+		class Item33
 		{
 			dataType="Marker";
 			position[]={4681,5.0500002,4204};
@@ -8652,7 +8640,7 @@ class Mission
 			id=479;
 			atlOffset=0.050000191;
 		};
-		class Item35
+		class Item34
 		{
 			dataType="Marker";
 			position[]={4675,5.0500002,4204};
@@ -8663,7 +8651,7 @@ class Mission
 			id=480;
 			atlOffset=0.050000191;
 		};
-		class Item36
+		class Item35
 		{
 			dataType="Marker";
 			position[]={4672,5,4210};
@@ -8672,7 +8660,7 @@ class Mission
 			colorName="ColorYellow";
 			id=481;
 		};
-		class Item37
+		class Item36
 		{
 			dataType="Marker";
 			position[]={4672,5.0500002,4179};
@@ -8682,7 +8670,7 @@ class Mission
 			id=482;
 			atlOffset=0.050000191;
 		};
-		class Item38
+		class Item37
 		{
 			dataType="Group";
 			side="Civilian";
@@ -8715,7 +8703,7 @@ class Mission
 			};
 			id=493;
 		};
-		class Item39
+		class Item38
 		{
 			dataType="Group";
 			side="East";
@@ -8900,7 +8888,7 @@ class Mission
 			};
 			id=503;
 		};
-		class Item40
+		class Item39
 		{
 			dataType="Marker";
 			position[]={4686,5.0500002,4224};
@@ -8910,7 +8898,7 @@ class Mission
 			id=514;
 			atlOffset=0.050000191;
 		};
-		class Item41
+		class Item40
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -8922,7 +8910,7 @@ class Mission
 			id=529;
 			atlOffset=0.050000191;
 		};
-		class Item42
+		class Item41
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -8932,7 +8920,7 @@ class Mission
 			title="Add check for BluFor in area";
 			id=571;
 		};
-		class Item43
+		class Item42
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8949,7 +8937,7 @@ class Mission
 			id=617;
 			type="B_supplyCrate_F";
 		};
-		class Item44
+		class Item43
 		{
 			dataType="Layer";
 			name="Complex Rooms";
@@ -10612,7 +10600,7 @@ class Mission
 			id=877;
 			atlOffset=1.7052736;
 		};
-		class Item45
+		class Item44
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -10622,7 +10610,7 @@ class Mission
 			title="A t shaped left/right";
 			id=941;
 		};
-		class Item46
+		class Item45
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -10632,7 +10620,7 @@ class Mission
 			title="Add corner fed";
 			id=942;
 		};
-		class Item47
+		class Item46
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -10642,7 +10630,7 @@ class Mission
 			title="Add front door variation";
 			id=943;
 		};
-		class Item48
+		class Item47
 		{
 			dataType="Marker";
 			position[]={4704,5.0500002,4220.25};
@@ -10651,16 +10639,6 @@ class Mission
 			colorName="ColorWEST";
 			id=967;
 			atlOffset=0.045000076;
-		};
-		class Item49
-		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={4666.5,5,4210.0669};
-			};
-			title="Respawn loadouts";
-			id=970;
 		};
 	};
 };
