@@ -44,21 +44,21 @@ _kits = [
 
 _box addAction [format ["<img image='Data\7Cav_Logo.paa' /> 7th Cavalry Equipment Crate"], {}, [], 1.5, true, true, "", "true", 5];
 
-_box addAction [" ", {}, nil, 1.5, true, false, "", "true", 5];
+_box addAction ["<t size = '0.5'> </t>", {}, nil, 1.5, true, false, "", "true", 5];
 
 {
 	_x params [
 		"_role",
 		"_fileName",
 		["_icon", iconMan],
-		["_cond", "(!(_target getVariable ['locked', false]) && (_this getVariable ['role','']) == 'opf') || ((_this getVariable ['role','']) == 'rangeMaster')"],
+		["_cond", "(!(_target getVariable ['locked', false]) && (_this getVariable ['tScripts_role','']) == 'opfor') || ((_this getVariable ['tScripts_role','']) == 'rangeMaster')"],
 		["_color", colorHexEast]
 	];
 
 	_box addAction ["  " + _color + _icon + "</t>" + _role, {
-		params ["_target", "_caller", "_actionId", "_arg"];
+		params ["_target", "_caller", "_actionId", "_arguments"];
 
-		_caller call compile preProcessFile format ["tScripts\Kits\fn_%1.sqf", _arg];
+		_caller call compile preProcessFile format ["tScripts\Kits\fn_%1.sqf", _arguments];
 
 		},
 		_filename,
@@ -74,7 +74,7 @@ _box addAction [" ", {}, nil, 1.5, true, false, "", "true", 5];
 
 } forEach _kits;
 
-_box addAction ["---", {}, [], 1.5, true, true, "", "true", 5];
+_box addAction ["<t size = '0.5'> </t>", {}, [], 1.5, true, true, "", "true", 5];
 
 _box call FUNC(resources);
 

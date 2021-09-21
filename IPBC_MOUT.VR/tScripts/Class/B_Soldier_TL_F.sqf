@@ -1,13 +1,13 @@
 
 //Team Leader
 
-#include "..\script_component.hpp";
+#include "script_component.hpp";
 
 private _state = param [0, "", [""]];
 
 if (_state == "init") then {
 
-	player setVariable ["role", "inf"];
+	SETVAR(player,GVAR(role),"infantry");
 
 	player call FUNC(bTeamLeader);
 

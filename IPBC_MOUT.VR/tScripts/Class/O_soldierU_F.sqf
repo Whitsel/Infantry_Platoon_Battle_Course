@@ -1,13 +1,13 @@
 
 //OPFOR Rifleman
 
-#include "..\script_component.hpp";
+#include "script_component.hpp";
 
 private _state = param [0, "", [""]];
 
 if (_state == "init") then {
 
-	player setVariable ["role", "opf"];
+	SETVAR(player,GVAR(role),"opfor");
 
 	player call FUNC(oRifleman);
 

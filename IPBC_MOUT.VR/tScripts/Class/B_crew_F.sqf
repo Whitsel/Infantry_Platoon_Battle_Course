@@ -1,13 +1,13 @@
 
-//Machinegun Ammmo Bearer
+//Mechanized Crewman
 
-#include "..\script_component.hpp";
+#include "script_component.hpp";
 
 private _state = param [0, "", [""]];
 
 if (_state == "init") then {
 
-	player setVariable ["role", "mech"];
+	SETVAR(player,GVAR(role),"mechanized");
 
 	player call FUNC(bCrewman);
 

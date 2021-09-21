@@ -1,7 +1,7 @@
 
 // Combat Cameraman
 
-#include "..\script_component.hpp";
+#include "script_component.hpp";
 
 private _state = param [0, "", [""]];
 
