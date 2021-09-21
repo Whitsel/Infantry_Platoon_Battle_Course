@@ -3,9 +3,10 @@
 
 params ["_target", "_floorSetHash", "_floorNum"];
 
+_spawnPositions = (_floorSetHash get _floorNum)#1;
 _spawnChanceAI = _target getVariable ["spawnChanceAI", 0.2];
 _spawnChanceCiv = _target getVariable ["spawnChanceCiv", 0.2];
-_spawnAISkill = (_target getVariable ["spawnAISkill", 0.1]);
+_spawnAISkill = _target getVariable ["spawnAISkill", 0.1];
 
 _civArray = [
 	"C_man_p_beggar_F",
@@ -154,44 +155,55 @@ _civArray = [
 	"C_Man_casual_6_F_tanoan"
 ];
 
+roomSpawnOpfor = {
+	private _unitOpforGroup = createGroup east;
+	private _unitOpfor = _unitOpforGroup createUnit ["O_soldierU_F", getposATL _x, [], 0.5, "NONE"];
+	_unitOpfor setDir random 360;
+	_unitOpfor setSKill _spawnAISkill;
+
+	if (0.1 > random 1) then {
+		call roomSpawnOpforWaypoint
+	};
+
+	private _randkit = ceil random 4;
+	switch (_randKit) do {
+		case 1: {_unitOpfor call tScripts_fnc_oRifleman};
+		case 2: {_unitOpfor call tScripts_fnc_oGrenadier};
+		case 3: {_unitOpfor call tScripts_fnc_oAutomaticRifleman};
+		case 4: {_unitOpfor call tScripts_fnc_oTeamLeader};
+	}
+};
+
+roomSpawnOpforWaypoint = {
+		private _wpPosition = _spawnPositions#(floor random (count _spawnPositions));
+		private _wp1 = _unitOpforGroup addWaypoint [_x, -1];
+		_wp1 setWaypointTimeout [0, 10, 60];
+		private _wp2 = _unitOpforGroup addWaypoint [_wpPosition, 1];
+		_wp2 setWaypointSpeed "LIMITED";
+};
+
+roomSpawnCiv = {
+	private _rand = floor random 145;
+	private _civRand = _civArray select _rand;
+	private _unitCiv = (createGroup east) createUnit [_civRand, getposATL _x, [], 0.5, "NONE"];
+	_unitCiv setDir random 360;
+	_unitCiv disableAI "PATH";
+};
+
 if (_target getVariable ["spawningAI", false]) then {
 	{
 		if (_spawnChanceAI > random 1) then {
 			if (_target getVariable ["spawningCiv", false]) then {
 				if (_spawnChanceCiv > random 1) then {
-					private _rand = floor random 145;
-					private _civRand = _civArray select _rand;
-					private _unitCiv = (createGroup east) createUnit [_civRand, getposATL _x, [], 0.5, "NONE"];
-					_unitCiv setDir random 360;
-					_unitCiv disableAI "PATH";
+					call roomSpawnCiv;
 				} else {
-					private _unitOpfor = (createGroup east) createUnit ["O_soldierU_F", getposATL _x, [], 0.5, "NONE"];
-					_unitOpfor setDir random 360;
-					_unitOpfor setSKill _spawnAISkill;
-
-					private _randkit = ceil random 4;
-					switch (_randKit) do {
-						case 1: {_unitOpfor call tScripts_fnc_oRifleman};
-						case 2: {_unitOpfor call tScripts_fnc_oGrenadier};
-						case 3: {_unitOpfor call tScripts_fnc_oAutomaticRifleman};
-						case 4: {_unitOpfor call tScripts_fnc_oTeamLeader};
-					}
+					call roomSpawnOpfor;
 				}
 			} else {
-				private _unitOpfor = (createGroup east) createUnit ["O_soldierU_F", getposATL _x, [], 0.5, "NONE"];
-				_unitOpfor setDir random 360;
-				_unitOpfor setSKill _spawnAISkill;
-
-				private _randkit = ceil random 4;
-				switch (_randKit) do {
-					case 1: {_unitOpfor call tScripts_fnc_oRifleman};
-					case 2: {_unitOpfor call tScripts_fnc_oGrenadier};
-					case 3: {_unitOpfor call tScripts_fnc_oAutomaticRifleman};
-					case 4: {_unitOpfor call tScripts_fnc_oTeamLeader};
-				}
+				call roomSpawnOpfor;
 			}
 		}
-	} forEach (_floorSetHash get _floorNum)#1
+	} forEach _spawnPositions;
 };
 
 diag_log format["tScripts Logging: AI spawned %1", _floorNum];
