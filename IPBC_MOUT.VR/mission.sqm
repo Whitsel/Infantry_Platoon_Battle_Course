@@ -8495,7 +8495,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4663.0005,5.8924227,4204.0005};
+				position[]={4681,5.8924227,4204};
 			};
 			side="Empty";
 			flags=4;
@@ -8511,7 +8511,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4669,5.8924227,4204.0005};
+				position[]={4675,5.8924227,4204};
 			};
 			side="Empty";
 			flags=4;
@@ -8527,7 +8527,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4674.9995,5.8924227,4203.9995};
+				position[]={4669,5.8924227,4204};
 			};
 			side="Empty";
 			flags=4;
@@ -8543,7 +8543,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4681,5.8924227,4204};
+				position[]={4663,5.8924227,4204};
 			};
 			side="Empty";
 			flags=4;
