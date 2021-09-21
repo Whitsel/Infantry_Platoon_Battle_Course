@@ -5,7 +5,7 @@ params ["_controller", "_frontDoor", "_floorSetHash", "_roomTrigger"];
 
 _controller addAction [format ["<img image='Data\7Cav_Logo.paa' /> 7th Cavalry Room Controller"], {}, [], 1.5, true, false, "", "true", 5];
 
-_controller addAction [" ", {}, nil, 1.5, true, false, "", "true", 5];
+_controller addAction ["<t size = '0.5'> </t>", {}, nil, 1.5, true, false, "", "true", 5];
 
 _controller addAction [
 	"  " + iconEdenRefresh + " Randomize Room",
@@ -26,7 +26,7 @@ _controller addAction [
 	5
 ];
 
-_controller addAction [" ", {}, nil, 1.5, true, false, "", "true", 5];
+_controller addAction ["<t size = '0.5'> </t>", {}, nil, 1.5, true, false, "", "true", 5];
 
 _controller addAction [
 	"  " + colorHexEast + iconEdenMan + "</t> Toggle AI spawning",
@@ -108,7 +108,7 @@ _controller addAction [
 	5
 ];
 
-_controller addAction [" ", {}, nil, 1.5, true, false, "", "_target getVariable ['spawningAI', false]", 5];
+_controller addAction ["<t size = '0.5'> </t>", {}, nil, 1.5, true, false, "", "_target getVariable ['spawningAI', false]", 5];
 
 _controller addAction [
 	"    " + colorHexEast + iconEdenSortUp + "</t> Increase AI Skill",
@@ -166,7 +166,7 @@ _controller addAction [
 	5
 ];
 
-_controller addAction [" ", {}, nil, 1.5, true, false, "", "_target getVariable ['spawningAI', false]", 5];
+_controller addAction ["<t size = '0.5'> </t>", {}, nil, 1.5, true, false, "", "_target getVariable ['spawningAI', false]", 5];
 
 _controller addAction [
 	"  " + colorHexCiv + iconEdenMan + "</t> Toggle Civilian spawning",
@@ -248,7 +248,7 @@ _controller addAction [
 	5
 ];
 
-_controller addAction [" ", {}, nil, 1.5, true, false, "", "true", 5];
+_controller addAction ["<t size = '0.5'> </t>", {}, nil, 1.5, true, false, "", "true", 5];
 
 _controller addAction [
 	"  " + colorHexUnknown + iconEdenObjects + "</t> Toggle Furniture Spawning",
