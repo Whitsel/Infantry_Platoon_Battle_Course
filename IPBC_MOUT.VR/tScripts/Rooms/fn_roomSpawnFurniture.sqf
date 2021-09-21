@@ -9,7 +9,7 @@ if (_target getVariable ["spawningFurniture", false]) then {
 	{
 		if (_spawnChance > random 1) then
 		{
-			_x hideObject false;
+			_x hideObjectGlobal false;
 		}
 	} foreach (_floorSetHash get _floorNum)#2;
 };

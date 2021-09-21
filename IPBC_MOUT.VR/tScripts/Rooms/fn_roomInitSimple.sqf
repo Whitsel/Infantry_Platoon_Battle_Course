@@ -357,4 +357,4 @@ roomHashSimple = createHashMapFromArray [
 	[11, roomIntersection]
 ];
 
-for "_i" from 1 to (count roomHashSimple) do {{hideObject _x} forEach (roomHashSimple get _i)#0 + (roomHashSimple get _i)#1 + (roomHashSimple get _i)#2};
+for "_i" from 1 to (count roomHashSimple) do {{hideObjectGlobal _x} forEach (roomHashSimple get _i)#0 + (roomHashSimple get _i)#1 + (roomHashSimple get _i)#2};

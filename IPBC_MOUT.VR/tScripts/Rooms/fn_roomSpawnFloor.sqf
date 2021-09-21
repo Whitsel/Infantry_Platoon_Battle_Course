@@ -11,7 +11,7 @@ _frontDoor#(floor random count _frontDoor) hideObjectGlobal true;
 
 _floorNum= ceil random count _floorSetHash;
 
-{_x hideObject false} foreach (_floorSetHash get _floorNum)#0;
+{_x hideObjectGlobal false} foreach (_floorSetHash get _floorNum)#0;
 
 [_target, _floorSetHash, _floorNum] call tScripts_fnc_roomSpawnFurniture;
 
