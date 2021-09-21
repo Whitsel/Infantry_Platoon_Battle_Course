@@ -1,5 +1,5 @@
 
-#include "..\script_component.hpp";
+#include "script_component.hpp";
 
 params ["_controller", "_frontDoor", "_floorSetHash", "_roomTrigger"];
 

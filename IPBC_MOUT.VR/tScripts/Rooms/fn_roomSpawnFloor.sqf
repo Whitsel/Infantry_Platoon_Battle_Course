@@ -1,5 +1,5 @@
 
-#include "..\script_component.hpp";
+#include "script_component.hpp";
 
 params ["_target", "_frontDoor", "_floorSetHash"];
 
