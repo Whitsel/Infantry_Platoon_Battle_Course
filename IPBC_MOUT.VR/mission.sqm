@@ -4976,7 +4976,7 @@ class Mission
 							side="Empty";
 							class Attributes
 							{
-								init="[this , camTargetSimple_0, ""rtt_simple_0"", 1.45, 0] call tScripts_fnc_camStatic;";
+								init="[this , camTargetSimple_0, ""rtt_simple_0"", 1.45, 0] call tScripts_fnc_camera_Static;";
 								name="camSimple_0";
 							};
 							id=470;
@@ -5010,7 +5010,7 @@ class Mission
 							side="Empty";
 							class Attributes
 							{
-								init="[this , camTargetSimple_1, ""rtt_simple_1"", 1, 0] call tScripts_fnc_camStatic;";
+								init="[this , camTargetSimple_1, ""rtt_simple_1"", 1, 0] call tScripts_fnc_camera_Static;";
 								name="camSimple_1";
 							};
 							id=472;
@@ -5043,7 +5043,7 @@ class Mission
 							side="Empty";
 							class Attributes
 							{
-								init="[this , camTargetSimple_2, ""rtt_simple_2"", 1.75, 0] call tScripts_fnc_camStatic;";
+								init="[this , camTargetSimple_2, ""rtt_simple_2"", 1.75, 0] call tScripts_fnc_camera_Static;";
 								name="camSimple_2";
 							};
 							id=530;
@@ -5964,7 +5964,7 @@ class Mission
 							flags=4;
 							class Attributes
 							{
-								init="" \n "[this, controllerSimple, ""rtt_simple_0"", ""rtt_simple_1"", ""rtt_simple_2"", ""rtt_simple_3""] call tScripts_fnc_camController;" \n "";
+								init="" \n "[this, controllerSimple, [""rtt_simple_0"", ""rtt_simple_1"", ""rtt_simple_2"", ""rtt_simple_3""]] call tScripts_fnc_camera_Controller;" \n "";
 								name="screenSimple";
 							};
 							id=464;
@@ -6440,7 +6440,7 @@ class Mission
 							flags=4;
 							class Attributes
 							{
-								init="" \n "[this , ""rtt_simple_3"", 1, 0] call tScripts_fnc_camHelmet;";
+								init="" \n "[this , ""rtt_simple_3"", 1, 0] call tScripts_fnc_camera_Helmet;";
 								name="camHelmetSimple";
 							};
 							id=487;
@@ -6458,7 +6458,7 @@ class Mission
 							side="Empty";
 							class Attributes
 							{
-								init="" \n "[] call tScripts_fnc_roomInitSimple;" \n " " \n "[this, [roomDoorSimple_0,roomDoorSimple_1], roomHashSimple, roomAreaSimple, camHelmetSimple] call tScripts_fnc_roomController;" \n "";
+								init="" \n "call tScripts_fnc_roomInitSimple;" \n " " \n "[this, [roomDoorSimple_0,roomDoorSimple_1], roomHashSimple, roomAreaSimple, camHelmetSimple] call tScripts_fnc_roomController;" \n "";
 								name="controllerSimple";
 							};
 							id=929;
@@ -9860,7 +9860,7 @@ class Mission
 							flags=4;
 							class Attributes
 							{
-								init="[this, controllerComplex, ""rtt_complex_0"", ""rtt_complex_1"", ""rtt_complex_2"", ""rtt_complex_3""] call tScripts_fnc_camController;";
+								init="[this, controllerComplex, ""rtt_complex_0"", ""rtt_complex_1"", ""rtt_complex_2"", ""rtt_complex_3""] call tScripts_fnc_camera_Controller;";
 								name="screenComplex";
 							};
 							id=880;
@@ -9878,7 +9878,7 @@ class Mission
 							flags=4;
 							class Attributes
 							{
-								init="[this , ""rtt_complex_3"", 1, 0] call tScripts_fnc_camHelmet;";
+								init="[this , ""rtt_complex_3"", 1, 0] call tScripts_fnc_camera_Helmet;";
 								name="camHelmetComplex";
 							};
 							id=909;
@@ -10354,7 +10354,7 @@ class Mission
 							side="Empty";
 							class Attributes
 							{
-								init="" \n "[] call tScripts_fnc_roomInitComplex;" \n " " \n "[this, [roomDoorComplex_0, roomDoorComplex_1], roomHashComplex, roomAreaComplex] call tScripts_fnc_roomController;" \n "";
+								init="" \n "call tScripts_fnc_roomInitComplex;" \n " " \n "[this, [roomDoorComplex_0, roomDoorComplex_1], roomHashComplex, roomAreaComplex] call tScripts_fnc_roomController;" \n "";
 								name="controllerComplex";
 							};
 							id=930;
@@ -10399,7 +10399,7 @@ class Mission
 							side="Empty";
 							class Attributes
 							{
-								init="[this , camTargetComplex_1, ""rtt_complex_1"", 1, 0] call tScripts_fnc_camStatic;";
+								init="[this , camTargetComplex_1, ""rtt_complex_1"", 1, 0] call tScripts_fnc_camera_Static;";
 								name="camComplex_1";
 							};
 							id=923;
@@ -10416,7 +10416,7 @@ class Mission
 							side="Empty";
 							class Attributes
 							{
-								init="[this , camTargetComplex_2, ""rtt_Complex_2"", 1.75, 0] call tScripts_fnc_camStatic;";
+								init="[this , camTargetComplex_2, ""rtt_Complex_2"", 1.75, 0] call tScripts_fnc_camera_Static;";
 								name="camComplex_2";
 							};
 							id=925;
@@ -10483,7 +10483,7 @@ class Mission
 							side="Empty";
 							class Attributes
 							{
-								init="[this , camTargetComplex_0, ""rtt_complex_0"", 1.45, 0] call tScripts_fnc_camStatic;";
+								init="[this , camTargetComplex_0, ""rtt_complex_0"", 1.45, 0] call tScripts_fnc_camera_Static;";
 								name="camComplex_0";
 							};
 							id=921;

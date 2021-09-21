@@ -12,9 +12,9 @@ class tScripts {
 
 	class cameras {
 		file = "tScripts\Cameras";
-		class camController {};
-		class camHelmet {};
-		class camStatic {};
+		class camera_Controller {};
+		class camera_Helmet {};
+		class camera_Static {};
 	}
 
 	class crates {
