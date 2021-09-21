@@ -264,7 +264,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=49;
+		items=51;
 		class Item0
 		{
 			dataType="Layer";
@@ -4962,7 +4962,6 @@ class Mission
 				{
 					dataType="Layer";
 					name="Utility";
-					state=3;
 					class Entities
 					{
 						items=7;
@@ -10645,6 +10644,26 @@ class Mission
 			colorName="ColorEAST";
 			id=1;
 			atlOffset=0.050000191;
+		};
+		class Item49
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={4672.793,5,4170.8882};
+			};
+			title="Add vehicle respawn init";
+			id=1;
+		};
+		class Item50
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={4672.0449,5,4204.0332};
+			};
+			title="Add RHS kits";
+			id=1;
 		};
 	};
 };
