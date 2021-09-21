@@ -1,4 +1,4 @@
 
 enableSaving [false, false];
 
-[] call tScripts_fnc_vehicleInit;
+call tScripts_fnc_vehicleInit;
