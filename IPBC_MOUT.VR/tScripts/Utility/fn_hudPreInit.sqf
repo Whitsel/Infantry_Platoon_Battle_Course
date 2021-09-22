@@ -1,4 +1,7 @@
 
+// Original Author JB
+//Lightly modified by Whitsel to add more HUD objects
+
 #include "script_component.hpp";
 
 HUD_Enabled = true;
