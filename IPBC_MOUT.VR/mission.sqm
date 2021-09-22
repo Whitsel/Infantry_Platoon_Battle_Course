@@ -8500,7 +8500,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, false] call tScripts_fnc_crateInfantry";
+				init="[this, false] call tScripts_fnc_crate_Infantry";
 			};
 			id=441;
 			type="B_supplyCrate_F";
@@ -8516,7 +8516,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, false] call tScripts_fnc_crateInfantry";
+				init="[this, false] call tScripts_fnc_crate_Infantry";
 			};
 			id=442;
 			type="B_supplyCrate_F";
@@ -8532,7 +8532,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, false] call tScripts_fnc_crateInfantry";
+				init="[this, false] call tScripts_fnc_crate_Infantry";
 			};
 			id=443;
 			type="B_supplyCrate_F";
@@ -8548,7 +8548,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, false] call tScripts_fnc_crateWeapons";
+				init="[this, false] call tScripts_fnc_crate_Weapons";
 			};
 			id=444;
 			type="B_supplyCrate_F";
@@ -8564,7 +8564,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, false] call tScripts_fnc_crateMech";
+				init="[this, false] call tScripts_fnc_crate_Mechanized";
 			};
 			id=445;
 			type="B_supplyCrate_F";
@@ -8580,7 +8580,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, false] call tScripts_fnc_crateLeadership";
+				init="[this, false] call tScripts_fnc_crate_Leadership";
 			};
 			id=446;
 			type="B_supplyCrate_F";
@@ -8927,7 +8927,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, false] call tScripts_fnc_crateOpfor";
+				init="[this, false] call tScripts_fnc_crate_Opfor";
 			};
 			id=617;
 			type="B_supplyCrate_F";
