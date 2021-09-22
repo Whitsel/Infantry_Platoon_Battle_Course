@@ -37,7 +37,7 @@ class tScripts {
 		class brifleman {};
 		class bmedic {};
 		class bmarksman {};
-		class bassistantMachineGunner {};
+		class bMachineGunassistant {};
 		class bmachineGunner {};
 		class bmachinegunAmmoBearer {};
 		class bantiTankGunner {};
