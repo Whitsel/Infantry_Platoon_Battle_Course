@@ -3,12 +3,12 @@
 
 params ["_target", "_floorSetHash", "_floorNum"];
 
-_spawnPositions = (_floorSetHash get _floorNum)#1;
-_spawnChanceAI = _target getVariable ["spawnChanceAI", 0.2];
-_spawnChanceCiv = _target getVariable ["spawnChanceCiv", 0.2];
-_spawnAISkill = _target getVariable ["spawnAISkill", 0.1];
+private _spawnPositions = (_floorSetHash get _floorNum)#1;
+private _spawnChanceAI = _target getVariable ["spawnChanceAI", 0.2];
+private _spawnChanceCiv = _target getVariable ["spawnChanceCiv", 0.2];
+private _spawnAISkill = _target getVariable ["spawnAISkill", 0.1];
 
-_civArray = [
+private _civArray = [
 	"C_man_p_beggar_F",
 	"C_man_1",
 	"C_Man_casual_1_F",
