@@ -14,19 +14,6 @@ player addAction [iconEdenTreeExpand + " Open Range Master Tools", {
 		true,
 		true,
 		"",
-		"true",
-		0
-];
-
-player addAction [iconEdenTreeExpand + " Open Range Master Tools", {
-		params ["_target", "_caller", "_actionId", "_arguments"];
-		player setVariable ["showTools", true];
-		},
-		nil,
-		0,
-		true,
-		true,
-		"",
 		"!(player getVariable ['showTools', false])",
 		0
 ];
