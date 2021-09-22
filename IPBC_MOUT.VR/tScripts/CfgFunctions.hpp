@@ -1,13 +1,4 @@
 
-class init {
-	tag = "init";
-	class functions
-	{
-		file = "tScripts\Utility";
-		class hudPreInit { preInit = 1; };
-	};
-};
-
 class tScripts {
 
 	class cameras {
@@ -19,6 +10,7 @@ class tScripts {
 
 	class crates {
 		file = "tScripts\Crates";
+		class crate_Common {};
 		class crate_Lock {};
 		class crate_Leadership {};
 		class crate_Infantry {};

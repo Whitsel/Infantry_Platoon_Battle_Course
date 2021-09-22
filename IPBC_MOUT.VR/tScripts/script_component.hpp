@@ -44,6 +44,7 @@
 #define iconCamera "<img size='1' image='\a3\ui_f\data\GUI\Rsc\RscDisplayEGSpectator\Follow'/>"
 #define iconCameraOld "<img size='1' image='\a3\ui_f\data\GUI\Cfg\KeyframeAnimation\iconCamera_CA'/>"
 #define iconCameraOverhead "<img size='1' image='\a3\ui_f\data\GUI\Rsc\RscDisplayMissionEditor\iconCamera_ca'/>"
+#define iconArsenal "<img size='1' image='\a3\ui_f\data\Logos\arsenal_1024_ca'/>"
 
 #define iconEdenMan "<img size='1' image='\a3\3den\data\Displays\Display3DEN\PanelRight\modeObjects_ca'/>"
 #define iconEdenGroup "<img size='1' image='\a3\3den\data\Displays\Display3DEN\PanelRight\modeGroups_ca'/>"

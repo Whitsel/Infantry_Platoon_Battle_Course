@@ -80,13 +80,7 @@ _crate call FUNC(addActionSpacer);
 
 _crate addAction ["<t size = '0.5'> </t>", {}, [], 1.5, true, true, "", "(!(_target getVariable ['tScripts_crates_locked', false]) && (_this getVariable ['tScripts_class_role','']) == 'infantry') || ((_this getVariable ['tScripts_class_role','']) == 'rangeMaster')", 5];
 
-_crate call FUNC(resources);
-
-_crate allowdamage false;
-
-_crate enableRopeAttach false;
-
-_crate call FUNC(crate_Lock);
+[_crate, _locked] call FUNC(crate_Common);
 
 if !(isServer) exitWith {};
 
