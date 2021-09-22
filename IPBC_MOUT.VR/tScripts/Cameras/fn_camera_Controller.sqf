@@ -212,7 +212,7 @@ _screen addAction [
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 		_arguments params ["_screen", "_rtt_3"];
-		private _cameraHelmetHashMap = GETMVAR(GVAR(camerasHelmet), createHashMap);
+		private _cameraHelmetHashMap = GETMVAR(EGVAR(COMPONENT,helmetHash), createHashMap);
 		private _cameraActual = (_cameraHelmetHashMap get _rtt_3)#0;
 		private _cameraPosition = (_cameraHelmetHashMap get _rtt_3)#1;
 		private _cameraHelmetOffset = [0.18, 0, 0.2];
@@ -234,7 +234,7 @@ _screen addAction [
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 		_arguments params ["_screen", "_rtt_3"];
-		private _cameraHelmetHashMap = GETMVAR(GVAR(camerasHelmet), createHashMap);
+		private _cameraHelmetHashMap = GETMVAR(EGVAR(COMPONENT,helmetHash), createHashMap);
 		private _cameraActual = (_cameraHelmetHashMap get _rtt_3)#0;
 		private _cameraPosition = (_cameraHelmetHashMap get _rtt_3)#1;
 		_cameraActual attachTo [_cameraPosition ,[0, 0, 0]];
