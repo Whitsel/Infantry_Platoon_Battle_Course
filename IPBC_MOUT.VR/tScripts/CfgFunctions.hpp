@@ -69,7 +69,6 @@ class tScripts {
 
 	class utility {
 		file = "tScripts\Utility";
-		class crateLock {};
 		class intro {};
 		class resources {};
 		class setCargo {};
