@@ -7,7 +7,7 @@ private _state = param [0, "", [""]];
 
 if (_state == "init") then {
 
-	SETVAR(player,GVAR(role),"mechanized");
+	SETVAR(player,EGVAR(COMPONENT,role),"mechanized");
 
 	player call FUNC(bCrewman);
 

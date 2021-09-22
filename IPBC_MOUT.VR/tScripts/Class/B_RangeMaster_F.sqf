@@ -9,7 +9,7 @@ if (_state == "init") then {
 
 	player setVariable ["instructor", true];
 
-	SETVAR(player,GVAR(role),"rangemaster");
+	SETVAR(player,EGVAR(COMPONENT,role),"rangemaster");
 
 	player call FUNC(cRangeMaster);
 

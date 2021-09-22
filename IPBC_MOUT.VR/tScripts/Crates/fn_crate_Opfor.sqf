@@ -1,14 +1,14 @@
 
-#include "..\script_component.hpp";
+#include "script_component.hpp";
 
-params ["_box",["_locked", false]];
+params ["_crate",["_locked", false]];
 
 if (_locked == true) then {
-	_box setVariable ["locked", true];
-	diag_log format ["tScripts Logging: Crate lock has been initially applied to %1", _box]
+	SETVAR(_crate,EGVAR(COMPONENT,locked),true);
+	diag_log format ["tScripts Logging: Crate lock has been initially applied to %1", _crate]
 };
 
-_kits = [
+private _kits = [
 	[
 		"Range Master",
 		"crangeMaster",
@@ -42,20 +42,20 @@ _kits = [
 	]
 ];
 
-_box addAction [format ["<img image='Data\7Cav_Logo.paa' /> 7th Cavalry Equipment Crate"], {}, [], 1.5, true, true, "", "true", 5];
+_crate addAction [format ["<img image='Data\7Cav_Logo.paa' /> 7th Cavalry Equipment Crate"], {}, [], 1.5, true, true, "", "true", 5];
 
-_box addAction ["<t size = '0.5'> </t>", {}, nil, 1.5, true, false, "", "true", 5];
+_crate addAction ["<t size = '0.5'> </t>", {}, nil, 1.5, true, false, "", "true", 5];
 
 {
 	_x params [
 		"_role",
 		"_fileName",
 		["_icon", iconMan],
-		["_cond", "(!(_target getVariable ['locked', false]) && (_this getVariable ['tScripts_role','']) == 'opfor') || ((_this getVariable ['tScripts_role','']) == 'rangeMaster')"],
+		["_cond", "(!(_target getVariable ['tScripts_crates_locked', false]) && (_this getVariable ['tScripts_class_role','']) == 'opfor') || ((_this getVariable ['tScripts_class_role','']) == 'rangeMaster')"],
 		["_color", colorHexEast]
 	];
 
-	_box addAction ["  " + _color + _icon + "</t>" + _role, {
+	_crate addAction ["  " + _color + _icon + "</t>" + _role, {
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
 		_caller call compile preProcessFile format ["tScripts\Kits\fn_%1.sqf", _arguments];
@@ -70,28 +70,28 @@ _box addAction ["<t size = '0.5'> </t>", {}, nil, 1.5, true, false, "", "true", 
 		5
 	];
 
-	diag_log format ["tScripts Logging: %1 kit added to quick select for %2", _filename, _box]
+	diag_log format ["tScripts Logging: %1 kit added to quick select for %2", _filename, _crate]
 
 } forEach _kits;
 
-_box addAction ["<t size = '0.5'> </t>", {}, [], 1.5, true, true, "", "true", 5];
+_crate addAction ["<t size = '0.5'> </t>", {}, [], 1.5, true, true, "", "(!(_target getVariable ['tScripts_crates_locked', false]) && (_this getVariable ['tScripts_class_role','']) == 'opfor') || ((_this getVariable ['tScripts_class_role','']) == 'rangeMaster')", 5];
 
-_box call FUNC(resources);
+_crate call FUNC(resources);
 
-_box allowdamage false;
+_crate allowdamage false;
 
-_box enableRopeAttach false;
+_crate enableRopeAttach false;
 
-_box call FUNC(crateLock);
+_crate call FUNC(crate_Lock);
 
 if !(isServer) exitWith {};
 
 [
-	_box,
+	_crate,
 	[
 		["30Rnd_65x39_caseless_black_mag", 100],
 		["100Rnd_65x39_caseless_black_mag", 50],
-		["200Rnd_65x39_cased_Box_Red", 20],
+		["200Rnd_65x39_cased_crate_Red", 20],
 		["30Rnd_9x21_Mag_SMG_02", 50],
 		["16Rnd_9x21_Mag", 20],
 		["1Rnd_HE_Grenade_shell", 50],

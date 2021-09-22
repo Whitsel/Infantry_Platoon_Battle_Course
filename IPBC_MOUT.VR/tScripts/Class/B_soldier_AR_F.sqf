@@ -7,7 +7,7 @@ private _state = param [0, "", [""]];
 
 if (_state == "init") then {
 
-	SETVAR(player,GVAR(role),"infantry");
+	SETVAR(player,EGVAR(COMPONENT,role),"infantry");
 
 	player call FUNC(bAutomaticRifleman);
 

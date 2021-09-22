@@ -19,11 +19,12 @@ class tScripts {
 
 	class crates {
 		file = "tScripts\Crates";
-		class crateLeadership {};
-		class crateInfantry {};
-		class crateWeapons {};
-		class crateMech {};
-		class crateOpfor {};
+		class crate_Lock {};
+		class crate_Leadership {};
+		class crate_Infantry {};
+		class crate_Weapons {};
+		class crate_Mechanized {};
+		class crate_Opfor {};
 	};
 
 	class rooms {
