@@ -48,7 +48,7 @@ private _kits = [
 
 _crate addAction [format ["<img image='Data\7Cav_Logo.paa' /> 7th Cavalry Equipment Crate"], {}, [], 1.5, true, true, "", "true", 5];
 
-_crate addAction ["<t size = '0.5'> </t>", {}, nil, 1.5, true, false, "", "true", 5];
+_crate call FUNC(addActionSpacer);
 
 {
 	_x params [

@@ -25,7 +25,7 @@ _rtt params ["_rtt_0", "_rtt_1", "_rtt_2", "_rtt_3"];
 
 _screen addAction [format ["<img image='Data\7Cav_Logo.paa' /> 7th Cavalry Camera Controller"], {}, [], 1.5, true, false, "", "true", 5];
 
-_screen addAction ["<t size = '0.5'> </t>", {}, nil, 1.5, true, false, "", "true", 5];
+_screen call FUNC(addActionSpacer);
 
 _screen addAction [
 	"  " + colorHexGuer + iconCameraOld + "</t> Turn on camera displays",
