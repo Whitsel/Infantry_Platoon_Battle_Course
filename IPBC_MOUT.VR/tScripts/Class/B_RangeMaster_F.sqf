@@ -20,6 +20,11 @@ if (_state == "init") then {
 
 	call FUNC(3DIcons);
 
+	if (!isMultiplayer) then {
+		_singlePlayerGroup = createGroup west;
+		[player] joinSilent _singlePlayerGroup;
+	};
+
 };
 
 if (_state == "respawn") then {
