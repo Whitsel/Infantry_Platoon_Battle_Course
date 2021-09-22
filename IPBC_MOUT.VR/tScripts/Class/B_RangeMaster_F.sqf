@@ -13,18 +13,19 @@ if (_state == "init") then {
 
 	player call FUNC(cRangeMaster);
 
-	call FUNC(tools);
-	call FUNC(pauseEx);
-	call FUNC(wallHacks);
-	call FUNC(timeSkip);
-
-	call FUNC(3DIcons);
-
 	if (!isMultiplayer) then {
 		_singlePlayerGroup = createGroup west;
 		[player] joinSilent _singlePlayerGroup;
+		call FUNC(tools);
+		call FUNC(pauseEx);
+		call FUNC(timeSkip);
+	} else {
+		call FUNC(tools);
+		call FUNC(pauseEx);
+		call FUNC(wallHacks);
+		call FUNC(timeSkip);
+		call FUNC(3DIcons);
 	};
-
 };
 
 if (_state == "respawn") then {
