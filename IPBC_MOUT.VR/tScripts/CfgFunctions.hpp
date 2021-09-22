@@ -72,6 +72,7 @@ class tScripts {
 		class intro {};
 		class resources {};
 		class setCargo {};
+		class hudPreInit { preInit = 1; };
 	};
 
 	class vehicle {
