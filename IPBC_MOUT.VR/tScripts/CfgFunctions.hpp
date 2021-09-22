@@ -50,6 +50,23 @@ class tScripts {
 		class orifleman {};
 	};
 
+	class equipment {
+		file = "tScripts\Kits\Equipment";
+		class equipment_logic { preInit = 1; };
+		class equipment_VAN {};
+		class equipment_VANACE {};
+		class equipment_VANACRE {};
+		class equipment_VANTFAR {};
+		class equipment_VANACEACRE {};
+		class equipment_VANACETFAR {};
+		class equipment_USF {};
+		class equipment_USFACE {};
+		class equipment_USFACRE {};
+		class equipment_USFTFAR {};
+		class equipment_USFACEACRE {};
+		class equipment_USFACETFAR {};
+	};
+
 	class tools {
 		file = "tScripts\Tools";
 		class pauseEx {};
