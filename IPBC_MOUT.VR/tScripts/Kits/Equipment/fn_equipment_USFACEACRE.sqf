@@ -43,7 +43,7 @@ call {//Magazines
 	BLU_MAGAZINES_MACHINEGUN = "rhsusf_100Rnd_762x51_m62_tracer";
 	BLU_MAGAZINES_GRENADIER_HE = "rhs_mag_M441_HE";
 	BLU_MAGAZINES_GRENADIER_SMOKE = "rhs_mag_m713_Red";
-	BLU_MAGAZINES_GRENADIER_FLARE = "UGL_FlareCIR_F";
+	BLU_MAGAZINES_GRENADIER_FLARE = "ACE_40mm_Flare_ir";
 	BLU_MAGAZINES_RIFLE_MARKSMAN = "rhsusf_20Rnd_762x51_m993_Mag";
 
 	BLUE_MAGAZINES_PISTOL = "rhsusf_mag_15Rnd_9x19_JHP";
@@ -57,8 +57,8 @@ call {	//Grenades
 	BLU_GRENADE_SMOKE = "SmokeShell";
 	BLU_GRENADE_SMOKE_BLUE = "SmokeShellBlue";
 	BLU_GRENADE_CHEM = "ACE_Chemlight_IR";
-	BLU_GRENADE_CHEM_YELLOW = "Chemlight_yellow";
-	BLU_GRENADE_CHEM_RED = "Chemlight_red";
+	BLU_GRENADE_CHEM_YELLOW = "ACE_Chemlight_HiYellow";
+	BLU_GRENADE_CHEM_RED = "ACE_Chemlight_HiRed";
 	BLU_GRENADE_IR = "B_IR_Grenade";
 };
 
