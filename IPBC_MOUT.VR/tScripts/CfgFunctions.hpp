@@ -35,6 +35,7 @@ class tScripts {
 		class bautomaticRifleman {};
 		class bgrenadier {};
 		class brifleman {};
+		class bcombatLifeSaver {};
 		class bmedic {};
 		class bmarksman {};
 		class bMachineGunassistant {};
