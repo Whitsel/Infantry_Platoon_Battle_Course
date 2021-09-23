@@ -1,7 +1,7 @@
 
 #include "script_component.hpp";
 
-diag_log "tScripts Logging: Detected RHS USAF, ACE. Switching equipment."
+diag_log "tScripts Logging: Detected RHS USAF, ACE. Switching equipment.";
 
 call {	//Weapons
 	BLU_PRIMARY_RIFLE = "rhs_weap_m4a1";
