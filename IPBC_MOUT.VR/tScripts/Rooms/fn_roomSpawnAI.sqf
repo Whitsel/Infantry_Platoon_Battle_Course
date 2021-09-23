@@ -183,7 +183,7 @@ roomSpawnOpforWaypoint = {
 };
 
 roomSpawnCiv = {
-	private _rand = floor random 145;
+	private _rand = floor random count(_civArray);
 	private _civRand = _civArray select _rand;
 	private _unitCiv = (createGroup east) createUnit [_civRand, getposATL _x, [], 0.5, "NONE"];
 	_unitCiv setDir random 360;
