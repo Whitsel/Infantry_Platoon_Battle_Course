@@ -34,11 +34,6 @@ private _kits = [
 		"Platoon Medic",
 		"bmedic",
 		iconManMedic
-	],
-	[
-		"Squad Leader",
-		"bteamLeader",
-		iconManOfficer
 	]
 ];
 
@@ -83,15 +78,15 @@ if !(isServer) exitWith {};
 [
 	_crate,
 	[
-		["30Rnd_65x39_caseless_black_mag", 100],
-		["16Rnd_9x21_Mag", 20],
-		["HandGrenade", 50],
-		["SmokeShell", 50],
-		["SmokeShellBlue", 20],
-		["Chemlight_blue", 20],
-		["Chemlight_yellow", 20],
-		["Chemlight_red", 20],
-		["B_IR_Grenade", 10],
-		["FirstAidKit", 100]
+		[BLU_MAGAZINES_RIFLE, 100],
+		[BLU_MAGAZINES_RIFLE_TRACER, 20],
+		[BLU_MAGAZINES_RIFLE_AUTOMATIC, 50],
+		[BLUE_MAGAZINES_PISTOL, 20],
+		[BLU_GRENADE_FRAG, 50],
+		[BLU_GRENADE_SMOKE, 50],
+		[BLU_GRENADE_SMOKE_BLUE, 20],
+		[BLU_GRENADE_CHEM, 20],
+		[BLU_GRENADE_IR, 10],
+		[BLU_MEDICAL, 100]
 	]
 ] call FUNC(setCargo);

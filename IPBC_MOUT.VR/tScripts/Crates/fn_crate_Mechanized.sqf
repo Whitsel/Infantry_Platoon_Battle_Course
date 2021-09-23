@@ -64,16 +64,14 @@ if !(isServer) exitWith {};
 [
 	_crate,
 	[
-		["30Rnd_9x21_Mag_SMG_02", 50],
-		["16Rnd_9x21_Mag", 20],
-		["HandGrenade", 50],
-		["SmokeShell", 50],
-		["SmokeShellBlue", 20],
-		["Chemlight_blue", 20],
-		["Chemlight_yellow", 20],
-		["Chemlight_red", 20],
-		["B_IR_Grenade", 10],
-		["SLAMDirectionalMine_Wire_Mag", 10],
-		["FirstAidKit", 100]
+		[BLU_MAGAZINES_RIFLE, 100],
+		[BLU_GRENADE_FRAG, 50],
+		[BLU_GRENADE_SMOKE, 50],
+		[BLU_GRENADE_SMOKE_BLUE, 20],
+		[BLU_GRENADE_CHEM, 20],
+		[BLU_GRENADE_CHEM_YELLOW, 20],
+		[BLU_GRENADE_CHEM_RED, 20],
+		[BLU_GRENADE_IR, 10],
+		[BLU_MEDICAL, 100]
 	]
 ] call FUNC(setCargo);
