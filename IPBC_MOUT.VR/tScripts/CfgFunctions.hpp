@@ -65,6 +65,8 @@ class tScripts {
 		class equipment_USFTFAR {};
 		class equipment_USFACEACRE {};
 		class equipment_USFACETFAR {};
+		class equipment_oVAN {};
+		class equipment_oAFRF {};
 	};
 
 	class tools {

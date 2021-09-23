@@ -37,3 +37,9 @@ if ("rhsusf_main" in activatedAddons) then
 		};
 	};
 };
+
+if ("rhs_main" in activatedAddons) then {
+	call FUNC(equipment_oAFRF)
+} else {
+	call FUNC(equipment_oVAN)
+};
