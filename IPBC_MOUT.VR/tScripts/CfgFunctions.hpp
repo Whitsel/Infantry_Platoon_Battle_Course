@@ -55,6 +55,7 @@ class tScripts {
 
 	class equipment {
 		file = "tScripts\Kits\Equipment";
+		class init_acre {};
 		class equipment_logic { preInit = 1; };
 		class equipment_VAN {};
 		class equipment_VANACE {};
