@@ -24,7 +24,7 @@
  * Public: [No]
  */
 
-params ["_cameraPosition", "_rtt", "_cameraFov", "_cameraEffect"];
+params ["_cameraPosition", "_rtt", ["_cameraFov", 1], ["_cameraEffect", 0]];
 
 private _cameraActual = "camera" camCreate getPos _cameraPosition;
 _cameraActual attachTo [_cameraPosition, [0, 0, 0]];
