@@ -8,14 +8,14 @@ waitUntil {!isNull _unit};
 _unit setUnitLoadout [
 	BLU_WEAP_SYS_RIFLE_TROOPER,
 	[],
-	[],
-	BLU_UNIFORM_CONTENTS_TROOPER,
+	BLU_WEAP_SYS_LAT,
+	BLU_UNIFORM_CONTENTS,
 	BLU_VEST_CONTENTS_RIFLEMAN,
 	BLU_PACK_CONTENTS_RIFLEMAN,
 	BLU_HELMET_TROOPER,
 	"",
 	[],
-	BLU_ITEMS_TROOPER
+	BLU_ITEMS
 ];
 
 _unit removeAllEventHandlers "Respawn";

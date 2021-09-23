@@ -6,16 +6,16 @@ params ["_unit"];
 waitUntil {!isNull _unit};
 
 _unit setUnitLoadout [
-	BLU_WEAP_SYS_RIFLE_LEADER,
+	BLU_WEAP_SYS_RIFLE_TROOPER,
 	[],
 	[],
-	BLU_UNIFORM_CONTENTS_LEADER,
+	BLU_UNIFORM_CONTENTS,
 	BLU_VEST_CONTENTS_MEDIC,
 	BLU_PACK_CONTENTS_MEDIC,
 	BLU_HELMET_LEADER,
 	"",
 	[],
-	BLU_ITEMS_LEADER
+	BLU_ITEMS
 ];
 
 _unit removeAllEventHandlers "Respawn";
