@@ -15,6 +15,6 @@ if (_state == "init") then {
 
 if (_state == "respawn") then {
 
-	player call FUNC(antiTankGunner);
+	player call FUNC(bAntiTankGunner);
 
 };

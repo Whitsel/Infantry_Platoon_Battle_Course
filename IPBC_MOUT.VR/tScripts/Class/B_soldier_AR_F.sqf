@@ -15,6 +15,6 @@ if (_state == "init") then {
 
 if (_state == "respawn") then {
 
-	player call FUNC(automaticRifleman);
+	player call FUNC(bAutomaticRifleman);
 
 };
