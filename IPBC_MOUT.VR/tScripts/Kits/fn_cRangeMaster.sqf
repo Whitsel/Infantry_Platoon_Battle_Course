@@ -18,14 +18,7 @@ _unit setUnitLoadout [
 	"H_Cap_headphones",
 	"",
 	[],
-	[
-		"ItemMap",
-		"ItemGPS",
-		"ItemRadio",
-		"ItemCompass",
-		"ItemWatch",
-		""
-	]
+	BLU_ITEMS
 ];
 
 _unit removeAllEventHandlers "Respawn";
