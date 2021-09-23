@@ -190,3 +190,5 @@ call {	//Assemblies/Contents
 		};
 	};
 };
+
+call FUNC(init_acre);
