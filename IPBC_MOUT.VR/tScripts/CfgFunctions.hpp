@@ -44,6 +44,7 @@ class tScripts {
 		class bantiTankGunner {};
 		class bantiTankAmmoBearer {};
 		class bcrewman {};
+		class bRATELO {};
 		class crangeMaster {};
 		class oteamLeader {};
 		class oautomaticRifleman {};

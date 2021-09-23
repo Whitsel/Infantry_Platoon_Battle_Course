@@ -9,12 +9,12 @@ if (_state == "init") then {
 
 	SETVAR(player,EGVAR(COMPONENT,role),"infantry");
 
-	player call FUNC(bTeamLeader);
+	player call FUNC(bRATELO);
 
 };
 
 if (_state == "respawn") then {
 
-	player call FUNC(teamLeader);
+	player call FUNC(bRATELO);
 
 };
