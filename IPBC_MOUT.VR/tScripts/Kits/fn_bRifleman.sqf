@@ -6,49 +6,16 @@ params ["_unit"];
 waitUntil {!isNull _unit};
 
 _unit setUnitLoadout [
-	[
-		"arifle_MX_Black_F",
-		"",
-		"acc_pointer_IR",
-		"optic_Holosight_blk_F",
-		["30Rnd_65x39_caseless_black_mag",30],
-		[],
-		""
-	],
+	BLU_WEAP_SYS_RIFLE_TROOPER,
 	[],
 	[],
-	[
-		"U_B_CombatUniform_mcam",
-		[
-			["FirstAidKit",5]
-		]
-	],
-	[
-		"V_PlateCarrier2_rgr",
-		[
-			["30Rnd_65x39_caseless_black_mag",7,30],
-			["HandGrenade",2,1],
-			["SmokeShell",4,1]
-		]
-	],
-	[
-		"B_AssaultPack_rgr",
-		[
-			["NVGoggles_INDEP",1],
-			["ClaymoreDirectionalMine_Remote_Mag",2,1]
-		]
-	],
-	"H_HelmetB",
+	BLU_UNIFORM_CONTENTS_TROOPER,
+	BLU_VEST_CONTENTS_RIFLEMAN,
+	BLU_PACK_CONTENTS_RIFLEMAN,
+	BLU_HELMET_TROOPER,
 	"",
 	[],
-	[
-		"ItemMap",
-		"",
-		"",
-		"ItemCompass",
-		"ItemWatch",
-		""
-	]
+	BLU_ITEMS_TROOPER
 ];
 
 _unit removeAllEventHandlers "Respawn";

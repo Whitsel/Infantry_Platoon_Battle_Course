@@ -10,8 +10,8 @@ _unit setUnitLoadout [
 	[],
 	[],
 	BLU_UNIFORM_CONTENTS_LEADER,
-	BLU_VEST_CONTENTS_MACHINEGUNASSISTANT,
-	BLU_PACK_CONTENTS_MACHINEGUNASSISTANT,
+	BLU_VEST_CONTENTS_SQUADLEADER,
+	BLU_PACK_CONTENTS_SQUADLEADER,
 	BLU_HELMET_LEADER,
 	"",
 	BLU_BINO,
@@ -24,8 +24,8 @@ _unit addEventHandler [
 	"Respawn",
 	{
 		params ["_unit", "_corpse"];
-		_unit call tScripts_fnc_bAssistantMachineGunner;
+		_unit call tScripts_fnc_bTeamLeader;
 	}
 ];
 
-diag_log format ["tScripts Logging: %1 had the Assistant Machine Gunner kit applied",name _unit]
+diag_log format ["tScripts Logging: %1 had the Platoon/Squad/Team Leader kit applied",name _unit]
