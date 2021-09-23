@@ -19,7 +19,7 @@ if ("rhsusf_main" in activatedAddons) then
 			default {call FUNC(equipment_USF)};
 		};
 	};
-}; else {
+} else {
 	if ("ace_main" in activatedAddons) then
 	{
 		switch (true) do
