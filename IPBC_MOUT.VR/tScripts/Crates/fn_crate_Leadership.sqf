@@ -28,7 +28,7 @@ private _kits = [
 	],
 	[
 		"Radio Telephone Operator",
-		"bteamLeader"
+		"bRATELO"
 	],
 	[
 		"Platoon Medic",

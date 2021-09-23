@@ -47,7 +47,7 @@ private _kits = [
 	],
 	[
 		"Combat Life Saver",
-		"bmedic",
+		"bCombatLifeSaver",
 		iconManMedic
 	]
 ];

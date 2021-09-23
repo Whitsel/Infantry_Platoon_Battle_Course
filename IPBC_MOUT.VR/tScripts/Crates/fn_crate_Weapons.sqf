@@ -23,7 +23,7 @@ private _kits = [
 	],
 	[
 		"Assistant Gunner",
-		"bassistantMachineGunner",
+		"bMachinegunAssistant",
 		iconManLeader
 	],
 	[
