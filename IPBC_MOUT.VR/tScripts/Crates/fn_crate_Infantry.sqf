@@ -18,7 +18,7 @@ private _kits = [
 	],
 	[
 		"Squad Leader",
-		"bteamLeader",
+		"bSquadLeader",
 		iconManOfficer
 	],
 	[

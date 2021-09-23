@@ -18,12 +18,12 @@ private _kits = [
 	],
 	[
 		"Platoon Leader",
-		"bteamLeader",
+		"bSquadLeader",
 		iconManCommander
 	],
 	[
 		"Platoon Sergeant",
-		"bteamLeader",
+		"bSquadLeader",
 		iconManCommander
 	],
 	[

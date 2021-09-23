@@ -31,6 +31,7 @@ class tScripts {
 
 	class kits {
 		file = "tScripts\Kits";
+		class bsquadLeader {};
 		class bteamLeader {};
 		class bautomaticRifleman {};
 		class bgrenadier {};
