@@ -18,11 +18,11 @@ _printer addAction ["  <img size='1' image='\a3\ui_f\data\GUI\RscCommon\RscDebug
 			};
 		}];
 		},
-		nil,	// arguments
-		1.5,	// priority
-		true,	// showWindow
-		true,	// hideOnUse
-		"",		// shortcut
-		"",		// condition
-		5		// distance
+		nil,
+		1.5,
+		true,
+		true,
+		"",
+		"",
+		5
 ];
