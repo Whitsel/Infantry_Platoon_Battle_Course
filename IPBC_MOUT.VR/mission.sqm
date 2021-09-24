@@ -10655,26 +10655,5 @@ class Mission
 			title="Add vehicle respawn init";
 			id=1;
 		};
-		class Item50
-		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={4672.0449,5,4204.0332};
-			};
-			title="Add RHS kits";
-			id=1;
-		};
-		class Item51
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={4672,5,4212};
-			};
-			name="crateAttachmentPoint";
-			id=2;
-			type="Logic";
-		};
 	};
 };
