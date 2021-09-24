@@ -44,9 +44,26 @@
 /*		  RESPAWN		   */
 
 	respawn				= BASE;
-	respawnDelay		   = 4;
-	respawnOnStart		 = -1;
-	respawnTemplatesWest[] = {"MenuPosition"};
+	respawnButton		= 0;
+	respawnDelay		= 10;
+	respawnOnStart		= -1;
+	respawnDialog		= 0;
+	respawnTemplatesWest[] = { "Spectator" };
+
+class Params
+{
+	#include "\a3\Functions_F\Params\paramRevive.hpp"
+
+	class Daytime
+	{
+		title = "Time";
+		texts[] = {"Morning","Day","Evening","Night"};
+		values[] = {6,12,18,0};
+		default = 12;
+		function = "BIS_fnc_paramDaytime";
+	};
+	#include "\a3\functions_f\Params\paramWeather.hpp"
+};
 
 /*		  SYSTEMS		   */
 
@@ -54,7 +71,7 @@
 	{
 		gameType = Coop;
 		minPlayers = 1;
-		maxPlayers = 55;
+		maxPlayers = 63;
 	 };
 
 	class CfgFunctions {
