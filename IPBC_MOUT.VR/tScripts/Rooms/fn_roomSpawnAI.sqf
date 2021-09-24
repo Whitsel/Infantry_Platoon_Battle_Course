@@ -183,11 +183,11 @@ roomSpawnOpfor = {
 };
 
 roomSpawnOpForWaypoint = {
-	private _wpMaxTime = (_target getVariable ["spawnAIMovementSpeed", 120]);
-	private _wpPosition = _spawnPositions#(floor random (count _spawnPositions));
+	private _wayPointMaxTime = (_target getVariable ["spawnAIMovementSpeed", 120]);
+	private _wayPointPosition = _spawnPositions#(floor random (count _spawnPositions));
 	private _wayPoint_1 = _unitOpforGroup addWaypoint [_x, -1];
-	_wayPoint_1 setWaypointTimeout [0, _wpMaxTime/2, _wpMaxTime];
-	private _wayPoint_2 = _unitOpforGroup addWaypoint [_wpPosition, 1];
+	_wayPoint_1 setWaypointTimeout [0, _wayPointMaxTime/2, _wayPointMaxTime];
+	private _wayPoint_2 = _unitOpforGroup addWaypoint [_wayPointPosition, 1];
 	_wayPoint_2 setWaypointSpeed "LIMITED";
 };
 
@@ -197,11 +197,13 @@ roomSpawnOpForHunt = {
 		{
 			params ["_unit", "_firer", "_distance", "_weapon", "_muzzle", "_mode", "_ammo", "_gunner"];
 			if (side _firer == side _unit) exitWith {};
-			private _wayPointHunt = group _unit addWaypoint [getPosATL _firer, 1];
-			_wayPointHunt setWaypointType "SAD";
-			_wayPointHunt setWayPointSpeed "LIMITED";
-			_wayPointHunt setWaypointBehaviour "COMBAT";
-			_wayPointHunt waypointAttachVehicle _firer;
+			private _wayPointHunt_1 = group _unit addWaypoint [getPosATL _unit, 1];
+			_wayPointHunt_1 setWaypointTimeout [0, 5, 10];
+			private _wayPointHunt_2 = group _unit addWaypoint [getPosATL _firer, 3];
+			_wayPointHunt_2 setWaypointType "SAD";
+			_wayPointHunt_2 setWayPointSpeed "LIMITED";
+			_wayPointHunt_2 setWaypointBehaviour "COMBAT";
+			_wayPointHunt_2 waypointAttachVehicle _firer;
 			_unit removeAllEventHandlers "FiredNear";
 		}
 	]
