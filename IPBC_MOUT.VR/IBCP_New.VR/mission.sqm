@@ -1,0 +1,1482 @@
+version=54;
+class EditorData
+{
+	class Camera
+	{
+		pos[]={4000,20,4000};
+	};
+};
+binarizationWanted=0;
+sourceName="IBCP_New";
+randomSeed=15813414;
+class ScenarioData
+{
+	author="Whitsel";
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800;
+		startWeather=0;
+		startWind=0;
+		startWaves=0;
+		forecastWeather=0;
+		forecastWind=0;
+		forecastWaves=0;
+		forecastLightnings=0;
+		year=2000;
+		day=1;
+		hour=12;
+		minute=0;
+		startFogDecay=0;
+		forecastFogDecay=0;
+	};
+	class Entities
+	{
+		items=3;
+		class Item0
+		{
+			dataType="Layer";
+			name="BluFor";
+			state=1;
+			class Entities
+			{
+				items=11;
+				class Item0
+				{
+					dataType="Group";
+					side="Civilian";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4000,5.0014391,4000.05};
+								angles[]={0,3.1415927,0};
+							};
+							side="Civilian";
+							flags=7;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""RANGE MASTER""];";
+								name="rangeMaster_0";
+								description="Range Master@RANGE MASTER";
+								isPlayer=1;
+							};
+							id=1;
+							type="B_RangeMaster_F";
+						};
+					};
+					class Attributes
+					{
+						init="this setGroupIdGlobal [""RANGE MASTER""];";
+					};
+					id=2;
+					atlOffset=-5;
+				};
+				class Item1
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=2;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4001,5.0014391,3996.05};
+								angles[]={0,3.1415927,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 6""];";
+								name="headHunter_6_0";
+								description="Platoon Leader@HEADHUNTER - 6";
+								isPlayable=1;
+							};
+							id=3;
+							type="B_officer_F";
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4003,5.0014391,3996.05};
+								angles[]={0,3.1415927,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 6""];";
+								name="headHunter_6_1";
+								description="Radio Telephone Operator@HEADHUNTER - 6R";
+								isPlayable=1;
+							};
+							id=4;
+							type="B_Soldier_unarmed_F";
+						};
+					};
+					class Attributes
+					{
+						init="this setGroupIdGlobal [""HEADHUNTER - 6""];";
+					};
+					id=5;
+					atlOffset=-5;
+				};
+				class Item2
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=2;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3999,5.0014391,3996.05};
+								angles[]={0,3.1415927,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 7""];";
+								name="headHunter_7_0";
+								description="Platoon Sergeant@HEADHUNTER - 7";
+								isPlayable=1;
+							};
+							id=6;
+							type="B_officer_F";
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3997,5.0014391,3996.05};
+								angles[]={0,3.1415927,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 7""];";
+								name="headHunter_7_1";
+								description="Platoon Medic@HEADHUNTER - 7M";
+								isPlayable=1;
+							};
+							id=7;
+							type="B_medic_F";
+						};
+					};
+					class Attributes
+					{
+						init="this setGroupIdGlobal [""HEADHUNTER - 7""];";
+					};
+					id=8;
+					atlOffset=-5;
+				};
+				class Item3
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=9;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4009,5.0014391,3992.05};
+								angles[]={0,3.141593,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 1""];";
+								name="headHunter_1_0";
+								description="Squad Leader@HEADHUNTER - 1";
+								isPlayable=1;
+							};
+							id=9;
+							type="B_Soldier_SL_F";
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4008,5.0014391,3990.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 1""];";
+								name="headHunter_1_1";
+								description="Alpha - Team Leader@HEADHUNTER - 1";
+								isPlayable=1;
+							};
+							id=10;
+							type="B_Soldier_TL_F";
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4008,5.0014391,3988.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 1""];";
+								name="headHunter_1_2";
+								description="Alpha - Automatic Rifleman@HEADHUNTER - 1";
+								isPlayable=1;
+							};
+							id=11;
+							type="B_soldier_AR_F";
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4008,5.0014391,3986.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 1""];";
+								name="headHunter_1_3";
+								description="Alpha - Genadier@HEADHUNTER - 1";
+								isPlayable=1;
+							};
+							id=12;
+							type="B_Soldier_GL_F";
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4008,5.0014391,3984.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 1""];";
+								name="headHunter_1_4";
+								description="Alpha - Rifleman@HEADHUNTER - 1";
+								isPlayable=1;
+							};
+							id=13;
+							type="B_Soldier_F";
+						};
+						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4010,5.0014391,3990.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 1""];";
+								name="headHunter_1_5";
+								description="Bravo - Team Leader@HEADHUNTER - 1";
+								isPlayable=1;
+							};
+							id=14;
+							type="B_Soldier_TL_F";
+						};
+						class Item6
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4010,5.0014391,3988.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 1""];";
+								name="headHunter_1_6";
+								description="Bravo - Automatic Rifleman@HEADHUNTER - 1";
+								isPlayable=1;
+							};
+							id=15;
+							type="B_soldier_AR_F";
+						};
+						class Item7
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4010,5.0014391,3986.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 1""];";
+								name="headHunter_1_7";
+								description="Bravo - Genadier@HEADHUNTER - 1";
+								isPlayable=1;
+							};
+							id=16;
+							type="B_Soldier_GL_F";
+						};
+						class Item8
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4010,5.0014391,3984.05};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 1""];";
+								name="headHunter_1_8";
+								description="Bravo - Combat Life Saver@HEADHUNTER - 1";
+								isPlayable=1;
+							};
+							id=17;
+							type="B_medic_F";
+						};
+					};
+					class Attributes
+					{
+						init="this setGroupIdGlobal [""HEADHUNTER - 1""];";
+					};
+					id=18;
+					atlOffset=-5;
+				};
+				class Item4
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=9;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4003,5.0014391,3992.05};
+								angles[]={0,3.141593,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 2""];";
+								name="headHunter_2_0";
+								description="Squad Leader@HEADHUNTER - 2";
+								isPlayable=1;
+							};
+							id=19;
+							type="B_Soldier_SL_F";
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4002,5.0014391,3990.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 2""];";
+								name="headHunter_2_1";
+								description="Alpha - Team Leader@HEADHUNTER - 2";
+								isPlayable=1;
+							};
+							id=20;
+							type="B_Soldier_TL_F";
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4002,5.0014391,3988.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 2""];";
+								name="headHunter_2_2";
+								description="Alpha - Automatic Rifleman@HEADHUNTER - 2";
+								isPlayable=1;
+							};
+							id=21;
+							type="B_soldier_AR_F";
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4002,5.0014391,3986.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 2""];";
+								name="headHunter_2_3";
+								description="Alpha - Genadier@HEADHUNTER - 2";
+								isPlayable=1;
+							};
+							id=22;
+							type="B_Soldier_GL_F";
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4002,5.0014391,3984.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 2""];";
+								name="headHunter_2_4";
+								description="Alpha - Rifleman@HEADHUNTER - 2";
+								isPlayable=1;
+							};
+							id=23;
+							type="B_Soldier_F";
+						};
+						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4004,5.0014391,3990.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 2""];";
+								name="headHunter_2_5";
+								description="Bravo - Team Leader@HEADHUNTER - 2";
+								isPlayable=1;
+							};
+							id=24;
+							type="B_Soldier_TL_F";
+						};
+						class Item6
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4004,5.0014391,3988.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 2""];";
+								name="headHunter_2_6";
+								description="Bravo - Automatic Rifleman@HEADHUNTER - 2";
+								isPlayable=1;
+							};
+							id=25;
+							type="B_soldier_AR_F";
+						};
+						class Item7
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4004,5.0014391,3986.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 2""];";
+								name="headHunter_2_7";
+								description="Bravo - Genadier@HEADHUNTER - 2";
+								isPlayable=1;
+							};
+							id=26;
+							type="B_Soldier_GL_F";
+						};
+						class Item8
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4004,5.0014391,3984.05};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 2""];";
+								name="headHunter_2_8";
+								description="Bravo - Combat Life Saver@HEADHUNTER - 2";
+								isPlayable=1;
+							};
+							id=27;
+							type="B_medic_F";
+						};
+					};
+					class Attributes
+					{
+						init="this setGroupIdGlobal [""HEADHUNTER - 2""];";
+					};
+					id=28;
+					atlOffset=-5;
+				};
+				class Item5
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=9;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3997,5.0014391,3992.05};
+								angles[]={0,3.141593,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 3""];";
+								name="headHunter_3_0";
+								description="Squad Leader@HEADHUNTER - 3";
+								isPlayable=1;
+							};
+							id=29;
+							type="B_Soldier_SL_F";
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3996,5.0014391,3990.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 3""];";
+								name="headHunter_3_1";
+								description="Alpha - Team Leader@HEADHUNTER - 3";
+								isPlayable=1;
+							};
+							id=30;
+							type="B_Soldier_TL_F";
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3996,5.0014391,3988.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 3""];";
+								name="headHunter_3_2";
+								description="Alpha - Automatic Rifleman@HEADHUNTER - 3";
+								isPlayable=1;
+							};
+							id=31;
+							type="B_soldier_AR_F";
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3996,5.0014391,3986.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 3""];";
+								name="headHunter_3_3";
+								description="Alpha - Genadier@HEADHUNTER - 3";
+								isPlayable=1;
+							};
+							id=32;
+							type="B_Soldier_GL_F";
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3996,5.0014391,3984.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 3""];";
+								name="headHunter_3_4";
+								description="Alpha - Rifleman@HEADHUNTER - 3";
+								isPlayable=1;
+							};
+							id=33;
+							type="B_Soldier_F";
+						};
+						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3998,5.0014391,3990.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 3""];";
+								name="headHunter_3_5";
+								description="Bravo - Team Leader@HEADHUNTER - 3";
+								isPlayable=1;
+							};
+							id=34;
+							type="B_Soldier_TL_F";
+						};
+						class Item6
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3998,5.0014391,3988.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 3""];";
+								name="headHunter_3_6";
+								description="Bravo - Automatic Rifleman@HEADHUNTER - 3";
+								isPlayable=1;
+							};
+							id=35;
+							type="B_soldier_AR_F";
+						};
+						class Item7
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3998,5.0014391,3986.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 3""];";
+								name="headHunter_3_7";
+								description="Bravo - Genadier@HEADHUNTER - 3";
+								isPlayable=1;
+							};
+							id=36;
+							type="B_Soldier_GL_F";
+						};
+						class Item8
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3998,5.0014391,3984.05};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 3""];";
+								name="headHunter_3_8";
+								description="Bravo - Combat Life Saver@HEADHUNTER - 3";
+								isPlayable=1;
+							};
+							id=37;
+							type="B_medic_F";
+						};
+					};
+					class Attributes
+					{
+						init="this setGroupIdGlobal [""HEADHUNTER - 3""];";
+					};
+					id=38;
+					atlOffset=-5;
+				};
+				class Item6
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=9;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3991,5.0014391,3992.05};
+								angles[]={0,3.141593,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 4""];";
+								name="headHunter_4_0";
+								description="Weapon Squad Leader@HEADHUNTER - 4";
+								isPlayable=1;
+							};
+							id=39;
+							type="B_Soldier_SL_F";
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3990,5.0014391,3990.05};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 4""];";
+								name="headHunter_4_1";
+								description="Gun 1 - Assistant Gunner@HEADHUNTER - 4";
+								isPlayable=1;
+							};
+							id=40;
+							type="B_support_AMG_F";
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3990,5.0014391,3988.05};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 4""];";
+								name="headHunter_4_2";
+								description="Gun 1 - Gunner@HEADHUNTER - 4";
+								isPlayable=1;
+							};
+							id=41;
+							type="B_HeavyGunner_F";
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3990,5.0014391,3986.05};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 4""];";
+								name="headHunter_4_3";
+								description="Gun 1 - Ammo Bearer@HEADHUNTER - 4";
+								isPlayable=1;
+							};
+							id=42;
+							type="B_Soldier_A_F";
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3992,5.0014391,3990.05};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 4""];";
+								name="headHunter_4_4";
+								description="Gun 2 - Assistant Gunner@HEADHUNTER - 4";
+								isPlayable=1;
+							};
+							id=43;
+							type="B_support_AMG_F";
+						};
+						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3992,5.0014391,3988.05};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 4""];";
+								name="headHunter_4_5";
+								description="Gun 2 - Gunner@HEADHUNTER - 4";
+								isPlayable=1;
+							};
+							id=44;
+							type="B_HeavyGunner_F";
+						};
+						class Item6
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3992,5.0014391,3986.05};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 4""];";
+								name="headHunter_4_6";
+								description="Gun 2 - Ammo Bearer@HEADHUNTER - 4";
+								isPlayable=1;
+							};
+							id=45;
+							type="B_Soldier_A_F";
+						};
+						class Item7
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3990,5.0014391,3984.05};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 4""];";
+								name="headHunter_4_7";
+								description="AT - Gunner@HEADHUNTER - 4";
+								isPlayable=1;
+							};
+							id=46;
+							type="B_soldier_LAT_F";
+						};
+						class Item8
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3992,5.0014391,3984.05};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""HEADHUNTER - 4""];";
+								name="headHunter_4_8";
+								description="AT - Ammo Bearer@HEADHUNTER - 4";
+								isPlayable=1;
+							};
+							id=47;
+							type="B_Soldier_lite_F";
+						};
+					};
+					class Attributes
+					{
+						init="this setGroupIdGlobal [""HEADHUNTER - 4""];";
+					};
+					id=48;
+					atlOffset=-5;
+				};
+				class Item7
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=3;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4011,5.0014391,3952.05};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""DEUCE - 1""];";
+								name="deuce_1_0";
+								description="Tank Commander@DEUCE - 1";
+								isPlayable=1;
+							};
+							id=49;
+							type="B_crew_F";
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4009,5.0014391,3952.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""DEUCE - 1""];";
+								name="deuce_1_1";
+								description="Gunner@@DEUCE - 1";
+								isPlayable=1;
+							};
+							id=50;
+							type="B_crew_F";
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4007,5.0014391,3952.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""DEUCE - 1""];";
+								name="deuce_1_2";
+								description="Driver@DEUCE - 1";
+								isPlayable=1;
+							};
+							id=51;
+							type="B_crew_F";
+						};
+					};
+					class Attributes
+					{
+						init="this setGroupIdGlobal [""DEUCE - 1""];";
+					};
+					id=52;
+					atlOffset=-5;
+				};
+				class Item8
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=3;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4005,5.0014391,3952.05};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""DEUCE - 2""];";
+								name="deuce_2_0";
+								description="Tank Commander@DEUCE - 2";
+								isPlayable=1;
+							};
+							id=53;
+							type="B_crew_F";
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4003,5.0014391,3952.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""DEUCE - 2""];";
+								name="deuce_2_1";
+								description="Gunner@@DEUCE - 2";
+								isPlayable=1;
+							};
+							id=54;
+							type="B_crew_F";
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4001,5.0014391,3952.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""DEUCE - 2""];";
+								name="deuce_2_2";
+								description="Driver@DEUCE - 2";
+								isPlayable=1;
+							};
+							id=55;
+							type="B_crew_F";
+						};
+					};
+					class Attributes
+					{
+						init="this setGroupIdGlobal [""DEUCE - 2""];";
+					};
+					id=56;
+					atlOffset=-5;
+				};
+				class Item9
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=3;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3999,5.0014391,3952.05};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""DEUCE - 3""];";
+								name="deuce_3_0";
+								description="Tank Commander@DEUCE - 3";
+								isPlayable=1;
+							};
+							id=57;
+							type="B_crew_F";
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3997,5.0014391,3952.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""DEUCE - 3""];";
+								name="deuce_3_1";
+								description="Gunner@@DEUCE - 3";
+								isPlayable=1;
+							};
+							id=58;
+							type="B_crew_F";
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3995,5.0014391,3952.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""DEUCE - 3""];";
+								name="deuce_3_2";
+								description="Driver@DEUCE - 3";
+								isPlayable=1;
+							};
+							id=59;
+							type="B_crew_F";
+						};
+					};
+					class Attributes
+					{
+						init="this setGroupIdGlobal [""DEUCE - 3""];";
+					};
+					id=60;
+					atlOffset=-5;
+				};
+				class Item10
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=3;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3993,5.0014391,3952.05};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""DEUCE - 4""];";
+								name="deuce_4_0";
+								description="Tank Commander@DEUCE - 4";
+								isPlayable=1;
+							};
+							id=61;
+							type="B_crew_F";
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3991,5.0014391,3952.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""DEUCE - 4""];";
+								name="deuce_4_1";
+								description="Gunner@@DEUCE - 4";
+								isPlayable=1;
+							};
+							id=62;
+							type="B_crew_F";
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3989,5.0014391,3952.05};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""DEUCE - 4""];";
+								name="deuce_4_2";
+								description="Driver@DEUCE - 4";
+								isPlayable=1;
+							};
+							id=63;
+							type="B_crew_F";
+						};
+					};
+					class Attributes
+					{
+						init="this setGroupIdGlobal [""DEUCE - 4""];";
+					};
+					id=64;
+					atlOffset=-5;
+				};
+			};
+			id=65;
+			atlOffset=-5;
+		};
+		class Item1
+		{
+			dataType="Layer";
+			name="OpFor";
+			state=1;
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Group";
+					side="East";
+					class Entities
+					{
+						items=9;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3979,5.0014391,3992.05};
+								angles[]={0,3.1415927,0};
+							};
+							side="East";
+							flags=7;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""DIAMONDBACK - 1""];";
+								description="Squad Leader@DIAMONDBACK - 1";
+								isPlayable=1;
+							};
+							id=66;
+							type="O_SoldierU_SL_F";
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3978,5.0014391,3990.05};
+							};
+							side="East";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""DIAMONDBACK - 1""];";
+								description="Alpha - Team Leader@DIAMONDBACK - 1";
+								isPlayable=1;
+							};
+							id=67;
+							type="O_soldierU_TL_F";
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3978,5.0014391,3988};
+							};
+							side="East";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""DIAMONDBACK - 1""];";
+								description="Alpha - Automatic Rifleman@DIAMONDBACK - 1";
+								isPlayable=1;
+							};
+							id=68;
+							type="O_soldierU_AR_F";
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3978,5.0014391,3986.05};
+							};
+							side="East";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""DIAMONDBACK - 1""];";
+								description="Alpha - Grenadier@DIAMONDBACK - 1";
+								isPlayable=1;
+							};
+							id=69;
+							type="O_SoldierU_GL_F";
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3978,5.0014391,3984.05};
+							};
+							side="East";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""DIAMONDBACK - 1""];";
+								description="Alpha - Rifleman@DIAMONDBACK - 1";
+								isPlayable=1;
+							};
+							id=70;
+							type="O_soldierU_F";
+						};
+						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3980,5.0014391,3990.05};
+							};
+							side="East";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""DIAMONDBACK - 1""];";
+								description="Bravo - Team Leader@DIAMONDBACK - 1";
+								isPlayable=1;
+							};
+							id=71;
+							type="O_soldierU_TL_F";
+						};
+						class Item6
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3980,5.0014391,3988.05};
+							};
+							side="East";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""DIAMONDBACK - 1""];";
+								description="Bravo - Automatic Rifleman@DIAMONDBACK - 1";
+								isPlayable=1;
+							};
+							id=72;
+							type="O_soldierU_AR_F";
+						};
+						class Item7
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3980,5.0014391,3986.05};
+							};
+							side="East";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""DIAMONDBACK - 1""];";
+								description="Bravo - Grenadier@DIAMONDBACK - 1";
+								isPlayable=1;
+							};
+							id=73;
+							type="O_SoldierU_GL_F";
+						};
+						class Item8
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3980,5.0014391,3984.05};
+							};
+							side="East";
+							flags=5;
+							class Attributes
+							{
+								init="this setGroupIdGlobal [""DIAMONDBACK - 1""];";
+								description="Bravo - Rifleman@DIAMONDBACK - 1";
+								isPlayable=1;
+							};
+							id=74;
+							type="O_soldierU_F";
+						};
+					};
+					class Attributes
+					{
+						init="this setGroupIdGlobal [""DIAMONDBACK - 1""];";
+					};
+					id=75;
+					atlOffset=-5;
+				};
+			};
+			id=76;
+			atlOffset=-5;
+		};
+		class Item2
+		{
+			dataType="Layer";
+			name="Utility";
+			state=1;
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={4000,5,4006};
+					};
+					id=77;
+					type="Logic";
+				};
+				class Item1
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={3999,5,4001};
+						angles[]={0,4.7123895,0};
+					};
+					init="this setVariable [""Owner"",""#adminLogged"",true];" \n "this setVariable [""Forced"",false,true];" \n "this setVariable [""Name"","""",true];" \n "this setVariable [""Addons"",3,true];";
+					id=78;
+					type="ModuleCurator_F";
+				};
+				class Item2
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={4001,5,4001};
+						angles[]={0,4.7123895,0};
+					};
+					init="this setVariable [""Owner"",""rangeMaster_0"",true];" \n "this setVariable [""Forced"",false,true];" \n "this setVariable [""Name"","""",true];" \n "this setVariable [""Addons"",3,true];";
+					id=79;
+					type="ModuleCurator_F";
+				};
+				class Item3
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={4000,5.0014391,3900};
+					};
+					init="this setVariable [""AllowFreeCamera"", true];" \n "this setVariable [""ShowFocusInfo"", true];" \n "this setVariable [""AllowAi"", true];" \n "this setVariable [""Allow3PPCamera"", true];";
+					isPlayable=1;
+					description="Camera Operator@COMBAT CAMERAMAN";
+					id=80;
+					type="VirtualSpectator_F";
+					atlOffset=0.0014390945;
+				};
+			};
+			id=81;
+			atlOffset=0.00071954727;
+		};
+	};
+};
