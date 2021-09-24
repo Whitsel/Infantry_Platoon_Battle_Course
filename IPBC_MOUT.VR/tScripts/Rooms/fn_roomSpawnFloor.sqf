@@ -7,7 +7,8 @@ params ["_target", "_frontDoor", "_floorSetHash"];
 
 sleep 0.5;
 
-_frontDoor#(floor random count _frontDoor) hideObjectGlobal true;
+_selectedDoor = _frontDoor#(floor random count _frontDoor);
+_selectedDoor hideObjectGlobal true;
 
 _floorNum= ceil random count _floorSetHash;
 
@@ -15,6 +16,6 @@ _floorNum= ceil random count _floorSetHash;
 
 [_target, _floorSetHash, _floorNum] call tScripts_fnc_roomSpawnFurniture;
 
-[_target, _floorSetHash, _floorNum] call tScripts_fnc_roomspawnAI;
+[_target, _floorSetHash, _floorNum, _selectedDoor] call tScripts_fnc_roomspawnAI;
 
 diag_log format["tScripts Logging: Floor spawned %1", _floorNum];

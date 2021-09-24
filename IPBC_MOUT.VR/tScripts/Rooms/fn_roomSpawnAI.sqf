@@ -1,10 +1,10 @@
 
 #include "script_component.hpp";
 
-params ["_target", "_floorSetHash", "_floorNum"];
+params ["_target", "_floorSetHash", "_floorNum", "_frontDoor"];
 
 private _spawnPositions = (_floorSetHash get _floorNum)#1;
-private _spawnChanceAI = _target getVariable ["spawnChanceAI", 0.2];
+private _spawnChanceAI = _target getVariable ["spawnChanceAI", 0.3];
 private _spawnChanceCiv = _target getVariable ["spawnChanceCiv", 0.2];
 private _spawnAISkill = _target getVariable ["spawnAISkill", 0.1];
 
@@ -156,21 +156,29 @@ private _civArray = [
 ];
 private _spawnedCivs = [];
 private _spawnCivMax = _target getVariable ["spawnCivMax", 2];
+private _spawnWalkers = [];
+private _spawnWalkersMax = _target getVariable ["spawnWalkerMax", 2];
+private _spawnHunters = [];
+private _spawnHuntersMax = _target getVariable ["spawnHunterMax", 2];
 
 roomSpawnOpfor = {
 	private _unitOpforGroup = createGroup east;
 	private _unitOpfor = _unitOpforGroup createUnit ["O_soldierU_F", getposATL _x, [], 0.5, "NONE"];
-	_unitOpfor setDir random 360;
+
+	_unitDoorDirection = _unitOpfor getDir _frontDoor;
+	_unitDirection = _unitDoorDirection + (floor random 180) - 90;
+	[_unitOpforGroup, _unitDirection] remoteExec ["setFormDir", 2, false];
+
 	_unitOpfor setSKill _spawnAISkill;
 
 	private _wayPointChance = (_target getVariable ["spawnAIMovement", 0.1]);
-	if (_wayPointChance > random 1) then {
-		call roomSpawnOpForWaypoint
+	if ((_wayPointChance > random 1) && (count _spawnWalkers < _spawnWalkersMax)) then {
+		call roomSpawnOpForWaypoint;
 	};
 
 	private _hunterChance = (_target getVariable ["spawnAIHunter", 0.1]);
-	if (_hunterChance > random 1) then {
-		call roomSpawnOpForHunt
+	if ((_hunterChance > random 1) && (count _spawnHunters < _spawnHuntersMax)) then {
+		call roomSpawnOpForHunt;
 	};
 
 	private _randkit = ceil random 4;
@@ -183,12 +191,18 @@ roomSpawnOpfor = {
 };
 
 roomSpawnOpForWaypoint = {
-	private _wayPointMaxTime = (_target getVariable ["spawnAIMovementSpeed", 120]);
-	private _wayPointPosition = _spawnPositions#(floor random (count _spawnPositions));
+	private _wayPointMaxTime = (_target getVariable ["spawnAIMovementSpeed", 30]);
+	private _wayPointPosition_2 = _spawnPositions#(floor random (count _spawnPositions));
+	private _wayPointPosition_3 = _spawnPositions#(floor random (count _spawnPositions));
 	private _wayPoint_1 = _unitOpforGroup addWaypoint [_x, -1];
 	_wayPoint_1 setWaypointTimeout [0, _wayPointMaxTime/2, _wayPointMaxTime];
-	private _wayPoint_2 = _unitOpforGroup addWaypoint [_wayPointPosition, 1];
+	private _wayPoint_2 = _unitOpforGroup addWaypoint [_wayPointPosition_2, 1];
+	_wayPoint_2 setWaypointTimeout [0, _wayPointMaxTime/2, _wayPointMaxTime];
 	_wayPoint_2 setWaypointSpeed "LIMITED";
+	private _wayPoint_3 = _unitOpforGroup addWaypoint [_wayPointPosition_3, 1];
+	_wayPoint_3 setWaypointTimeout [0, _wayPointMaxTime/2, _wayPointMaxTime];
+	_wayPoint_3 setWaypointSpeed "LIMITED";
+	_spawnWalkers pushBack _unitOpfor;
 };
 
 roomSpawnOpForHunt = {
@@ -206,7 +220,8 @@ roomSpawnOpForHunt = {
 			_wayPointHunt_2 waypointAttachVehicle _firer;
 			_unit removeAllEventHandlers "FiredNear";
 		}
-	]
+	];
+	_spawnHunters pushBack _unitOpfor;
 };
 
 roomSpawnCiv = {
