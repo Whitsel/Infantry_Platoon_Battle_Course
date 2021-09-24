@@ -7,7 +7,7 @@ private _state = param [0, "", [""]];
 
 if (_state == "init") then {
 
-	SETVAR(player,EGVAR(COMPONENT,role),"infantry");
+	SETVAR(player,CGVAR(role),"infantry");
 
 	player call FUNC(bRATELO);
 

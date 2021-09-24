@@ -34,8 +34,8 @@ _rtt setPiPEffect [_cameraEffect];
 private _camCommitTime = 0;
 _cameraActual camCommit _camCommitTime;
 
-private _cameraHelmetHashMap = GETMVAR(EGVAR(COMPONENT,helmetHash), createHashMap);
+private _cameraHelmetHashMap = GETMVAR(CGVAR(helmetHash), createHashMap);
 _cameraHelmetHashMap set [_rtt, [_cameraActual, _cameraPosition]];
-SETMVAR(EGVAR(COMPONENT,helmetHash), _cameraHelmetHashMap);
+SETMVAR(CGVAR(helmetHash), _cameraHelmetHashMap);
 
 diag_log format ["tScripts Logging: %1 helmet camera created at %2", _cameraActual, _cameraPosition]

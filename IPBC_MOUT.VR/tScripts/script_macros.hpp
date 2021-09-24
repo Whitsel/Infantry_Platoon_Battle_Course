@@ -67,3 +67,5 @@
 
 #define GETGVAR(var1,var2) GETMVAR(GVAR(var1),var2)
 #define GETEGVAR(var1,var2,var3) GETMVAR(EGVAR(var1,var2),var3)
+
+#define CGVAR(var2) TRIPLES(PREFIX,COMPONENT,var2)
