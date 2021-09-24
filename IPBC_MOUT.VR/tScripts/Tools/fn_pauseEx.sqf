@@ -1,12 +1,14 @@
 
 #include "script_component.hpp";
 
-params [""];
+params ["_unit"];
 
-player addAction ["  " + colorHexEast + "<img size='1' image='\a3\ui_f\data\GUI\Cfg\Ranks\captain_gs'/></t> Pause Exercise", {
+_unit addAction [
+	"  " + colorHexEast + "<img size='1' image='\a3\ui_f\data\GUI\Cfg\Ranks\captain_gs'/></t> Pause Exercise",
+	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
-		[missionNameSpace, ["aiFreeze", true]] remoteExec ["setvariable", 0, true];
-		_AI = (
+		SETMVAR(CGVAR(aiFreeze),true);
+		private _AI = (
 			(allUnits select {side group _x == west}) +
 			(vehicles select {side group _x == west}) +
 			(allUnits select {side group _x == east}) +
@@ -19,7 +21,7 @@ player addAction ["  " + colorHexEast + "<img size='1' image='\a3\ui_f\data\GUI\
 		);
 		{[_x, false] remoteExec ["enableSimulationGlobal", 0]} forEach _AI;
 		{[_x, false] remoteExec ["allowDamage ", 0]} forEach _AI;
-		format ["PauseEx Initiated by %1\n  \nAn Exercise Pause has been Initiated. All AI and vehicles are temporarily disabled.", name player] remoteExec ["hint", 0];
+		format ["PauseEx Initiated by %1\n  \nAn Exercise Pause has been Initiated. All AI and vehicles are temporarily disabled.", name _caller] remoteExec ["hint", 0];
 
 		arrows = [];
 		{
@@ -31,20 +33,22 @@ player addAction ["  " + colorHexEast + "<img size='1' image='\a3\ui_f\data\GUI\
 		} forEach allPlayers;
 
 	},
-	nil,		// arguments
-	0,		  // priority
-	true,	   // showWindow
-	false,	  // hideOnUse
-	"",		 // shortcut
-	"!(missionNameSpace getVariable ['aiFreeze',false]) && (player getVariable ['showTools', false])", 	// condition
-	0,		  //radius
-	true		// unconscious
+	nil,
+	0,
+	true,
+	false,
+	"",
+	"!(missionNameSpace getVariable ['tScripts_tools_aiFreeze',false]) && (_this getVariable ['tScripts_tools_showTools', false])",
+	0,
+	true
 ];
 
-player addAction ["  " + colorHexGuer + "<img size='1' image='\a3\ui_f\data\GUI\RscCommon\RscHTML\arrow_right_ca'/></t> Play Exercise", {
+_unit addAction [
+	"  " + colorHexGuer + "<img size='1' image='\a3\ui_f\data\GUI\RscCommon\RscHTML\arrow_right_ca'/></t> Play Exercise",
+	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
-		[missionNameSpace, ["aiFreeze", false]] remoteExec ["setvariable", 0, true];
-		_AI = (
+		SETMVAR(CGVAR(aiFreeze),false);
+		private _AI = (
 			(allUnits select {side group _x == west}) +
 			(vehicles select {side group _x == west}) +
 			(allUnits select {side group _x == east}) +
@@ -57,16 +61,17 @@ player addAction ["  " + colorHexGuer + "<img size='1' image='\a3\ui_f\data\GUI\
 		);
 		{[_x, true] remoteExec ["enableSimulationGlobal", 0]} forEach _AI;
 		{[_x, true] remoteExec ["allowDamage ", 0]} forEach _AI;
-		format ["PauseEx Ended by %1\n \nThe Exercise Pause has been ended. All AI and vehicles have been reenabled.", name player] remoteExec ["hint", 0];
+		format ["PauseEx Ended by %1\n \nThe Exercise Pause has been ended. All AI and vehicles have been reenabled.", name _caller] remoteExec ["hint", 0];
 
-		{deleteVehicle _x} forEach arrows
+		{deleteVehicle _x} forEach arrows;
+		arrows = [];
 	},
-	nil,		// arguments
-	0,		  // priority
-	true,	   // showWindow
-	false,	  // hideOnUse
-	"",		 // shortcut
-	"(missionNameSpace getVariable ['aiFreeze',false]) && (player getVariable ['showTools', false])", 	// condition
-	0,		  //radius
-	true		// unconscious
+	nil,
+	0,
+	true,
+	false,
+	"",
+	"(missionNameSpace getVariable ['tScripts_tools_aiFreeze',false]) && (_this getVariable ['tScripts_tools_showTools', false])",
+	0,
+	true
 ];

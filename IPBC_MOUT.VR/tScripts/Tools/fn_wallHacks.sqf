@@ -1,122 +1,72 @@
 
 #include "script_component.hpp";
 
-params [""];
+params ["_unit"];
 
-player addAction ["  <t color='#ffffff'><img size='1' image='\a3\ui_f\data\IGUI\Cfg\Radar\viewdir_ca'/></t> Wallhacks", {
+_unit addAction [
+	"  " + colorHexGuer + "<img size='1' image='\a3\ui_f\data\IGUI\Cfg\Radar\viewdir_ca'/></t> Turn Wallhacks On",
+	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
-		player setVariable ["showWallhacks", true];
-	},
-	nil,		// arguments
-	0,		  // priority
-	true,	   // showWindow
-	false,	  // hideOnUse
-	"",		 // shortcut
-	"!(player getVariable ['showWallhacks', false]) && (player getVariable ['showTools', false])" 	// condition
-];
-
-player addAction ["  <t color='#ffffff'><img size='1' image='\a3\ui_f\data\IGUI\Cfg\Radar\viewdir_ca'/></t> Wallhacks", {
-		params ["_target", "_caller", "_actionId", "_arguments"];
-		player setVariable ["showWallhacks", false];
-	},
-	nil,		// arguments
-	0,		  // priority
-	true,	   // showWindow
-	false,	  // hideOnUse
-	"",		 // shortcut
-	"(player getVariable ['showWallhacks', false]) && (player getVariable ['showTools', false])" 	// condition
-];
-
-player addAction ["    " + colorHexGuer + "<img size='1' image='\a3\ui_f\data\IGUI\Cfg\Radar\viewdir_ca'/></t> AI: Turn Wallhacks On", {
-		params ["_target", "_caller", "_actionId", "_arguments"];
-		player setVariable ["showWallhacksAI", true];
-		player setVariable ["showWallhacksPlayers", false];
+		SETVAR(_caller,CGVAR(wallsHacks),true);
 		onEachFrame {
 			{
-				if (((side _x == east) or (side _x == resistance)) and ((_x distance player) < 500)) then {
-					_beg = ASLToAGL eyePos _x;
-					_endW = (_beg vectorAdd (_x weaponDirection currentWeapon _x vectorMultiply 500));
-					_endV = (_beg vectorAdd (getCameraViewDirection _x vectorMultiply 500));
-					drawLine3D [_beg, _endW, [1,0,0,1]];
-					drawLine3D [_beg, _endV, [0,0,1,1]];
+				private _minDistance = 5;
+				private _maxDistance = 100;
+				private _playerDistance = _x distance player;
+				private _alpha3D = 1 - (_playerDistance/_maxDistance);
+				if (((side _x == east) or (side _x == resistance)) && ((_playerDistance < _maxDistance) && (_playerDistance > _minDistance))) then {
+					private _beg = ASLToAGL eyePos _x;
+					private _endW = (_beg vectorAdd (_x weaponDirection currentWeapon _x vectorMultiply (_playerDistance * 1.10)));
+					private _endV = (_beg vectorAdd (getCameraViewDirection _x vectorMultiply (_playerDistance * 1.10)));
+					drawLine3D [_beg, _endW, [0.5,0,0,_alpha3D]];
+					drawLine3D [_beg, _endV, [0.5,0,0,_alpha3D/2]];
+				}
+			} foreach allUnits;
+			{
+				private _minDistance = 5;
+				private _maxDistance = 100;
+				private _playerDistance = _x distance player;
+				private _alpha3D = 1 - (_playerDistance/_maxDistance);
+				if ((side _x == west) and ((_playerDistance < _maxDistance) && (_playerDistance > _minDistance))) then {
+					private _beg = ASLToAGL eyePos _x;
+					private _endW = (_beg vectorAdd (_x weaponDirection currentWeapon _x vectorMultiply (_playerDistance * 1.10)));
+					private _endV = (_beg vectorAdd (getCameraViewDirection _x vectorMultiply (_playerDistance * 1.10)));
+					drawLine3D [_beg, _endW, [0,0,0.5,_alpha3D]];
+					drawLine3D [_beg, _endV, [0,0,0.5,_alpha3D/2]];
+				}
+			} foreach allUnits;
+		};
+	},
+	nil,
+	0,
+	true,
+	false,
+	"",
+	"!(_this getVariable ['tScripts_tools_wallsHacks', false]) && (_this getVariable ['tScripts_tools_showTools', false])"
+];
+
+_unit addAction [
+	"  " + colorHexEast + "<img size='1' image='\a3\ui_f\data\IGUI\Cfg\Radar\viewdir_ca'/></t> Turn Wallhacks Off",
+	{
+		params ["_target", "_caller", "_actionId", "_arguments"];
+		SETVAR(_caller,CGVAR(wallsHacks),false);
+		onEachFrame {
+			{
+				private _playerDistance = _x distance player;
+				if (((side _x == west) or (side _x == east) or (side _x == resistance))) then {
+					private _beg = ASLToAGL eyePos _x;
+					private _endW = (_beg vectorAdd (_x weaponDirection currentWeapon _x vectorMultiply 500));
+					private _endV = (_beg vectorAdd (getCameraViewDirection _x vectorMultiply 500));
+					drawLine3D [_beg, _endW, [0,0,0,0]];
+					drawLine3D [_beg, _endV, [0,0,0,0]];
 				}
 			} foreach allUnits;
 		}
 	},
-	nil,		// arguments
-	0,		  // priority
-	true,	   // showWindow
-	false,	  // hideOnUse
-	"",		 // shortcut
-	"(player getVariable ['showWallhacks', false]) && !(player getVariable ['showWallhacksAI', false]) && (player getVariable ['showTools', false])" 	// condition
-];
-
-player addAction ["    " + colorHexEast + "<img size='1' image='\a3\ui_f\data\IGUI\Cfg\Radar\viewdir_ca'/></t> AI: Turn Wallhacks Off", {
-		params ["_target", "_caller", "_actionId", "_arguments"];
-		player setVariable ["showWallhacksAI", false];
-		onEachFrame {
-			{
-				if (((side _x == east) or (side _x == resistance)) and ((_x distance player) < 500)) then {
-					_beg = ASLToAGL eyePos _x;
-					_endW = (_beg vectorAdd (_x weaponDirection currentWeapon _x vectorMultiply 500));
-					_endV = (_beg vectorAdd (getCameraViewDirection _x vectorMultiply 500));
-					drawLine3D [_beg, _endW, [1,0,0,0]];
-					drawLine3D [_beg, _endV, [0,0,1,0]];
-				}
-			} foreach allUnits;
-		}
-	},
-	nil,		// arguments
-	0,		  // priority
-	true,	   // showWindow
-	false,	  // hideOnUse
-	"",		 // shortcut
-	"(player getVariable ['showWallhacks', false]) && (player getVariable ['showWallhacksAI', false]) && (player getVariable ['showTools', false])" 	// condition
-];
-
-player addAction ["    " + colorHexGuer + "<img size='1' image='\a3\ui_f\data\IGUI\Cfg\Radar\viewdir_ca'/></t> Players: Turn Wallhacks On", {
-		params ["_target", "_caller", "_actionId", "_arguments"];
-		player setVariable ["showWallhacksPlayers", true];
-		player setVariable ["showWallhacksAI", false];
-		onEachFrame {
-			{
-				if ((side _x == west) and ((_x distance player) < 500)) then {
-					_beg = ASLToAGL eyePos _x;
-					_endW = (_beg vectorAdd (_x weaponDirection currentWeapon _x vectorMultiply 500));
-					_endV = (_beg vectorAdd (getCameraViewDirection _x vectorMultiply 500));
-					drawLine3D [_beg, _endW, [1,0,0,1]];
-					drawLine3D [_beg, _endV, [0,0,1,1]];
-				}
-			} foreach allPlayers;
-		}
-	},
-	nil,		// arguments
-	0,		  // priority
-	true,	   // showWindow
-	false,	  // hideOnUse
-	"",		 // shortcut
-	"(player getVariable ['showWallhacks', false]) && !(player getVariable ['showWallhacksPlayers', false]) && (player getVariable ['showTools', false])" 	// condition
-];
-
-player addAction ["    " + colorHexEast + "<img size='1' image='\a3\ui_f\data\IGUI\Cfg\Radar\viewdir_ca'/></t> Players: Turn Wallhacks Off", {
-		params ["_target", "_caller", "_actionId", "_arguments"];
-		player setVariable ["showWallhacksPlayers", false];
-		onEachFrame {
-			{
-				if ((side _x == west) and ((_x distance player) < 500)) then {
-					_beg = ASLToAGL eyePos _x;
-					_endW = (_beg vectorAdd (_x weaponDirection currentWeapon _x vectorMultiply 500));
-					_endV = (_beg vectorAdd (getCameraViewDirection _x vectorMultiply 500));
-					drawLine3D [_beg, _endW, [1,0,0,0]];
-					drawLine3D [_beg, _endV, [0,0,1,0]];
-				}
-			} foreach allPlayers;
-		}
-	},
-	nil,		// arguments
-	0,		  // priority
-	true,	   // showWindow
-	false,	  // hideOnUse
-	"",		 // shortcut
-	"(player getVariable ['showWallhacks', false]) && (player getVariable ['showWallhacksPlayers', false]) && (player getVariable ['showTools', false])" 	// condition
+	nil,
+	0,
+	true,
+	false,
+	"",
+	"(_this getVariable ['tScripts_tools_wallsHacks', false]) && (_this getVariable ['tScripts_tools_showTools', false])"
 ];

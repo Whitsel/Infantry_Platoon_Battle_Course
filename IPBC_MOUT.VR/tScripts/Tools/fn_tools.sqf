@@ -1,32 +1,36 @@
 
 #include "script_component.hpp";
 
-params [""];
+params ["_unit"];
 
-player addAction ["<t size = '0.5'> </t>", {}, nil, 0, true, false, "", "true", 0];
+_unit addAction ["<t size = '0.5'> </t>", {}, nil, 0, true, false, "", "true", 0];
 
-player addAction [iconEdenTreeExpand + " Open Range Master Tools", {
+_unit addAction [
+	iconEdenTreeExpand + " Open Range Master Tools",
+	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
-		player setVariable ["showTools", true];
+		SETVAR(_caller,CGVAR(showTools),true);
 		},
 		nil,
 		0,
 		true,
 		true,
 		"",
-		"!(player getVariable ['showTools', false])",
+		"!(_this getVariable ['tScripts_tools_showTools', false])",
 		0
 ];
 
-player addAction [iconEdenTreeCollapse + "Close Range Master Tools", {
+_unit addAction [
+	iconEdenTreeCollapse + "Close Range Master Tools",
+	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
-		player setVariable ["showTools", false];
+		SETVAR(_caller,CGVAR(showTools),false);
 		},
 		nil,
 		0,
 		true,
 		true,
 		"",
-		"(player getVariable ['showTools', false])",
+		"(_this getVariable ['tScripts_tools_showTools', false])",
 		0
 ];
