@@ -11,7 +11,7 @@ _controller addAction [
 	"  " + iconEdenRefresh + " Randomize Room",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
-		_arguments params ["_frontDoor", "_floorSetHash", "_roomTrigger"]; //_floorSetHash is not being passed properly
+		_arguments params ["_frontDoor", "_floorSetHash", "_roomTrigger"];
 
 		[_floorSetHash, _roomTrigger, _frontDoor] call tScripts_fnc_roomClear;
 
