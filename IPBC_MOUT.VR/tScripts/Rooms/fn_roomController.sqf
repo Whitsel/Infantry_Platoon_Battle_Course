@@ -29,7 +29,7 @@ _controller addAction [
 _controller call FUNC(addActionSpacer);
 
 _controller addAction [
-	"  " + colorHexEast + iconEdenMan + "</t> Toggle AI spawning",
+	"  " + colorHexEast + iconEdenGroup + "</t> Toggle AI spawning",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 
@@ -37,10 +37,10 @@ _controller addAction [
 			_target getVariable ["spawningAI", false] == false
 		) then {
 			[_target, ["spawningAI", true]] remoteExec ["setvariable", 0, true];
-			hint "AI spawning toggled on";
+			hintSilent "AI spawning toggled on";
 		} else {
 			[_target, ["spawningAI", false]] remoteExec ["setvariable", 0, true];
-			hint "AI spawning toggled off";
+			hintSilent "AI spawning toggled off";
 		}
 	},
 	nil,
@@ -62,13 +62,13 @@ _controller addAction [
 		if (
 			_spawnChanceAI >= 1
 		) then {
-			hint "Spawn Chance already set to 100%";
+			hintSilent "Spawn Chance already set to 100%";
 		} else {
-			_spawnChanceAI = _spawnChanceAI + .05;
+			_spawnChanceAI = _spawnChanceAI + 0.10;
 
 			[_target, ["spawnChanceAI", _spawnChanceAI]] remoteExec ["setvariable", 0, true];
 
-			hint format["AI spawn chance set to %1 %",_spawnChanceAI * 100];
+			hintSilent format["AI spawn chance set to %1 %",_spawnChanceAI * 100];
 		};
 	},
 	nil,
@@ -90,13 +90,13 @@ _controller addAction [
 		if (
 			_spawnChanceAI <= 0
 		) then {
-			hint "Spawn Chance already set to 0%";
+			hintSilent "Spawn Chance already set to 0%";
 		} else {
-			_spawnChanceAI = _spawnChanceAI - .05;
+			_spawnChanceAI = _spawnChanceAI - 0.10;
 
 			[_target, ["spawnChanceAI", _spawnChanceAI]] remoteExec ["setvariable", 0, true];
 
-			hint format["AI spawn chance set to %1 %",_spawnChanceAI * 100];
+			hintSilent format["AI spawn chance set to %1 %",_spawnChanceAI * 100];
 		};
 	},
 	nil,
@@ -120,13 +120,13 @@ _controller addAction [
 		if (
 			_spawnAISkill >= 1
 		) then {
-			hint "AI skill already set to 100%";
+			hintSilent "AI skill already set to 100%";
 		} else {
-			_spawnAISkill = _spawnAISkill + .05;
+			_spawnAISkill = _spawnAISkill + 0.10;
 
 			[_target, ["spawnAISkill", _spawnAISkill]] remoteExec ["setvariable", 0, true];
 
-			hint format["AI skill set to %1 %",_spawnAISkill * 100];
+			hintSilent format["AI skill set to %1 %",_spawnAISkill * 100];
 		};
 	},
 	nil,
@@ -148,13 +148,187 @@ _controller addAction [
 		if (
 			_spawnAISkill <= 0
 		) then {
-			hint "AI skill already set to 0%";
+			hintSilent "AI skill already set to 0%";
 		} else {
-			_spawnAISkill = _spawnAISkill - .05;
+			_spawnAISkill = _spawnAISkill - 0.10;
 
 			[_target, ["spawnAISkill", _spawnAISkill]] remoteExec ["setvariable", 0, true];
 
-			hint format["AI skill set to %1 %",_spawnAISkill * 100];
+			hintSilent format["AI skill set to %1 %",_spawnAISkill * 100];
+		};
+	},
+	nil,
+	1.5,
+	true,
+	false,
+	"",
+	"_target getVariable ['spawningAI', false]",
+	5
+];
+
+_controller addAction ["<t size = '0.5'> </t>", {}, nil, 1.5, true, false, "", "_target getVariable ['spawningAI', false]", 5];
+
+_controller addAction [
+	"    " + colorHexEast + iconEdenSortUp + "</t> Increase AI Movement Chance",
+	{
+		params ["_target", "_caller", "_actionId", "_arguments"];
+
+		_spawnAIMovement = (_target getVariable ["spawnAIMovement", 0.1]);
+
+		if (
+			_spawnAIMovement >= 1
+		) then {
+			hintSilent "AI Movement Chance already set to 100%";
+		} else {
+			_spawnAIMovement = _spawnAIMovement + 0.10;
+
+			[_target, ["spawnAIMovement", _spawnAIMovement]] remoteExec ["setvariable", 0, true];
+
+			hintSilent format["AI Movement Chance set to %1 %",_spawnAIMovement * 100];
+		};
+	},
+	nil,
+	1.5,
+	true,
+	false,
+	"",
+	"_target getVariable ['spawningAI', false]",
+	5
+];
+
+_controller addAction [
+	"    " + colorHexEast + iconEdenSortDown + "</t> Decrease AI Movement Chance", //Strange behavior first time it hits 0%
+	{
+		params ["_target", "_caller", "_actionId", "_arguments"];
+
+		_spawnAIMovement = (_target getVariable ["spawnAIMovement", 0.1]);
+
+		if (
+			_spawnAIMovement <= 0
+		) then {
+			hintSilent "AI Movement Chance already set to 0%";
+		} else {
+			_spawnAIMovement = _spawnAIMovement - 0.10;
+
+			[_target, ["spawnAIMovement", _spawnAIMovement]] remoteExec ["setvariable", 0, true];
+
+			hintSilent format["AI Movement Chance set to %1 %",_spawnAIMovement * 100];
+		};
+	},
+	nil,
+	1.5,
+	true,
+	false,
+	"",
+	"_target getVariable ['spawningAI', false]",
+	5
+];
+
+_controller addAction ["<t size = '0.5'> </t>", {}, nil, 1.5, true, false, "", "_target getVariable ['spawningAI', false]", 5];
+
+_controller addAction [
+	"    " + colorHexEast + iconEdenSortUp + "</t> Increase AI Movement Max Time",
+	{
+		params ["_target", "_caller", "_actionId", "_arguments"];
+
+		_spawnAIMovementSpeed = (_target getVariable ["spawnAIMovementSpeed", 120]);
+
+		if (
+			_spawnAIMovementSpeed >= 300
+		) then {
+			hintSilent "Max AI Movement Time already set to 300 seconds";
+		} else {
+			_spawnAIMovementSpeed = _spawnAIMovementSpeed + 10;
+
+			[_target, ["spawnAIMovementSpeed", _spawnAIMovementSpeed]] remoteExec ["setvariable", 0, true];
+
+			hintSilent format["Max AI Movement time set to %1",_spawnAIMovementSpeed];
+		};
+	},
+	nil,
+	1.5,
+	true,
+	false,
+	"",
+	"_target getVariable ['spawningAI', false]",
+	5
+];
+
+_controller addAction [
+	"    " + colorHexEast + iconEdenSortDown + "</t> Decrease AI Movement Max Time", //Strange behavior first time it hits 0%
+	{
+		params ["_target", "_caller", "_actionId", "_arguments"];
+
+		_spawnAIMovementSpeed = (_target getVariable ["spawnAIMovementSpeed", 120]);
+
+		if (
+			_spawnAIMovementSpeed <= 0
+		) then {
+			hintSilent "Max AI Movement Time already set to 0 seconds";
+		} else {
+			_spawnAIMovementSpeed = _spawnAIMovementSpeed - 10;
+
+			[_target, ["spawnAIMovementSpeed", _spawnAIMovementSpeed]] remoteExec ["setvariable", 0, true];
+
+			hintSilent format["Max AI Movement time set to %1",_spawnAIMovementSpeed];
+		};
+	},
+	nil,
+	1.5,
+	true,
+	false,
+	"",
+	"_target getVariable ['spawningAI', false]",
+	5
+];
+
+_controller addAction ["<t size = '0.5'> </t>", {}, nil, 1.5, true, false, "", "_target getVariable ['spawningAI', false]", 5];
+
+_controller addAction [
+	"    " + colorHexEast + iconEdenSortUp + "</t> Increase AI Hunter Chance",
+	{
+		params ["_target", "_caller", "_actionId", "_arguments"];
+
+		_spawnAIHunter = (_target getVariable ["spawnAIHunter", 0.1]);
+
+		if (
+			_spawnAIHunter >= 1
+		) then {
+			hintSilent "AI Hunter Chance already set to 100%";
+		} else {
+			_spawnAIHunter = _spawnAIHunter + 0.10;
+
+			[_target, ["spawnAIHunter", _spawnAIHunter]] remoteExec ["setvariable", 0, true];
+
+			hintSilent format["AI Hunter Chance set to %1 %",_spawnAIHunter * 100];
+		};
+	},
+	nil,
+	1.5,
+	true,
+	false,
+	"",
+	"_target getVariable ['spawningAI', false]",
+	5
+];
+
+_controller addAction [
+	"    " + colorHexEast + iconEdenSortDown + "</t> Decrease AI Hunter Chance", //Strange behavior first time it hits 0%
+	{
+		params ["_target", "_caller", "_actionId", "_arguments"];
+
+		_spawnAIHunter = (_target getVariable ["spawnAIHunter", 0.1]);
+
+		if (
+			_spawnAIHunter <= 0
+		) then {
+			hintSilent "AI Hunter Chance already set to 0%";
+		} else {
+			_spawnAIHunter = _spawnAIHunter - 0.10;
+
+			[_target, ["spawnAIHunter", _spawnAIHunter]] remoteExec ["setvariable", 0, true];
+
+			hintSilent format["AI Hunter Chance set to %1 %",_spawnAIHunter * 100];
 		};
 	},
 	nil,
@@ -177,10 +351,10 @@ _controller addAction [
 			_target getVariable ["spawningCiv", false] == false
 		) then {
 			[_target, ["spawningCiv", true]] remoteExec ["setvariable", 0, true];
-			hint "Civlian spawning toggled on";
+			hintSilent "Civlian spawning toggled on";
 		} else {
 			[_target, ["spawningCiv", false]] remoteExec ["setvariable", 0, true];
-			hint "Civilian spawning toggled off";
+			hintSilent "Civilian spawning toggled off";
 		}
 	},
 	nil,
@@ -202,13 +376,13 @@ _controller addAction [
 		if (
 			_spawnChanceCiv >= 1
 		) then {
-			hint "Spawn Chance already set to 100%";
+			hintSilent "Spawn Chance already set to 100%";
 		} else {
-			_spawnChanceCiv = _spawnChanceCiv + .05;
+			_spawnChanceCiv = _spawnChanceCiv + 0.10;
 
 			[_target, ["spawnChanceCiv", _spawnChanceCiv]] remoteExec ["setvariable", 0, true];
 
-			hint format["Civilian spawn chance set to %1 %",_spawnChanceCiv * 100];
+			hintSilent format["Civilian spawn chance set to %1 %",_spawnChanceCiv * 100];
 		};
 	},
 	nil,
@@ -230,13 +404,13 @@ _controller addAction [
 		if (
 			_spawnChanceCiv <= 0
 		) then {
-			hint "Spawn Chance already set to 0%";
+			hintSilent "Spawn Chance already set to 0%";
 		} else {
-			_spawnChanceCiv = _spawnChanceCiv - .05;
+			_spawnChanceCiv = _spawnChanceCiv - 0.10;
 
 			[_target, ["spawnChanceCiv", _spawnChanceCiv]] remoteExec ["setvariable", 0, true];
 
-			hint format["Civilian spawn chance set to %1 %",_spawnChanceCiv * 100];
+			hintSilent format["Civilian spawn chance set to %1 %",_spawnChanceCiv * 100];
 		};
 	},
 	nil,
@@ -259,10 +433,10 @@ _controller addAction [
 			_target getVariable ["spawningFurniture", false] == false
 		) then {
 			[_target, ["spawningFurniture", true]] remoteExec ["setvariable", 0, true];
-			hint "Furniture spawning toggled on";
+			hintSilent "Furniture spawning toggled on";
 		} else {
 			[_target, ["spawningFurniture", false]] remoteExec ["setvariable", 0, true];
-			hint "Furniture spawning toggled off";
+			hintSilent "Furniture spawning toggled off";
 		};
 	},
 	nil,
@@ -284,13 +458,13 @@ _controller addAction [
 		if (
 			_spawnChanceFurniture >= 1
 		) then {
-			hint "Furniture Spawn Chance already set to 100%";
+			hintSilent "Furniture Spawn Chance already set to 100%";
 		} else {
-			_spawnChanceFurniture = _spawnChanceFurniture + .05;
+			_spawnChanceFurniture = _spawnChanceFurniture + 0.10;
 
 			[_target, ["spawnChanceFurniture", _spawnChanceFurniture]] remoteExec ["setvariable", 0, true];
 
-			hint format["Furniture spawn chance set to %1 %",_spawnChanceFurniture * 100];
+			hintSilent format["Furniture spawn chance set to %1 %",_spawnChanceFurniture * 100];
 		};
 	},
 	nil,
@@ -312,13 +486,13 @@ _controller addAction [
 		if (
 			_spawnChanceFurniture <= 0
 		) then {
-			hint "Furniture Spawn Chance already set to 0%";
+			hintSilent "Furniture Spawn Chance already set to 0%";
 		} else {
-			_spawnChanceFurniture = _spawnChanceFurniture - .05;
+			_spawnChanceFurniture = _spawnChanceFurniture - 0.10;
 
 			[_target, ["spawnChanceFurniture", _spawnChanceFurniture]] remoteExec ["setvariable", 0, true];
 
-			hint format["Furniture spawn chance set to %1 %",_spawnChanceFurniture * 100];
+			hintSilent format["Furniture spawn chance set to %1 %",_spawnChanceFurniture * 100];
 		};
 	},
 	nil,
