@@ -8399,98 +8399,6 @@ class Mission
 		};
 		class Item22
 		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={4672,5.0500002,4186};
-				angles[]={0,4.7123895,0};
-			};
-			id=438;
-			type="ModuleCurator_F";
-			atlOffset=0.050000191;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ModuleCurator_F_Owner";
-					expression="_this setVariable ['Owner',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="combatCameraman_0";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ModuleCurator_F_Forced";
-					expression="_this setVariable ['Forced',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ModuleCurator_F_Name";
-					expression="_this setVariable ['Name',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="ModuleCurator_F_Addons";
-					expression="_this setVariable ['Addons',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item23
-		{
 			dataType="Object";
 			class PositionInfo
 			{
@@ -8665,40 +8573,7 @@ class Mission
 			id=482;
 			atlOffset=0.050000191;
 		};
-		class Item37
-		{
-			dataType="Group";
-			side="Civilian";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4671.9702,5.0014391,4187.9229};
-					};
-					side="Civilian";
-					flags=7;
-					class Attributes
-					{
-						init="this setGroupIdGlobal [""COMBAT CAMERAMAN""];" \n "this hideObjectGlobal true;";
-						name="combatCameraman_0";
-						description="Camera Operator@COMBAT CAMERAMAN";
-						isPlayable=1;
-					};
-					id=494;
-					type="C_journalist_F";
-				};
-			};
-			class Attributes
-			{
-				init="this setGroupIdGlobal [""COMBAT CAMERAMAN""];" \n "";
-			};
-			id=493;
-		};
-		class Item38
+		class Item36
 		{
 			dataType="Group";
 			side="East";
@@ -10673,8 +10548,131 @@ class Mission
 				position[]={4672,5,4212};
 			};
 			name="crateAttachmentPoint";
+			init="this setVariable [""AllowFreeCamera"", true];" \n "this setVariable [""ShowFocusInfo"", true];" \n "this setVariable [""AllowAi"", true];" \n "this setVariable [""Allow3PPCamera"", true];";
+			isPlayable=1;
+			description="Camera Operator@COMBAT CAMERAMAN";
 			id=1;
-			type="Logic";
+			type="VirtualSpectator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="AllowFreeCamera";
+					expression="_this setVariable ['AllowFreeCamera', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="WhitelistedSides";
+					expression="_this setVariable ['WhitelistedSides', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"ARRAY"
+								};
+							};
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ShowFocusInfo";
+					expression="_this setVariable ['ShowFocusInfo', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="AllowAi";
+					expression="_this setVariable ['AllowAi', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="Allow3PPCamera";
+					expression="_this setVariable ['Allow3PPCamera', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item50
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4672,5,4250};
+			};
+			init="[this, ""Simple Rooms""] execVM ""location.sqf""";
+			id=6;
+			type="LocationArea_F";
+		};
+		class Item51
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4704,5,4250};
+			};
+			init="[this, ""Complex Rooms""] execVM ""location.sqf""";
+			id=7;
+			type="LocationArea_F";
 		};
 	};
 };
