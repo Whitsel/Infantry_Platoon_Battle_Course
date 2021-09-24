@@ -154,6 +154,8 @@ private _civArray = [
 	"C_Man_casual_5_F_tanoan",
 	"C_Man_casual_6_F_tanoan"
 ];
+private _spawnedCivs = [];
+private _spawnCivMax = _target getVariable ["spawnCivMax", 2];
 
 roomSpawnOpfor = {
 	private _unitOpforGroup = createGroup east;
@@ -206,22 +208,23 @@ roomSpawnOpForHunt = {
 };
 
 roomSpawnCiv = {
-	private _rand = floor random count(_civArray);
-	private _civRand = _civArray select _rand;
-	private _unitCiv = (createGroup east) createUnit [_civRand, getposATL _x, [], 0.5, "NONE"];
-	_unitCiv setDir random 360;
-	_unitCiv disableAI "PATH";
+	if ((_spawnChanceCiv > random 1) && (count _spawnedCivs < _spawnCivMax)) then {
+		private _rand = floor random count(_civArray);
+		private _civRand = _civArray select _rand;
+		private _unitCiv = (createGroup east) createUnit [_civRand, getposATL _x, [], 0.5, "NONE"];
+		_unitCiv setDir random 360;
+		_unitCiv disableAI "PATH";
+		_spawnedCivs pushBack _unitCiv;
+	} else {
+		call roomSpawnOpfor
+	}
 };
 
 if (_target getVariable ["spawningAI", false]) then {
 	{
 		if (_spawnChanceAI > random 1) then {
 			if (_target getVariable ["spawningCiv", false]) then {
-				if (_spawnChanceCiv > random 1) then {
 					call roomSpawnCiv;
-				} else {
-					call roomSpawnOpfor;
-				}
 			} else {
 				call roomSpawnOpfor;
 			}

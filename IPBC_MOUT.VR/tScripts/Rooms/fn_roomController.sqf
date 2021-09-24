@@ -422,6 +422,64 @@ _controller addAction [
 	5
 ];
 
+_controller addAction ["<t size = '0.5'> </t>", {}, nil, 1.5, true, false, "", "(_target getVariable ['spawningAI', false]) && (_target getVariable ['spawningCiv', false])", 5];
+
+_controller addAction [
+	"    " + colorHexCiv + iconEdenSortUp + "</t> Increase Max Civilian Spawn",
+	{
+		params ["_target", "_caller", "_actionId", "_arguments"];
+
+		_spawnCivMax = (_target getVariable ["spawnCivMax", 2]);
+
+		if (
+			_spawnCivMax >= 10
+		) then {
+			hintSilent "Max Civilian Spawn already set to 10";
+		} else {
+			_spawnCivMax = _spawnCivMax + 1;
+
+			[_target, ["spawnCivMax", _spawnCivMax]] remoteExec ["setvariable", 0, true];
+
+			hintSilent format["Max Civilian Spawn set to %1",_spawnCivMax];
+		};
+	},
+	nil,
+	1.5,
+	true,
+	false,
+	"",
+	"(_target getVariable ['spawningAI', false]) && (_target getVariable ['spawningCiv', false])",
+	5
+];
+
+_controller addAction [
+	"    " + colorHexCiv + iconEdenSortDown + "</t> Decrease Max Civilian Spawn", //Strange behavior first time it hits 0%
+	{
+		params ["_target", "_caller", "_actionId", "_arguments"];
+
+		_spawnCivMax = (_target getVariable ["spawnCivMax", 2]);
+
+		if (
+			_spawnCivMax <= 0
+		) then {
+			hintSilent "Max Civilian Spawn already set to 0";
+		} else {
+			_spawnCivMax = _spawnCivMax - 1;
+
+			[_target, ["spawnCivMax", _spawnCivMax]] remoteExec ["setvariable", 0, true];
+
+			hintSilent format["Max Civilian Spawn set to %1",_spawnCivMax];
+		};
+	},
+	nil,
+	1.5,
+	true,
+	false,
+	"",
+	"(_target getVariable ['spawningAI', false]) && (_target getVariable ['spawningCiv', false])",
+	5
+];
+
 _controller call FUNC(addActionSpacer);
 
 _controller addAction [
