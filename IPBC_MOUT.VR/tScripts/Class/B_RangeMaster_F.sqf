@@ -7,24 +7,25 @@ private _state = param [0, "", [""]];
 
 if (_state == "init") then {
 
-	player setVariable ["instructor", true]; //Holderever. Variables need cleaned up to use rangemaster
-
-	SETVAR(player,EGVAR(COMPONENT,role),"rangemaster");
+	SETVAR(player,CGVAR(instructor),true);
+	SETVAR(player,CGVAR(role),"rangemaster");
 
 	player call FUNC(cRangeMaster);
 
+	private _westGroup = createGroup west;
+	_westGroup setGroupId ["RANGE MASTER"];
+	[player] joinSilent _westGroup;
+
 	if (!isMultiplayer) then {
 		player call FUNC(bRifleman);
-		_singlePlayerGroup = createGroup west;
-		[player] joinSilent _singlePlayerGroup;
-		call FUNC(tools);
-		call FUNC(pauseEx);
-		call FUNC(timeSkip);
+		player call FUNC(tools);
+		player call FUNC(pauseEx);
+		player call FUNC(timeSkip);
 	} else {
-		call FUNC(tools);
-		call FUNC(pauseEx);
-		call FUNC(wallHacks);
-		call FUNC(timeSkip);
+		player call FUNC(tools);
+		player call FUNC(pauseEx);
+		player call FUNC(wallHacks);
+		player call FUNC(timeSkip);
 		call FUNC(3DIcons);
 	};
 };
