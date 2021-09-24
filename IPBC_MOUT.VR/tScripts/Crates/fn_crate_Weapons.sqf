@@ -4,7 +4,7 @@
 params ["_crate",["_locked", false]];
 
 if (_locked == true) then {
-	SETVAR(_crate,EGVAR(COMPONENT,locked),true);
+	SETVAR(_crate,CGVAR(locked),true);
 	diag_log format ["tScripts Logging: Crate lock has been initially applied to %1", _crate]
 };
 
@@ -13,7 +13,7 @@ private _kits = [
 		"Range Master",
 		"crangeMaster",
 		iconManCommander2,
-		"(player getVariable ['instructor', false])",
+		"!(_target getVariable ['tScripts_crates_locked', false]) && (player getVariable ['tScripts_class_instructor', false])",
 		colorHexGold
 	],
 	[
@@ -55,7 +55,7 @@ _crate call FUNC(addActionSpacer);
 		"_role",
 		"_fileName",
 		["_icon", iconMan],
-		["_cond", "(!(_target getVariable ['tScripts_crates_locked', false]) && (_this getVariable ['tScripts_class_role','']) == 'infantry') || ((_this getVariable ['tScripts_class_role','']) == 'rangeMaster')"],
+		["_cond", "!(_target getVariable ['tScripts_crates_locked', false]) && (((_this getVariable ['tScripts_class_role','']) == 'infantry') || ((_this getVariable ['tScripts_class_role','']) == 'rangeMaster'))"],
 		["_color", colorHexWest]
 	];
 
@@ -78,7 +78,7 @@ _crate call FUNC(addActionSpacer);
 
 } forEach _kits;
 
-_crate addAction ["<t size = '0.5'> </t>", {}, [], 1.5, true, true, "", "(!(_target getVariable ['tScripts_crates_locked', false]) && (_this getVariable ['tScripts_class_role','']) == 'infantry') || ((_this getVariable ['tScripts_class_role','']) == 'rangeMaster')", 5];
+_crate addAction ["<t size = '0.5'> </t>", {}, [], 1.5, true, true, "", "!(_target getVariable ['tScripts_crates_locked', false]) && (((_this getVariable ['tScripts_class_role','']) == 'infantry') || ((_this getVariable ['tScripts_class_role','']) == 'rangeMaster'))", 5];
 
 [_crate, _locked] call FUNC(crate_Common);
 

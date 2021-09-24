@@ -3,13 +3,12 @@
 
 params ["_crate",["_locked", false]];
 
-_crate call FUNC(resources);
-
 _crate addAction[
 	"  " + iconArsenal,
 	{
+		params ["_target", "_caller", "_actionId", "_arguments"];
 		if ("ace_main" in activatedAddons) then {
-			[player, player, true] call ace_arsenal_fnc_openBox;
+			[_caller, _caller, true] call ace_arsenal_fnc_openBox;
 		} else {
 			["Open", [true]] call BIS_fnc_arsenal;
 		}
@@ -19,9 +18,11 @@ _crate addAction[
 	true,
 	true,
 	"",
-	"(_this getVariable ['tScripts_class_role','']) == 'rangeMaster'",
+	"(!(_target getVariable ['tScripts_crates_locked', false]) && (_target getVariable ['tScripts_crates_arsenal', false])) || !isMultiplayer",
 	5
 ];
+
+_crate call FUNC(resources);
 
 _crate call FUNC(crate_Lock);
 
