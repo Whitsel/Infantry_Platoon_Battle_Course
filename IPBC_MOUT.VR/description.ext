@@ -18,7 +18,6 @@
 
 /*		   RULES			*/
 
-	cba_settings_hasSettingsFile	= 0;
 	disabledAI	= true;
 	disableChannels[]	= {
 		{0,true,true},
@@ -31,6 +30,7 @@
 
 	forceRotorLibSimulation  = 0;
 
+	cba_settings_hasSettingsFile	= 0;
 	cba_settings_whitelist[]	= {"76561198099828056"};
 
 /*	 GARBADGE COLLECTIOR	*/
@@ -79,8 +79,6 @@ class Params
 	};
 
 /*		   OTHER			*/
-
-// Debug Console
 
 	enableTargetDebug = 1;
 	enableDebugConsole[] = {"76561198099828056"};
