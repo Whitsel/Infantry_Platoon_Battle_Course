@@ -1,3 +1,7 @@
+<p align="center">
+<img src="https://github.com/Whitsel/Infantry_Platoon_Battle_Course/blob/main/Media/IPBC.png" width="600">
+</p>
+
 # Infantry Platoon Battle Course
 Arma 3 Repository for assembling Infantry Platoon Battle Course mission files. All mission are inteded to be open for use by any units or individuals so interested as well as modified to meet their needs.
 
