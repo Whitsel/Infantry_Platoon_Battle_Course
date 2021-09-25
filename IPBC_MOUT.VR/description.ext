@@ -82,3 +82,5 @@ class Params
 
 	enableTargetDebug = 1;
 	enableDebugConsole[] = {"76561198099828056"};
+
+#include "cfgOrbat.hpp"
