@@ -21,8 +21,6 @@ class EditorData
 	class Camera
 	{
 		pos[]={4700,20,4200};
-		dir[]={-1.7484555e-007,0,1};
-		aside[]={1,-0,1.7484555e-007};
 	};
 };
 binarizationWanted=0;
@@ -62,7 +60,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=51;
+		items=49;
 		class Item0
 		{
 			dataType="Layer";
@@ -4760,9 +4758,10 @@ class Mission
 				{
 					dataType="Layer";
 					name="Utility";
+					state=3;
 					class Entities
 					{
-						items=7;
+						items=8;
 						class Item0
 						{
 							dataType="Object";
@@ -4880,9 +4879,20 @@ class Mission
 							type="EmptyDetectorArea10x10";
 							atlOffset=0.050000191;
 						};
+						class Item7
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={4672,5,4251};
+							};
+							init="[this,""Simple Rooms"",24,20] execVM ""location.sqf""";
+							id=1;
+							type="LocationArea_F";
+						};
 					};
 					id=516;
-					atlOffset=1.0304689;
+					atlOffset=0.51523447;
 				};
 				class Item11
 				{
@@ -5761,7 +5771,7 @@ class Mission
 							flags=4;
 							class Attributes
 							{
-								init="[this, controllerSimple, [""rtt_simple_0"", ""rtt_simple_1"", ""rtt_simple_2"", ""rtt_simple_3""]] call tScripts_fnc_camera_Controller;";
+								init="" \n "[this, controllerSimple, [""rtt_simple_0"", ""rtt_simple_1"", ""rtt_simple_2"", ""rtt_simple_3""]] call tScripts_fnc_camera_Controller;" \n "";
 								name="screenSimple";
 							};
 							id=464;
@@ -6285,7 +6295,7 @@ class Mission
 				};
 			};
 			id=91;
-			atlOffset=0.23830128;
+			atlOffset=0.20609951;
 		};
 		class Item1
 		{
@@ -7937,25 +7947,12 @@ class Mission
 		class Item17
 		{
 			dataType="Marker";
-			position[]={4656,5.0500002,4224};
+			position[]={4673,5,4211};
 			name="respawn_west";
 			type="b_hq";
 			id=391;
-			atlOffset=0.050000191;
 		};
 		class Item18
-		{
-			dataType="Marker";
-			position[]={4672,5.0500002,4250};
-			name="marker_1";
-			markerType="RECTANGLE";
-			type="rectangle";
-			a=12;
-			b=10;
-			id=392;
-			atlOffset=0.050000191;
-		};
-		class Item19
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8013,7 +8010,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item20
+		class Item19
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -8104,7 +8101,7 @@ class Mission
 				nAttributes=4;
 			};
 		};
-		class Item21
+		class Item20
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -8195,6 +8192,98 @@ class Mission
 				nAttributes=4;
 			};
 		};
+		class Item21
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4672,5.0500002,4186};
+				angles[]={0,4.7123895,0};
+			};
+			id=438;
+			type="ModuleCurator_F";
+			atlOffset=0.050000191;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="combatCameraman_0";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
 		class Item22
 		{
 			dataType="Object";
@@ -8211,7 +8300,7 @@ class Mission
 			id=441;
 			type="B_supplyCrate_F";
 		};
-		class Item24
+		class Item23
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8227,7 +8316,7 @@ class Mission
 			id=442;
 			type="B_supplyCrate_F";
 		};
-		class Item25
+		class Item24
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8243,7 +8332,7 @@ class Mission
 			id=443;
 			type="B_supplyCrate_F";
 		};
-		class Item26
+		class Item25
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8259,7 +8348,7 @@ class Mission
 			id=444;
 			type="B_supplyCrate_F";
 		};
-		class Item27
+		class Item26
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8275,7 +8364,7 @@ class Mission
 			id=445;
 			type="B_supplyCrate_F";
 		};
-		class Item28
+		class Item27
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8291,7 +8380,7 @@ class Mission
 			id=446;
 			type="B_supplyCrate_F";
 		};
-		class Item29
+		class Item28
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -8302,7 +8391,7 @@ class Mission
 			id=453;
 			atlOffset=0.050000191;
 		};
-		class Item30
+		class Item29
 		{
 			dataType="Marker";
 			position[]={4672,5.0500002,4220.25};
@@ -8312,7 +8401,7 @@ class Mission
 			id=476;
 			atlOffset=0.045000076;
 		};
-		class Item31
+		class Item30
 		{
 			dataType="Marker";
 			position[]={4663,5.0500002,4204};
@@ -8322,7 +8411,7 @@ class Mission
 			id=477;
 			atlOffset=0.050000191;
 		};
-		class Item32
+		class Item31
 		{
 			dataType="Marker";
 			position[]={4669,5.0500002,4204};
@@ -8332,7 +8421,7 @@ class Mission
 			id=478;
 			atlOffset=0.050000191;
 		};
-		class Item33
+		class Item32
 		{
 			dataType="Marker";
 			position[]={4681,5.0500002,4204};
@@ -8342,7 +8431,7 @@ class Mission
 			id=479;
 			atlOffset=0.050000191;
 		};
-		class Item34
+		class Item33
 		{
 			dataType="Marker";
 			position[]={4675,5.0500002,4204};
@@ -8352,7 +8441,7 @@ class Mission
 			id=480;
 			atlOffset=0.050000191;
 		};
-		class Item35
+		class Item34
 		{
 			dataType="Marker";
 			position[]={4672,5,4210};
@@ -8361,7 +8450,7 @@ class Mission
 			colorName="ColorYellow";
 			id=481;
 		};
-		class Item36
+		class Item35
 		{
 			dataType="Marker";
 			position[]={4672,5.0500002,4179};
@@ -8372,6 +8461,39 @@ class Mission
 			atlOffset=0.050000191;
 		};
 		class Item36
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4671.9702,5.0014391,4187.9229};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						init="this setGroupIdGlobal [""COMBAT CAMERAMAN""];" \n "this hideObjectGlobal true;";
+						name="combatCameraman_0";
+						description="Camera Operator@COMBAT CAMERAMAN";
+						isPlayable=1;
+					};
+					id=494;
+					type="C_journalist_F";
+				};
+			};
+			class Attributes
+			{
+				init="this setGroupIdGlobal [""COMBAT CAMERAMAN""];" \n "";
+			};
+			id=493;
+		};
+		class Item37
 		{
 			dataType="Group";
 			side="East";
@@ -8556,17 +8678,16 @@ class Mission
 			};
 			id=503;
 		};
-		class Item39
+		class Item38
 		{
 			dataType="Marker";
-			position[]={4686,5.0500002,4224};
+			position[]={4659,5,4221};
 			name="respawn_east";
 			type="b_hq";
 			colorName="ColorEAST";
 			id=514;
-			atlOffset=0.050000191;
 		};
-		class Item40
+		class Item39
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -8578,7 +8699,7 @@ class Mission
 			id=529;
 			atlOffset=0.050000191;
 		};
-		class Item41
+		class Item40
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -8588,7 +8709,7 @@ class Mission
 			title="Add check for BluFor in area";
 			id=571;
 		};
-		class Item42
+		class Item41
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8605,7 +8726,7 @@ class Mission
 			id=617;
 			type="B_supplyCrate_F";
 		};
-		class Item43
+		class Item42
 		{
 			dataType="Layer";
 			name="Complex Rooms";
@@ -10044,7 +10165,7 @@ class Mission
 					state=3;
 					class Entities
 					{
-						items=7;
+						items=8;
 						class Item0
 						{
 							dataType="Trigger";
@@ -10162,9 +10283,20 @@ class Mission
 							type="Sign_Sphere25cm_F";
 							atlOffset=12;
 						};
+						class Item7
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={4704,5,4251};
+							};
+							init="[this,""Complex Rooms"",24,20] execVM ""location.sqf""";
+							id=2;
+							type="LocationArea_F";
+						};
 					};
 					id=913;
-					atlOffset=6.3484373;
+					atlOffset=3.1742191;
 				};
 				class Item10
 				{
@@ -10266,9 +10398,9 @@ class Mission
 				};
 			};
 			id=877;
-			atlOffset=1.7052736;
+			atlOffset=0.91171932;
 		};
-		class Item44
+		class Item43
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -10278,7 +10410,7 @@ class Mission
 			title="A t shaped left/right";
 			id=941;
 		};
-		class Item45
+		class Item44
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -10288,17 +10420,7 @@ class Mission
 			title="Add corner fed";
 			id=942;
 		};
-		class Item46
-		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={4655.9341,5,4247.2568};
-			};
-			title="Add front door variation";
-			id=943;
-		};
-		class Item47
+		class Item45
 		{
 			dataType="Marker";
 			position[]={4704,5.0500002,4220.25};
@@ -10308,7 +10430,7 @@ class Mission
 			id=967;
 			atlOffset=0.045000076;
 		};
-		class Item48
+		class Item46
 		{
 			dataType="Marker";
 			position[]={4658,5.0500002,4220};
@@ -10318,7 +10440,7 @@ class Mission
 			id=1;
 			atlOffset=0.050000191;
 		};
-		class Item49
+		class Item47
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -10328,51 +10450,95 @@ class Mission
 			title="Add vehicle respawn init";
 			id=1;
 		};
-		class Item50
-		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={4672.0449,5,4204.0332};
-			};
-			title="Add RHS kits";
-			id=1;
-		};
-		class Item51
+		class Item48
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={4672,5,4212};
+				position[]={4624,5,4177};
 			};
-			name="crateAttachmentPoint";
-			init="this setVariable [""AllowFreeCamera"", true];" \n "this setVariable [""ShowFocusInfo"", true];" \n "this setVariable [""AllowAi"", true];" \n "this setVariable [""Allow3PPCamera"", true];";
-			isPlayable=1;
-			description="Camera Operator@COMBAT CAMERAMAN";
-			id=1;
-			type="VirtualSpectator_F";
-		};
-		class Item50
-		{
-			dataType="Logic";
-			class PositionInfo
+			id=66;
+			type="ModuleStrategicMapORBAT_F";
+			class CustomAttributes
 			{
-				position[]={4672,5,4250};
+				class Attribute0
+				{
+					property="ModuleStrategicMapORBAT_F_Path";
+					expression="_this setVariable ['Path',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="missionConfigFile >> ""CfgORBAT"" >> ""7thCavalry""";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleStrategicMapORBAT_F_Tags";
+					expression="_this setVariable ['Tags',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleStrategicMapORBAT_F_Parent";
+					expression="_this setVariable ['Parent',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="missionConfigFile >> ""CfgORBAT"" >> ""7thCavalry""";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleStrategicMapORBAT_F_Tiers";
+					expression="_this setVariable ['Tiers',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				nAttributes=4;
 			};
-			init="[this, ""Simple Rooms""] execVM ""location.sqf""";
-			id=6;
-			type="LocationArea_F";
-		};
-		class Item51
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={4704,5,4250};
-			};
-			init="[this, ""Complex Rooms""] execVM ""location.sqf""";
-			id=7;
-			type="LocationArea_F";
 		};
 	};
 };
