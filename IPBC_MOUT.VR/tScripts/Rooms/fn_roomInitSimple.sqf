@@ -44,6 +44,56 @@ roomBoxLarge = [
 	]
 ];
 
+roomBoxLargeCornerL = [
+	[
+		Box_Corner_L_0,
+		Box_Corner_L_1,
+		Box_Corner_L_2,
+		Box_Corner_L_3,
+		Box_Corner_L_4
+	],
+	[
+		Box_Corner_L_Opfor_0,
+		Box_Corner_L_Opfor_1,
+		Box_Corner_L_Opfor_2,
+		Box_Corner_L_Opfor_3,
+		Box_Corner_L_Opfor_4
+	],
+	[
+		Box_Corner_L_Furniture_0,
+		Box_Corner_L_Furniture_1,
+		Box_Corner_L_Furniture_2,
+		Box_Corner_L_Furniture_3,
+		Box_Corner_L_Furniture_4,
+		Box_Corner_L_Furniture_5
+	]
+];
+
+roomBoxLargeCornerR = [
+	[
+		Box_Corner_R_0,
+		Box_Corner_R_1,
+		Box_Corner_R_2,
+		Box_Corner_R_3,
+		Box_Corner_R_4
+	],
+	[
+		Box_Corner_R_Opfor_0,
+		Box_Corner_R_Opfor_1,
+		Box_Corner_R_Opfor_2,
+		Box_Corner_R_Opfor_3,
+		Box_Corner_R_Opfor_4
+	],
+	[
+		Box_Corner_R_Furniture_0,
+		Box_Corner_R_Furniture_1,
+		Box_Corner_R_Furniture_2,
+		Box_Corner_R_Furniture_3,
+		Box_Corner_R_Furniture_4,
+		Box_Corner_R_Furniture_5
+	]
+];
+
 roomTubeLong = [
 	[
 		tube_long_1,
@@ -346,15 +396,17 @@ roomIntersection = [
 roomHashSimple = createHashMapFromArray [
 	[1, roomBoxSmall],
 	[2, roomBoxLarge],
-	[3, roomTubeLong],
-	[4, roomTubeWide],
-	[5, roomLShapedSmallLeft],
-	[6, roomLShapedSmallRight],
-	[7, roomLShapedLargeL],
-	[8, roomLShapedLargeR],
-	[9, roomTShapedSmall],
-	[10, roomTShapedLarge],
-	[11, roomIntersection]
+	[3, roomBoxLargeCornerL],
+	[4, roomBoxLargeCornerR],
+	[5, roomTubeLong],
+	[6, roomTubeWide],
+	[7, roomLShapedSmallLeft],
+	[8, roomLShapedSmallRight],
+	[9, roomLShapedLargeL],
+	[10, roomLShapedLargeR],
+	[11, roomTShapedSmall],
+	[12, roomTShapedLarge],
+	[13, roomIntersection]
 ];
 
 for "_i" from 1 to (count roomHashSimple) do {{hideObjectGlobal _x} forEach (roomHashSimple get _i)#0 + (roomHashSimple get _i)#1 + (roomHashSimple get _i)#2};
