@@ -73,6 +73,13 @@ class tScripts {
 		class equipment_oAFRF {};
 	};
 
+	class orbat {
+		file = "tScripts\Orbat";
+		class orbatAdd {};
+		class orbatOpen {};
+		class orbatMove {};
+	}
+
 	class tools {
 		file = "tScripts\Tools";
 		class pauseEx {};
@@ -96,5 +103,4 @@ class tScripts {
 		class vehicleInit {};
 		class liftVehicle {};
 	};
-
 };
