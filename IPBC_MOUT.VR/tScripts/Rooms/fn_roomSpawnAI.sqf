@@ -168,6 +168,7 @@ roomSpawnOpfor = {
 	_unitDoorDirection = _unitOpfor getDir _frontDoor;
 	_unitDirection = _unitDoorDirection + (floor random 180) - 90;
 	[_unitOpforGroup, _unitDirection] remoteExec ["setFormDir", 2, false];
+	_unitOpfor forceWalk true;
 
 	_unitOpfor setSKill _spawnAISkill;
 
@@ -196,9 +197,11 @@ roomSpawnOpForWaypoint = {
 	private _wayPointPosition_3 = _spawnPositions#(floor random (count _spawnPositions));
 	private _wayPoint_1 = _unitOpforGroup addWaypoint [_x, -1];
 	_wayPoint_1 setWaypointTimeout [0, _wayPointMaxTime/2, _wayPointMaxTime];
+
 	private _wayPoint_2 = _unitOpforGroup addWaypoint [_wayPointPosition_2, 1];
 	_wayPoint_2 setWaypointTimeout [0, _wayPointMaxTime/2, _wayPointMaxTime];
 	_wayPoint_2 setWaypointSpeed "LIMITED";
+
 	private _wayPoint_3 = _unitOpforGroup addWaypoint [_wayPointPosition_3, 1];
 	_wayPoint_3 setWaypointTimeout [0, _wayPointMaxTime/2, _wayPointMaxTime];
 	_wayPoint_3 setWaypointSpeed "LIMITED";
