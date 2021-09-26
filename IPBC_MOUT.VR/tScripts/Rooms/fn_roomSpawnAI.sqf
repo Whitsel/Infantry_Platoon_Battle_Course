@@ -226,7 +226,7 @@ roomSpawnOpForHunt = {
 			_wayPointHunt_2 waypointAttachVehicle _firer;
 
 			_unit removeAllEventHandlers "FiredNear";
-		};
+		}
 	];
 	_spawnHunters pushBack _unitOpfor;
 };
