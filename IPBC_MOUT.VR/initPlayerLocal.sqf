@@ -4,7 +4,12 @@ waitUntil {!isNull player};
 player addEventHandler ["InventoryClosed", {
 	params ["_unit", "_container"];
 	if ((typeOf _container) == "GroundWeaponHolder") then {
-		deleteVehicle _container
+		_container spawn {
+			sleep 120;
+			if (!isNull _this) then {
+				deleteVehicle _this;
+			};
+		};
 	};
 }];
 
