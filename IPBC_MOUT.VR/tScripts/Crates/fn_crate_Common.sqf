@@ -4,6 +4,25 @@
 params ["_crate",["_locked", false]];
 
 _crate addAction[
+	"  " + colorHexEast + iconHeal + "</t> Heal",
+	{
+		params ["_target", "_caller", "_actionId", "_arguments"];
+		if ("ace_main" in activatedAddons) then {
+			[_target, _caller] call ace_medical_treatment_fnc_fullHeal;
+		} else {
+			_caller setDamage 0;
+		};
+	},
+	[],
+	1.5,
+	true,
+	true,
+	"",
+	"true",
+	5
+];
+
+_crate addAction[
 	"  " + iconArsenal,
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
@@ -11,7 +30,7 @@ _crate addAction[
 			[_caller, _caller, true] call ace_arsenal_fnc_openBox;
 		} else {
 			["Open", [true]] call BIS_fnc_arsenal;
-		}
+		};
 	},
 	[],
 	1.5,
