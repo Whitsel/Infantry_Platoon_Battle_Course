@@ -23,7 +23,9 @@ private _kits = [
 	]
 ];
 
-_crate addAction [format ["<img image='Data\7Cav\7Cav_Logo.paa' /> 7th Cavalry Equipment Crate"], {}, [], 1.5, true, true, "", "true", 5];
+_crate addAction [format ["<img image='Data\7Cav\7Cav_Logo.paa' /> 7th Cavalry Equipment Crate"], {
+	[missionConfigFile >> "CfgORBAT" >> "7thCavalry"] call BIS_fnc_ORBATOpen
+}, [], 1.5, true, true, "", "true", 5];
 
 _crate call FUNC(addActionSpacer);
 
