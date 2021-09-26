@@ -70,9 +70,9 @@ _crate call FUNC(addActionSpacer);
 		5
 	];
 
-	diag_log format ["tScripts Logging: %1 kit added to quick select for %2", _filename, _crate]
-
 } forEach _kits;
+
+diag_log format ["tScripts Logging: OpFor kit added to quick select for %1", _crate];
 
 _crate addAction ["<t size = '0.5'> </t>", {}, [], 1.5, true, true, "", "!(_target getVariable ['tScripts_crates_locked', false]) && (((_this getVariable ['tScripts_class_role','']) == 'opfor') || ((_this getVariable ['tScripts_class_role','']) == 'rangeMaster'))", 5];
 
