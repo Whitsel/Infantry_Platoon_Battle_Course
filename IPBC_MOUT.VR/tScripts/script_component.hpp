@@ -39,7 +39,7 @@
 #define iconTank "<img size='1' image='\a3\ui_f\data\IGUI\Cfg\MPTable\armored_ca'/>"
 #define iconTruck "<img size='1' image='\a3\ui_f\data\Map\VehicleIcons\iconTruck_ca'/>"
 #define iconVirtual "<img size='1' image='\a3\ui_f\data\Map\VehicleIcons\iconVirtual_ca'/>"
-#define iconHeal "<img size='1' image='\a3\ui_f\data\Map\VehicleIcons\iconHeal_ca'/>"
+#define iconHeal "<img size='1' image='\a3\ui_f\data\IGUI\Cfg\Actions\heal_ca'/>"
 #define iconExplosive "<img size='1' image='\a3\ui_f\data\Map\VehicleIcons\iconExplosive_ca'/>"
 #define iconKey "<img size='1' image='\a3\ui_f\data\GUI\Cfg\KeyframeAnimation\IconKey_CA'/>"
 #define iconCamera "<img size='1' image='\a3\ui_f\data\GUI\Rsc\RscDisplayEGSpectator\Follow'/>"
