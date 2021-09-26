@@ -214,14 +214,17 @@ roomSpawnOpForHunt = {
 		{
 			params ["_unit", "_firer", "_distance", "_weapon", "_muzzle", "_mode", "_ammo", "_gunner"];
 			if (side _firer == side _unit) exitWith {};
-			_unit reveal _firer;
+			_unit reveal [_firer, 4];
+
 			private _wayPointHunt_1 = group _unit addWaypoint [getPosATL _unit, 1];
 			_wayPointHunt_1 setWaypointTimeout [0, 5, 10];
+
 			private _wayPointHunt_2 = group _unit addWaypoint [getPosATL _firer, 3];
 			_wayPointHunt_2 setWaypointType "SAD";
 			_wayPointHunt_2 setWayPointSpeed "LIMITED";
 			_wayPointHunt_2 setWaypointBehaviour "COMBAT";
 			_wayPointHunt_2 waypointAttachVehicle _firer;
+
 			_unit removeAllEventHandlers "FiredNear";
 		};
 	];
