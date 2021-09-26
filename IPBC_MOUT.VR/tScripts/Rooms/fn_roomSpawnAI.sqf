@@ -188,7 +188,7 @@ roomSpawnOpfor = {
 		case 2: {_unitOpfor call tScripts_fnc_oGrenadier};
 		case 3: {_unitOpfor call tScripts_fnc_oAutomaticRifleman};
 		case 4: {_unitOpfor call tScripts_fnc_oTeamLeader};
-	}
+	};
 };
 
 roomSpawnOpForWaypoint = {
@@ -214,6 +214,7 @@ roomSpawnOpForHunt = {
 		{
 			params ["_unit", "_firer", "_distance", "_weapon", "_muzzle", "_mode", "_ammo", "_gunner"];
 			if (side _firer == side _unit) exitWith {};
+			_unit reveal _firer;
 			private _wayPointHunt_1 = group _unit addWaypoint [getPosATL _unit, 1];
 			_wayPointHunt_1 setWaypointTimeout [0, 5, 10];
 			private _wayPointHunt_2 = group _unit addWaypoint [getPosATL _firer, 3];
@@ -222,7 +223,7 @@ roomSpawnOpForHunt = {
 			_wayPointHunt_2 setWaypointBehaviour "COMBAT";
 			_wayPointHunt_2 waypointAttachVehicle _firer;
 			_unit removeAllEventHandlers "FiredNear";
-		}
+		};
 	];
 	_spawnHunters pushBack _unitOpfor;
 };
@@ -237,7 +238,7 @@ roomSpawnCiv = {
 		_spawnedCivs pushBack _unitCiv;
 	} else {
 		call roomSpawnOpfor
-	}
+	};
 };
 
 if (_target getVariable ["spawningAI", false]) then {
@@ -247,8 +248,8 @@ if (_target getVariable ["spawningAI", false]) then {
 					call roomSpawnCiv;
 			} else {
 				call roomSpawnOpfor;
-			}
-		}
+			};
+		};
 	} forEach _spawnPositions;
 };
 
