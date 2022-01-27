@@ -8,47 +8,27 @@ class EditorData
 	toggles=5;
 	class ItemIDProvider
 	{
-<<<<<<< Updated upstream
-		nextID=12;
-	};
-	class Camera
-	{
-		pos[]={4209.0928,26.887625,6489.0234};
-		dir[]={0.017897937,-0.58358157,0.81185728};
-		up[]={0.012862323,0.81205457,0.58343989};
-		aside[]={0.99975717,0,-0.022040317};
-=======
 		nextID=8;
 	};
 	class Camera
 	{
-		pos[]={6674.2061,18.871004,3101.6926};
-		dir[]={-0.019115726,-0.38076222,0.92448407};
-		up[]={-0.0078712851,0.92467481,0.38068393};
-		aside[]={0.99979568,-2.4112524e-008,0.020672305};
->>>>>>> Stashed changes
+		pos[]={5522.1768,24.601702,727.31812};
+		dir[]={-0.03022977,-0.49639693,0.86757302};
+		up[]={-0.017285947,0.86809433,0.49609575};
+		aside[]={0.99939525,-2.1427695e-009,0.034823004};
 	};
 };
 binarizationWanted=0;
 sourceName="IPBC_R2C";
 addons[]=
 {
-<<<<<<< Updated upstream
-	"A3_Characters_F",
-	"A3_Modules_F_Curator_Curator"
-=======
 	"A3_Characters_F"
->>>>>>> Stashed changes
 };
 class AddonsMetaData
 {
 	class List
 	{
-<<<<<<< Updated upstream
-		items=2;
-=======
 		items=1;
->>>>>>> Stashed changes
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -56,22 +36,9 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-<<<<<<< Updated upstream
-		class Item1
-		{
-			className="A3_Modules_F_Curator";
-			name="Arma 3 Zeus Update - Scripted Modules";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
 	};
 };
-randomSeed=8494579;
-=======
-	};
-};
-randomSeed=11139631;
->>>>>>> Stashed changes
+randomSeed=9313596;
 class ScenarioData
 {
 	author="Whitsel";
@@ -80,10 +47,6 @@ class Mission
 {
 	class Intel
 	{
-<<<<<<< Updated upstream
-		resistanceWest=0;
-=======
->>>>>>> Stashed changes
 		timeOfChanges=1800.0002;
 		startWeather=0;
 		startWind=0.1;
@@ -101,11 +64,7 @@ class Mission
 	};
 	class Entities
 	{
-<<<<<<< Updated upstream
-		items=6;
-=======
 		items=4;
->>>>>>> Stashed changes
 		class Item0
 		{
 			dataType="Group";
@@ -118,69 +77,16 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-<<<<<<< Updated upstream
-						position[]={4208,5.0014391,6508.0498};
-=======
-						position[]={6672,5.0014391,3120.05};
->>>>>>> Stashed changes
+						position[]={5520,5.0014391,752.04999};
 					};
 					side="West";
 					flags=7;
 					class Attributes
 					{
-<<<<<<< Updated upstream
-						init="this execVM ""draw3D.sqf""";
-=======
->>>>>>> Stashed changes
 						isPlayer=1;
 					};
 					id=1;
 					type="B_Soldier_GL_F";
-<<<<<<< Updated upstream
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male09ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-=======
->>>>>>> Stashed changes
 				};
 			};
 			class Attributes
@@ -190,155 +96,8 @@ class Mission
 		};
 		class Item1
 		{
-<<<<<<< Updated upstream
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={4214.519,5,6512.7192};
-			};
-			id=4;
-			type="ModuleCurator_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ModuleCurator_F_Owner";
-					expression="_this setVariable ['Owner',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="fdsa";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ModuleCurator_F_Forced";
-					expression="_this setVariable ['Forced',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ModuleCurator_F_Name";
-					expression="_this setVariable ['Name',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="ModuleCurator_F_Addons";
-					expression="_this setVariable ['Addons',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=3;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item2
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={4216.665,5,6516.4209};
-			};
-			id=5;
-			type="ModuleCuratorAddEditableObjects";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ModuleCuratorAddEditableObjects_Curator";
-					expression="_this setVariable ['Curator',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ModuleCuratorAddEditableObjects_AddCrew";
-					expression="_this setVariable ['AddCrew',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item3
-		{
-			dataType="Group";
-			side="Independent";
-=======
 			dataType="Group";
 			side="East";
->>>>>>> Stashed changes
 			class Entities
 			{
 				items=1;
@@ -347,61 +106,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-<<<<<<< Updated upstream
-						position[]={4207.1919,5.0014391,6530.1938};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						name="asdf";
-					};
-					id=7;
-					type="I_Soldier_A_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-=======
-						position[]={6672,5.0014391,3152.05};
+						position[]={5520,5.0014391,784.04999};
 					};
 					side="East";
 					flags=7;
@@ -409,28 +114,18 @@ class Mission
 					{
 					};
 					id=3;
-					type="O_Soldier_F";
->>>>>>> Stashed changes
+					type="O_Survivor_F";
 				};
 			};
 			class Attributes
 			{
 			};
-<<<<<<< Updated upstream
-			id=6;
-		};
-		class Item4
-		{
-			dataType="Group";
-			side="Independent";
-=======
 			id=2;
 		};
 		class Item2
 		{
 			dataType="Group";
 			side="East";
->>>>>>> Stashed changes
 			class Entities
 			{
 				items=1;
@@ -439,61 +134,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-<<<<<<< Updated upstream
-						position[]={4202.0156,5.0014391,6531.0371};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						name="asdf_1";
-					};
-					id=9;
-					type="I_Soldier_A_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-=======
-						position[]={6678,5.0014391,3152.05};
+						position[]={5530,5.0014391,784.04999};
 					};
 					side="East";
 					flags=7;
@@ -501,28 +142,18 @@ class Mission
 					{
 					};
 					id=5;
-					type="O_Soldier_F";
->>>>>>> Stashed changes
+					type="O_Survivor_F";
 				};
 			};
 			class Attributes
 			{
 			};
-<<<<<<< Updated upstream
-			id=8;
-		};
-		class Item5
-		{
-			dataType="Group";
-			side="Independent";
-=======
 			id=4;
 		};
 		class Item3
 		{
 			dataType="Group";
 			side="East";
->>>>>>> Stashed changes
 			class Entities
 			{
 				items=1;
@@ -531,61 +162,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-<<<<<<< Updated upstream
-						position[]={4211.6392,5.0014391,6531.5894};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						name="asdf_2";
-					};
-					id=11;
-					type="I_Soldier_A_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-=======
-						position[]={6664,5.0014391,3152.05};
+						position[]={5510,5.0014391,784.04999};
 					};
 					side="East";
 					flags=7;
@@ -593,49 +170,13 @@ class Mission
 					{
 					};
 					id=7;
-					type="O_Soldier_F";
->>>>>>> Stashed changes
+					type="O_Survivor_F";
 				};
 			};
 			class Attributes
 			{
 			};
-<<<<<<< Updated upstream
-			id=10;
-		};
-	};
-	class Connections
-	{
-		class LinkIDProvider
-		{
-			nextID=2;
-		};
-		class Links
-		{
-			items=2;
-			class Item0
-			{
-				linkID=0;
-				item0=5;
-				item1=4;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item1
-			{
-				linkID=1;
-				item0=5;
-				item1=7;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-=======
 			id=6;
->>>>>>> Stashed changes
 		};
 	};
 };
