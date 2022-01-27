@@ -1,2 +1,0 @@
-
-execVM "shotsNear.sqf"
