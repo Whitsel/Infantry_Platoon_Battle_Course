@@ -8,6 +8,7 @@ class EditorData
 	toggles=5;
 	class ItemIDProvider
 	{
+<<<<<<< Updated upstream
 		nextID=12;
 	};
 	class Camera
@@ -16,20 +17,38 @@ class EditorData
 		dir[]={0.017897937,-0.58358157,0.81185728};
 		up[]={0.012862323,0.81205457,0.58343989};
 		aside[]={0.99975717,0,-0.022040317};
+=======
+		nextID=8;
+	};
+	class Camera
+	{
+		pos[]={6674.2061,18.871004,3101.6926};
+		dir[]={-0.019115726,-0.38076222,0.92448407};
+		up[]={-0.0078712851,0.92467481,0.38068393};
+		aside[]={0.99979568,-2.4112524e-008,0.020672305};
+>>>>>>> Stashed changes
 	};
 };
 binarizationWanted=0;
 sourceName="IPBC_R2C";
 addons[]=
 {
+<<<<<<< Updated upstream
 	"A3_Characters_F",
 	"A3_Modules_F_Curator_Curator"
+=======
+	"A3_Characters_F"
+>>>>>>> Stashed changes
 };
 class AddonsMetaData
 {
 	class List
 	{
+<<<<<<< Updated upstream
 		items=2;
+=======
+		items=1;
+>>>>>>> Stashed changes
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -37,6 +56,7 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+<<<<<<< Updated upstream
 		class Item1
 		{
 			className="A3_Modules_F_Curator";
@@ -47,6 +67,11 @@ class AddonsMetaData
 	};
 };
 randomSeed=8494579;
+=======
+	};
+};
+randomSeed=11139631;
+>>>>>>> Stashed changes
 class ScenarioData
 {
 	author="Whitsel";
@@ -55,7 +80,10 @@ class Mission
 {
 	class Intel
 	{
+<<<<<<< Updated upstream
 		resistanceWest=0;
+=======
+>>>>>>> Stashed changes
 		timeOfChanges=1800.0002;
 		startWeather=0;
 		startWind=0.1;
@@ -73,7 +101,11 @@ class Mission
 	};
 	class Entities
 	{
+<<<<<<< Updated upstream
 		items=6;
+=======
+		items=4;
+>>>>>>> Stashed changes
 		class Item0
 		{
 			dataType="Group";
@@ -86,17 +118,25 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
+<<<<<<< Updated upstream
 						position[]={4208,5.0014391,6508.0498};
+=======
+						position[]={6672,5.0014391,3120.05};
+>>>>>>> Stashed changes
 					};
 					side="West";
 					flags=7;
 					class Attributes
 					{
+<<<<<<< Updated upstream
 						init="this execVM ""draw3D.sqf""";
+=======
+>>>>>>> Stashed changes
 						isPlayer=1;
 					};
 					id=1;
 					type="B_Soldier_GL_F";
+<<<<<<< Updated upstream
 					class CustomAttributes
 					{
 						class Attribute0
@@ -139,6 +179,8 @@ class Mission
 						};
 						nAttributes=2;
 					};
+=======
+>>>>>>> Stashed changes
 				};
 			};
 			class Attributes
@@ -148,6 +190,7 @@ class Mission
 		};
 		class Item1
 		{
+<<<<<<< Updated upstream
 			dataType="Logic";
 			class PositionInfo
 			{
@@ -292,6 +335,10 @@ class Mission
 		{
 			dataType="Group";
 			side="Independent";
+=======
+			dataType="Group";
+			side="East";
+>>>>>>> Stashed changes
 			class Entities
 			{
 				items=1;
@@ -300,6 +347,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
+<<<<<<< Updated upstream
 						position[]={4207.1919,5.0014391,6530.1938};
 					};
 					side="Independent";
@@ -352,17 +400,37 @@ class Mission
 						};
 						nAttributes=2;
 					};
+=======
+						position[]={6672,5.0014391,3152.05};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+					};
+					id=3;
+					type="O_Soldier_F";
+>>>>>>> Stashed changes
 				};
 			};
 			class Attributes
 			{
 			};
+<<<<<<< Updated upstream
 			id=6;
 		};
 		class Item4
 		{
 			dataType="Group";
 			side="Independent";
+=======
+			id=2;
+		};
+		class Item2
+		{
+			dataType="Group";
+			side="East";
+>>>>>>> Stashed changes
 			class Entities
 			{
 				items=1;
@@ -371,6 +439,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
+<<<<<<< Updated upstream
 						position[]={4202.0156,5.0014391,6531.0371};
 					};
 					side="Independent";
@@ -423,17 +492,37 @@ class Mission
 						};
 						nAttributes=2;
 					};
+=======
+						position[]={6678,5.0014391,3152.05};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+					};
+					id=5;
+					type="O_Soldier_F";
+>>>>>>> Stashed changes
 				};
 			};
 			class Attributes
 			{
 			};
+<<<<<<< Updated upstream
 			id=8;
 		};
 		class Item5
 		{
 			dataType="Group";
 			side="Independent";
+=======
+			id=4;
+		};
+		class Item3
+		{
+			dataType="Group";
+			side="East";
+>>>>>>> Stashed changes
 			class Entities
 			{
 				items=1;
@@ -442,6 +531,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
+<<<<<<< Updated upstream
 						position[]={4211.6392,5.0014391,6531.5894};
 					};
 					side="Independent";
@@ -494,11 +584,23 @@ class Mission
 						};
 						nAttributes=2;
 					};
+=======
+						position[]={6664,5.0014391,3152.05};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+					};
+					id=7;
+					type="O_Soldier_F";
+>>>>>>> Stashed changes
 				};
 			};
 			class Attributes
 			{
 			};
+<<<<<<< Updated upstream
 			id=10;
 		};
 	};
@@ -531,6 +633,9 @@ class Mission
 					type="Sync";
 				};
 			};
+=======
+			id=6;
+>>>>>>> Stashed changes
 		};
 	};
 };
